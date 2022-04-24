@@ -27,3 +27,4 @@ Syntax reminder for
 - [Angular](./17_angular.md)
 - [Flutter](./18_flutter.md)
 - [React](./19_react.md)
+- [Git](./20_git.md)

@@ -3,8 +3,8 @@
 # Summary
 
 [Showcases](./showcases.md)
-
 [Skills](./skills.md)
+[About](./about.md)
 
 ---
 
@@ -28,6 +28,7 @@
   - [Angular](./syntax_reminder/17_angular.md)
   - [Flutter](./syntax_reminder/18_flutter.md)
   - [React](./syntax_reminder/19_react.md)
+  - [Git](./syntax_reminder/20_git.md)
 - [Article](./article/README.md)
   - [Pigeon Release v0.2.0](./article/02_pigeon_release_v0.2.0.md)
   - [Pigeon Release v0.1.0](./article/01_pigeon_release_v0.1.0.md)
