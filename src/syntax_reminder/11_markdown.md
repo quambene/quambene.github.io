@@ -10,6 +10,7 @@
 - [Numbered list](#numbered-list)
 - [Emphasis](#emphasis)
 - [Link](#link)
+- [Image](#image)
 - [Inline code block](#inline-code-block)
 - [Blockquotes](#blockquotes)
 - [Table](#table)
@@ -20,6 +21,7 @@
 - [Numbered list](#numbered-list)
 - [Emphasis](#emphasis)
 - [Link](#link)
+- [Image](#image)
 - [Inline code block](#inline-code-block)
 - [Blockquotes](#blockquotes)
 - [Table](#table)
@@ -66,6 +68,12 @@
 ```
 
 [Link](url)
+
+### Image
+
+``` bash
+![Alt text](url "Title")
+```
 
 ### Inline code block
 
