@@ -1,6 +1,6 @@
 # Showcases
 
-Some of my projects are showcased as follows.
+Some of my projects are showcased as follows. [More](./about.md) about me.
 
 ## Pigeon
 
@@ -22,6 +22,13 @@ Some of my projects are showcased as follows.
 - technical description: web development with proper responsive design on desktop, tablet and mobile
 - tech stack: Angular+Rust
 - website: [https://turtle.community](https://turtle.community)
+
+## LibreCRM
+
+- functional description: open-source customer relationship management (CRM) based on LibreOffice
+- technical description: flexibility of spreadsheets combined with consistency of databases
+- tech stack: LibreOffice Base
+- website: [https://github.com/quambene/libre_crm](https://github.com/quambene/libre_crm)
 
 ## Blockchain demo
 
