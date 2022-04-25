@@ -8,6 +8,7 @@ Working as Full Stack Developer. Interested in Rust, Machine Learning, and Compu
 
 [Github](https://github.com/quambene)<br/>
 [Twitter](https://twitter.com/quambene)<br/>
+[Linkedin](https://www.linkedin.com/in/quambene)<br/>
 [Email](mailto:contact.quambene@gmail.com)<br/>
 
 ## Latest Post
