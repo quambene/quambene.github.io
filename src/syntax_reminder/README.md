@@ -28,3 +28,4 @@ Syntax reminder for
 - [Flutter](./18_flutter.md)
 - [React](./19_react.md)
 - [Git](./20_git.md)
+- [Fortran](./21_fortran.md)

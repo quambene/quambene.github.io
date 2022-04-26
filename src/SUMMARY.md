@@ -29,6 +29,7 @@
   - [Flutter](./syntax_reminder/18_flutter.md)
   - [React](./syntax_reminder/19_react.md)
   - [Git](./syntax_reminder/20_git.md)
+  - [Fortran](./syntax_reminder/21_fortran.md)
 - [Article](./article/README.md)
   - [Pigeon Release v0.2.0](./article/2022-01-05_pigeon_release_v0.2.0.md)
   - [Pigeon Release v0.1.0](./article/2021-11-20_pigeon_release_v0.1.0.md)
