@@ -63,6 +63,18 @@ x: Dict[int, int] = {"key1": 1, "key2": 2} # typed
 x: Optional[str] = some_function()
 ```
 
+### Operators
+
+``` python
+# Bitwise operators
+& # AND
+| # OR
+~ # NOT
+^ # XOR
+>> # right shift
+<< # left shift
+```
+
 ### Control flow
 
 ```python
