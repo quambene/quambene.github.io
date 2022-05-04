@@ -42,6 +42,9 @@ x: complex
 x: str
 x: bool
 
+from typing import Any
+x: Any
+
 # List
 x = ["item1", "item2", "item3"]
 x: List[str] = ["item1", "item2", "item3"] # typed
