@@ -169,4 +169,6 @@ def test_my_func3():
 pytest
 pytest -v
 pytest -v *.py
+pytest -v -m unit *.py
+pytest -v -m integration *.py
 ```
