@@ -9,6 +9,7 @@
 - [Functions](#functions)
 - [Classes](#classes)
 - [Error handling](#error-handling)
+- [Testing](#testing)
 
 ### Print
 
@@ -136,4 +137,36 @@ finally: # always executed
 
 # Raise error
 raise ValueError("error message")
+```
+
+### Testing
+
+``` python
+import pytest
+
+
+def my_func():
+    return 4
+
+
+def test_my_func():
+    assert my_func() == 4
+
+
+@pytest.mark.unit
+def test_my_func2():
+    assert my_func() == 4
+
+
+@pytest.mark.integration
+def test_my_func3():
+    assert my_func() == 4
+
+```
+
+``` bash
+# Run tests
+pytest
+pytest -v
+pytest -v *.py
 ```
