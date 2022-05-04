@@ -148,6 +148,7 @@
 <li><a href="#functions">Functions</a></li>
 <li><a href="#classes">Classes</a></li>
 <li><a href="#error-handling">Error handling</a></li>
+<li><a href="#testing">Testing</a></li>
 </ul>
 <h3 id="print"><a class="header" href="#print">Print</a></h3>
 <pre><code class="language-python">name = &quot;world&quot;
@@ -255,6 +256,35 @@ finally: # always executed
 
 # Raise error
 raise ValueError(&quot;error message&quot;)
+</code></pre>
+<h3 id="testing"><a class="header" href="#testing">Testing</a></h3>
+<pre><code class="language-python">import pytest
+
+
+def my_func():
+    return 4
+
+
+def test_my_func():
+    assert my_func() == 4
+
+
+@pytest.mark.unit
+def test_my_func2():
+    assert my_func() == 4
+
+
+@pytest.mark.integration
+def test_my_func3():
+    assert my_func() == 4
+
+</code></pre>
+<pre><code class="language-bash"># Run tests
+pytest
+pytest -v
+pytest -v *.py
+pytest -v -m unit *.py
+pytest -v -m integration *.py
 </code></pre>
 
                     </main>
