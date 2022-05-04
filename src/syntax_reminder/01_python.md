@@ -120,16 +120,29 @@ def my_function():
 class MyClass:
     my_class_var = 100
 
-    def __init__(self):
-        self.my_instance_var = 3
+    def __init__(self, my_instance_var):
+        self.my_instance_var = my_instance_var
 
     def my_function(self):
-        return self.my_instance_var
+        pass
 
 # Instantiation
-my_class_instance = MyClass()
-my_class_instance.my_function()
-my_class_instance.my_class_var
+my_class = MyClass()
+my_class.my_function()
+my_class.my_class_var
+my_class.my_instance_var
+
+# Inheritance
+class MyDerivedClass(MyBaseClass):
+    pass
+
+# Abstract class
+from abc import ABC, abstractmethod
+
+class MyAbstractClass(ABC)
+    @abstractmethod
+    def my_abstract_method(self):
+        pass
 
 # Data class
 @dataclass
