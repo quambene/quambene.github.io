@@ -173,6 +173,9 @@ x: complex
 x: str
 x: bool
 
+from typing import Any
+x: Any
+
 # List
 x = [&quot;item1&quot;, &quot;item2&quot;, &quot;item3&quot;]
 x: List[str] = [&quot;item1&quot;, &quot;item2&quot;, &quot;item3&quot;] # typed
@@ -189,6 +192,15 @@ x: Dict[int, int] = {&quot;key1&quot;: 1, &quot;key2&quot;: 2} # typed
 
 # Option
 x: Optional[str] = some_function()
+</code></pre>
+<h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
+<pre><code class="language-python"># Bitwise operators
+&amp; # AND
+| # OR
+~ # NOT
+^ # XOR
+&gt;&gt; # right shift
+&lt;&lt; # left shift
 </code></pre>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
 <pre><code class="language-python"># for loop
@@ -227,16 +239,29 @@ def my_function():
 <pre><code class="language-python">class MyClass:
     my_class_var = 100
 
-    def __init__(self):
-        self.my_instance_var = 3
+    def __init__(self, my_instance_var):
+        self.my_instance_var = my_instance_var
 
     def my_function(self):
-        return self.my_instance_var
+        pass
 
 # Instantiation
-my_class_instance = MyClass()
-my_class_instance.my_function()
-my_class_instance.my_class_var
+my_class = MyClass()
+my_class.my_function()
+my_class.my_class_var
+my_class.my_instance_var
+
+# Inheritance
+class MyDerivedClass(MyBaseClass):
+    pass
+
+# Abstract class
+from abc import ABC, abstractmethod
+
+class MyAbstractClass(ABC)
+    @abstractmethod
+    def my_abstract_method(self):
+        pass
 
 # Data class
 @dataclass
