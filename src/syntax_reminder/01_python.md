@@ -5,6 +5,7 @@
 - [Print](#print)
 - [Variables](#variables)
 - [Data types](#data-types)
+- [Operators](#operators)
 - [Control flow](#control-flow)
 - [Functions](#functions)
 - [Classes](#classes)
@@ -66,6 +67,11 @@ x: Optional[str] = some_function()
 ### Operators
 
 ``` python
+# Logical operators
+and
+or
+not
+
 # Bitwise operators
 & # AND
 | # OR
