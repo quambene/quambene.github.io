@@ -31,11 +31,6 @@ x: int = 4 # Assign value (typed)
 x = y = z = 0 # Multiple assignment
 x += 1 # Increment
 x -= 1 # Decrement
-
-x = 42 # decimal
-x = 0b101010 # binary
-x = 0x2a # hex
-x = 0o52 # octal
 ```
 
 ### Data types
@@ -50,6 +45,17 @@ x: bool
 
 from typing import Any
 x: Any
+
+# Integer
+x = 42 # decimal
+x = 0b101010 # binary
+x = 0x2a # hex
+x = 0o52 # octal
+
+# String
+len(my_string)
+my_string[start:end] # substring [start:end)
+my_string[-1] # last character
 
 # List
 x = ["item1", "item2", "item3"]
