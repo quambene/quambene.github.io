@@ -177,6 +177,17 @@ x: bool
 from typing import Any
 x: Any
 
+# Integer
+x = 42 # decimal
+x = 0b101010 # binary
+x = 0x2a # hex
+x = 0o52 # octal
+
+# String
+len(my_string)
+my_string[start:end] # substring [start:end)
+my_string[-1] # last character
+
 # List
 x = [&quot;item1&quot;, &quot;item2&quot;, &quot;item3&quot;]
 x: List[str] = [&quot;item1&quot;, &quot;item2&quot;, &quot;item3&quot;] # typed
@@ -209,7 +220,12 @@ not
 &lt;&lt; # left shift
 </code></pre>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
-<pre><code class="language-python"># for loop
+<pre><code class="language-python"># Loop control statements
+continue
+break
+pass
+
+# for loop
 for i in range(10):
     print(i)
 
