@@ -31,6 +31,11 @@ x: int = 4 # Assign value (typed)
 x = y = z = 0 # Multiple assignment
 x += 1 # Increment
 x -= 1 # Decrement
+
+x = 42 # decimal
+x = 0b101010 # binary
+x = 0x2a # hex
+x = 0o52 # octal
 ```
 
 ### Data types
@@ -84,6 +89,11 @@ not
 ### Control flow
 
 ```python
+# Loop control statements
+continue
+break
+pass
+
 # for loop
 for i in range(10):
     print(i)
