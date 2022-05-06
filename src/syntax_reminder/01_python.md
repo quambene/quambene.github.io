@@ -16,7 +16,7 @@
 
 ```python
 name = "world"
-print("Hello", name)
+print("Hello ", name)
 print(f"Hello, {name}!")
 print("This %(verb)s a %(noun)s." % {"noun": "test", "verb": "is"})
 print("integer: %d float: %f" % (my_int, my_float))
@@ -31,6 +31,7 @@ x: int = 4 # Assign value (typed)
 x = y = z = 0 # Multiple assignment
 x += 1 # Increment
 x -= 1 # Decrement
+_x = 4 # Suppress 'unused variable' warning
 ```
 
 ### Data types
@@ -83,6 +84,23 @@ and
 or
 not
 
+# Identity operators
+is
+is not
+
+# Membership operators
+in
+not in
+
+# Arithmetic operators
++ # addition
+- # subtraction
+* # multiplication
+/ # division
+** # exponentiation
+% # modulo (remainder)
+// # floor division
+
 # Bitwise operators
 & # AND
 | # OR
@@ -101,7 +119,7 @@ break
 pass
 
 # for loop
-for i in range(10):
+for i in range(4): # [0, 1, 2, 3]
     print(i)
 
 # while loop
