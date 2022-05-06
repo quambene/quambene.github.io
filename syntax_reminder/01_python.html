@@ -153,7 +153,7 @@
 </ul>
 <h3 id="print"><a class="header" href="#print">Print</a></h3>
 <pre><code class="language-python">name = &quot;world&quot;
-print(&quot;Hello&quot;, name)
+print(&quot;Hello &quot;, name)
 print(f&quot;Hello, {name}!&quot;)
 print(&quot;This %(verb)s a %(noun)s.&quot; % {&quot;noun&quot;: &quot;test&quot;, &quot;verb&quot;: &quot;is&quot;})
 print(&quot;integer: %d float: %f&quot; % (my_int, my_float))
@@ -165,6 +165,7 @@ x: int = 4 # Assign value (typed)
 x = y = z = 0 # Multiple assignment
 x += 1 # Increment
 x -= 1 # Decrement
+_x = 4 # Suppress 'unused variable' warning
 </code></pre>
 <h3 id="data-types"><a class="header" href="#data-types">Data types</a></h3>
 <pre><code class="language-python"># Basic types
@@ -211,6 +212,23 @@ and
 or
 not
 
+# Identity operators
+is
+is not
+
+# Membership operators
+in
+not in
+
+# Arithmetic operators
++ # addition
+- # subtraction
+* # multiplication
+/ # division
+** # exponentiation
+% # modulo (remainder)
+// # floor division
+
 # Bitwise operators
 &amp; # AND
 | # OR
@@ -226,7 +244,7 @@ break
 pass
 
 # for loop
-for i in range(10):
+for i in range(4): # [0, 1, 2, 3]
     print(i)
 
 # while loop
