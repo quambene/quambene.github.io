@@ -20,6 +20,8 @@ print("Hello ", name)
 print(f"Hello, {name}!")
 print("This %(verb)s a %(noun)s." % {"noun": "test", "verb": "is"})
 print("integer: %d float: %f" % (my_int, my_float))
+print(f"binary: {4:b}")
+print(f"binary (zero-padded): {4:04b}")
 ```
 
 ### Variables
@@ -54,15 +56,24 @@ x = 0x2a # hex
 x = 0o52 # octal
 
 # String
-len(my_string)
-my_string[start:end] # substring [start:end)
-my_string[-1] # last character
+len(my_str)
+my_str[start:end] # substring [start:end)
+my_str[-1] # last character
 
 # List
-x = ["item1", "item2", "item3"]
-x: List[str] = ["item1", "item2", "item3"] # typed
-x[0:3] # Indexing is inclusive-exclusive
-x[-3:-1] # Negative indexes count from the last item backwards
+my_arr = ["item1", "item2", "item3"]
+my_arr: List[str] = ["item1", "item2", "item3"] # typed
+my_arr[0:3] # Indexing is inclusive-exclusive
+my_arr[-3:-1] # Negative indexes count from the last item backwards
+len(my_arr)
+my_arr.append(value)
+my_arr.remove(value)
+my_arr.insert(index, value)
+my_arr.pop(index)
+my_arr.reverse() # in-place
+reversed(my_arr) # copy
+my_arr.sort() # in-place
+sorted(my_arr) # copy
 
 # Tuple
 x = (1, 2, 3)
