@@ -34,6 +34,11 @@ x = y = z = 0 # Multiple assignment
 x += 1 # Increment
 x -= 1 # Decrement
 _x = 4 # Suppress 'unused variable' warning
+
+# Random number
+random.random() # Random float in [0, 1)
+random.randint(a, b) # Random int in [a, b]
+random.randrange(a, b) # Random int in [a, b)
 ```
 
 ### Data types
@@ -63,6 +68,7 @@ my_str[-1] # last character
 # List
 my_arr = ["item1", "item2", "item3"]
 my_arr: List[str] = ["item1", "item2", "item3"] # typed
+my_arr = [] # empty list
 my_arr[0:3] # Indexing is inclusive-exclusive
 my_arr[-3:-1] # Negative indexes count from the last item backwards
 len(my_arr)
@@ -76,9 +82,11 @@ my_arr.reverse() # in-place
 reversed(my_arr) # copy
 my_arr.sort() # in-place
 sorted(my_arr) # copy
+my_arr[i], my_arr[j] = my_arr[j], my_arr[i] # Swap items
 
 # Tuple
 x = (1, 2, 3)
+x = () # empty tuple
 x: Tuple[int, int, int] = (1, 2, 3) # typed
 
 # Dictionary
