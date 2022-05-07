@@ -66,6 +66,8 @@ my_arr: List[str] = ["item1", "item2", "item3"] # typed
 my_arr[0:3] # Indexing is inclusive-exclusive
 my_arr[-3:-1] # Negative indexes count from the last item backwards
 len(my_arr)
+min(my_arr)
+max(my_arr)
 my_arr.append(value)
 my_arr.remove(value)
 my_arr.insert(index, value)
@@ -82,6 +84,29 @@ x: Tuple[int, int, int] = (1, 2, 3) # typed
 # Dictionary
 x = {"key1": 1, "key2": 2}
 x: Dict[int, int] = {"key1": 1, "key2": 2} # typed
+
+# Set
+x = {"foo", "bar"}
+x: Set[str] = {"foo", "bar"} # typed
+x = set() # empty set
+x.add(el) # Add element to set
+x.remote(el) # Remove element
+x.discard(el) # Remove element (fail quietly)
+x.clear() # Removes all elements
+x1 | x2 # union
+x1.union(x2) # union
+x1 & x2 # intersection
+x1.intersection(x2) # intersection
+x1 - x2 # difference
+x1.difference(x2) # difference
+x1 ^ x2 # symmetric difference / disjunctive union
+x1.symmetric_difference(x2) # symmetric difference / disjunctive union
+x1.isdisjoint(x2) # check if disjoint sets
+x1 <= x2 # check if subset
+x1.issubset(x2) # check if subset
+x1 < x2 # check if proper subset
+x1 >= x2 # check if superset
+x1.issuperset(x2) # check if superset
 
 # Option
 x: Optional[str] = some_function()
