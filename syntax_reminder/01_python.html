@@ -168,6 +168,11 @@ x = y = z = 0 # Multiple assignment
 x += 1 # Increment
 x -= 1 # Decrement
 _x = 4 # Suppress 'unused variable' warning
+
+# Random number
+random.random() # Random float in [0, 1)
+random.randint(a, b) # Random int in [a, b]
+random.randrange(a, b) # Random int in [a, b)
 </code></pre>
 <h3 id="data-types"><a class="header" href="#data-types">Data types</a></h3>
 <pre><code class="language-python"># Basic types
@@ -176,6 +181,8 @@ x: float
 x: complex
 x: str
 x: bool
+
+type(x) # Check type
 
 from typing import Any
 x: Any
@@ -188,15 +195,27 @@ x = 0o52 # octal
 
 # String
 len(my_str)
-my_str[start:end] # substring [start:end)
+my_str[0] # first character
 my_str[-1] # last character
+my_str[start:end] # substring [start, end)
+s1 + s2 # Concatenate strings
+&quot; &quot;.join([s1, s2]) # Concatenate with separator
+my_str.split(&quot; &quot;, -1) # Split blank-separated string into a list
+list(my_string) # Convert string to list of characters
+4 * &quot;01&quot; # Concatenate string multiple times
+if my_substr in my_str # check if string contains substring 
+my_str.lower() # lower case string
+my_str.upper() # upper case string
 
-# List
+# List (dynamic array)
 my_arr = [&quot;item1&quot;, &quot;item2&quot;, &quot;item3&quot;]
 my_arr: List[str] = [&quot;item1&quot;, &quot;item2&quot;, &quot;item3&quot;] # typed
+my_arr = [] # empty list
 my_arr[0:3] # Indexing is inclusive-exclusive
 my_arr[-3:-1] # Negative indexes count from the last item backwards
 len(my_arr)
+min(my_arr)
+max(my_arr)
 my_arr.append(value)
 my_arr.remove(value)
 my_arr.insert(index, value)
@@ -205,17 +224,66 @@ my_arr.reverse() # in-place
 reversed(my_arr) # copy
 my_arr.sort() # in-place
 sorted(my_arr) # copy
+my_arr[i], my_arr[j] = my_arr[j], my_arr[i] # Swap items
 
 # Tuple
-x = (1, 2, 3)
-x: Tuple[int, int, int] = (1, 2, 3) # typed
+my_tup = (1, 2, 3)
+my_tup = () # empty tuple
+my_tup: Tuple[int, int, int] = (1, 2, 3) # typed
 
 # Dictionary
-x = {&quot;key1&quot;: 1, &quot;key2&quot;: 2}
-x: Dict[int, int] = {&quot;key1&quot;: 1, &quot;key2&quot;: 2} # typed
+my_dict = {&quot;key1&quot;: 1, &quot;key2&quot;: 2}
+my_dict: Dict[int, int] = {&quot;key1&quot;: 1, &quot;key2&quot;: 2} # typed
+
+# Set
+my_set = {&quot;foo&quot;, &quot;bar&quot;}
+my_set: Set[str] = {&quot;foo&quot;, &quot;bar&quot;} # typed
+my_set = set() # empty set
+my_set.add(el) # Add element to set
+my_set.remote(el) # Remove element
+my_set.discard(el) # Remove element (fail quietly)
+my_set.clear() # Removes all elements
+x1 | x2 # union
+x1.union(x2) # union
+x1 &amp; x2 # intersection
+x1.intersection(x2) # intersection
+x1 - x2 # difference
+x1.difference(x2) # difference
+x1 ^ x2 # symmetric difference / disjunctive union
+x1.symmetric_difference(x2) # symmetric difference / disjunctive union
+x1.isdisjoint(x2) # check if disjoint sets
+x1 &lt;= x2 # check if subset
+x1.issubset(x2) # check if subset
+x1 &lt; x2 # check if proper subset
+x1 &gt;= x2 # check if superset
+x1.issuperset(x2) # check if superset
+
+# Bytearray
+my_bytearray = bytearray(4) # empty bytearray of bytes
+my_bytearray = bytearray(my_str, &quot;utf-8&quot;) # Convert string to bytearray
+
+# (dynamic) Array
+import array as arr
+my_arr = arr.array('i', [1, 2, 3]) # array of unsigned integers
+
+# Linked list / double-ended queue
+from collections import deque
+llist = deque() # empty linked list
+llist = deque('abc')
+
+# Binary trees
+from binarytree import Node
+
+# Binary search
+from bisect import bisect_left
 
 # Option
+from typing import Optional
 x: Optional[str] = some_function()
+
+# Callback
+from typing import Callable
+x: Callable[[int], int]
 </code></pre>
 <h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
 <pre><code class="language-python"># Logical operators
