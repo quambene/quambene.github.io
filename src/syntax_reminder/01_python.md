@@ -51,12 +51,10 @@ x: complex
 x: str
 x: bool
 
+type(x) # Check type
+
 from typing import Any
 x: Any
-
-# Callback
-from typing import Callable
-x: Callable[[int], int]
 
 # Integer
 x = 42 # decimal
@@ -66,10 +64,19 @@ x = 0o52 # octal
 
 # String
 len(my_str)
-my_str[start:end] # substring [start:end)
+my_str[0] # first character
 my_str[-1] # last character
+my_str[start:end] # substring [start, end)
+s1 + s2 # Concatenate strings
+" ".join([s1, s2]) # Concatenate with separator
+my_str.split(" ", -1) # Split blank-separated string into a list
+list(my_string) # Convert string to list of characters
+4 * "01" # Concatenate string multiple times
+if my_substr in my_str # check if string contains substring 
+my_str.lower() # lower case string
+my_str.upper() # upper case string
 
-# List
+# List (dynamic array)
 my_arr = ["item1", "item2", "item3"]
 my_arr: List[str] = ["item1", "item2", "item3"] # typed
 my_arr = [] # empty list
@@ -89,22 +96,22 @@ sorted(my_arr) # copy
 my_arr[i], my_arr[j] = my_arr[j], my_arr[i] # Swap items
 
 # Tuple
-x = (1, 2, 3)
-x = () # empty tuple
-x: Tuple[int, int, int] = (1, 2, 3) # typed
+my_tup = (1, 2, 3)
+my_tup = () # empty tuple
+my_tup: Tuple[int, int, int] = (1, 2, 3) # typed
 
 # Dictionary
-x = {"key1": 1, "key2": 2}
-x: Dict[int, int] = {"key1": 1, "key2": 2} # typed
+my_dict = {"key1": 1, "key2": 2}
+my_dict: Dict[int, int] = {"key1": 1, "key2": 2} # typed
 
 # Set
-x = {"foo", "bar"}
-x: Set[str] = {"foo", "bar"} # typed
-x = set() # empty set
-x.add(el) # Add element to set
-x.remote(el) # Remove element
-x.discard(el) # Remove element (fail quietly)
-x.clear() # Removes all elements
+my_set = {"foo", "bar"}
+my_set: Set[str] = {"foo", "bar"} # typed
+my_set = set() # empty set
+my_set.add(el) # Add element to set
+my_set.remote(el) # Remove element
+my_set.discard(el) # Remove element (fail quietly)
+my_set.clear() # Removes all elements
 x1 | x2 # union
 x1.union(x2) # union
 x1 & x2 # intersection
@@ -120,8 +127,32 @@ x1 < x2 # check if proper subset
 x1 >= x2 # check if superset
 x1.issuperset(x2) # check if superset
 
+# Bytearray
+my_bytearray = bytearray(4) # empty bytearray of bytes
+my_bytearray = bytearray(my_str, "utf-8") # Convert string to bytearray
+
+# (dynamic) Array
+import array as arr
+my_arr = arr.array('i', [1, 2, 3]) # array of unsigned integers
+
+# Linked list / double-ended queue
+from collections import deque
+llist = deque() # empty linked list
+llist = deque('abc')
+
+# Binary trees
+from binarytree import Node
+
+# Binary search
+from bisect import bisect_left
+
 # Option
+from typing import Optional
 x: Optional[str] = some_function()
+
+# Callback
+from typing import Callable
+x: Callable[[int], int]
 ```
 
 ### Operators
