@@ -54,6 +54,10 @@ x: bool
 from typing import Any
 x: Any
 
+# Callback
+from typing import Callable
+x: Callable[[int], int]
+
 # Integer
 x = 42 # decimal
 x = 0b101010 # binary
