@@ -107,8 +107,10 @@ my_tup = () # empty tuple
 my_tup: Tuple[int, int, int] = (1, 2, 3) # typed
 
 # Dictionary
-my_dict = {"key1": 1, "key2": 2}
-my_dict: Dict[int, int] = {"key1": 1, "key2": 2} # typed
+my_dict = {"key1": "val1", "key2": "val2"}
+my_dict: Dict[str, str] = {"key1": "val1", "key2": "val2"} # typed
+my_dict["key3"] = "val3" # Add item
+my_dict.update({"key3": "val4"}) # Update item
 
 # Set
 my_set = {"foo", "bar"}
