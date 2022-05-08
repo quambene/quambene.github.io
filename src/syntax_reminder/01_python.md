@@ -61,6 +61,12 @@ x = 42 # decimal
 x = 0b101010 # binary
 x = 0x2a # hex
 x = 0o52 # octal
+bin(42) # convert to binary number
+hex(42) # convert to hex number
+oct(42) # convert to octal number
+ord('a') # convert character to unicode
+chr(97) # convert unicode to character
+int("101010", 2) # convert binary to decimal number
 
 # String
 len(my_str)
@@ -126,6 +132,8 @@ x1.issubset(x2) # check if subset
 x1 < x2 # check if proper subset
 x1 >= x2 # check if superset
 x1.issuperset(x2) # check if superset
+enumerate(my_set) # returns enumerated iterator
+list(my_set) # Convert set to list
 
 # Bytearray
 my_bytearray = bytearray(4) # empty bytearray of bytes
