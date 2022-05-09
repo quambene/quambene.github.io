@@ -201,10 +201,14 @@ not in
 # Bitwise operators
 & # AND
 | # OR
-~ # NOT
 ^ # XOR
+~ # NOT
 >> # right shift
 << # left shift
+(value >> index) & 1 # get bit
+value & ~(1 << index) # set bit to 0
+value | (1 << index) # set bit to 1
+value ^ (1 << index) # swap bit
 ```
 
 ### Control flow
@@ -260,7 +264,7 @@ await my_asnyc_func()
 import asyncio
 async def main():
     # ...
-    
+
 asyncio.run(main())
 ```
 
