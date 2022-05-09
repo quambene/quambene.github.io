@@ -35,6 +35,12 @@ x += 1 # Increment
 x -= 1 # Decrement
 _x = 4 # Suppress 'unused variable' warning
 
+# Destructuring assignments
+x, y = (10, 20)
+x, y = [10, 20]
+x, y = "hi"
+key, val = my_dict.items()
+
 # Random number
 random.random() # Random float in [0, 1)
 random.randint(a, b) # Random int in [a, b]
@@ -111,6 +117,7 @@ my_dict = {"key1": "val1", "key2": "val2"}
 my_dict: Dict[str, str] = {"key1": "val1", "key2": "val2"} # typed
 my_dict["key3"] = "val3" # Add item
 my_dict.update({"key3": "val4"}) # Update item
+my_dict.items() # return key-value pairs
 
 # Set
 my_set = {"foo", "bar"}
