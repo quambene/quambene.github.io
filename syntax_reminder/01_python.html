@@ -150,6 +150,7 @@
 <li><a href="#classes">Classes</a></li>
 <li><a href="#error-handling">Error handling</a></li>
 <li><a href="#testing">Testing</a></li>
+<li><a href="#modules">Modules</a></li>
 </ul>
 <h3 id="print"><a class="header" href="#print">Print</a></h3>
 <pre><code class="language-python">name = &quot;world&quot;
@@ -446,6 +447,14 @@ pytest -v
 pytest -v *.py
 pytest -v -m unit *.py
 pytest -v -m integration *.py
+</code></pre>
+<h3 id="modules"><a class="header" href="#modules">Modules</a></h3>
+<p><code>my_module.py</code></p>
+<pre><code class="language-python">def my_func():
+    pass
+</code></pre>
+<p><code>main.py</code></p>
+<pre><code class="language-python">from my_module import my_func
 </code></pre>
 
                     </main>
