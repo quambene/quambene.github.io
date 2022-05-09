@@ -329,10 +329,14 @@ not in
 # Bitwise operators
 &amp; # AND
 | # OR
-~ # NOT
 ^ # XOR
+~ # NOT
 &gt;&gt; # right shift
 &lt;&lt; # left shift
+(value &gt;&gt; index) &amp; 1 # get bit
+value &amp; ~(1 &lt;&lt; index) # set bit to 0
+value | (1 &lt;&lt; index) # set bit to 1
+value ^ (1 &lt;&lt; index) # swap bit
 </code></pre>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
 <pre><code class="language-python"># Loop control statements
@@ -382,7 +386,7 @@ await my_asnyc_func()
 import asyncio
 async def main():
     # ...
-    
+
 asyncio.run(main())
 </code></pre>
 <h3 id="classes"><a class="header" href="#classes">Classes</a></h3>
