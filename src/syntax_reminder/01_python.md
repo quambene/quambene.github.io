@@ -11,6 +11,7 @@
 - [Classes](#classes)
 - [Error handling](#error-handling)
 - [Testing](#testing)
+- [Modules](#modules)
 
 ### Print
 
@@ -335,4 +336,19 @@ pytest -v
 pytest -v *.py
 pytest -v -m unit *.py
 pytest -v -m integration *.py
+```
+
+### Modules
+
+`my_module.py`
+
+``` python
+def my_func():
+    pass
+```
+
+`main.py`
+
+``` python
+from my_module import my_func
 ```
