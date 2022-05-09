@@ -249,6 +249,19 @@ add_one = lambda x: x + 1
 @my_decorator
 def my_function():
     return
+
+# Asynchronous function
+async def my_async_func():
+    # ...
+
+await my_asnyc_func()
+
+# Event loop
+import asyncio
+async def main():
+    # ...
+    
+asyncio.run(main())
 ```
 
 ### Classes
