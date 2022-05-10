@@ -278,7 +278,7 @@ class MyClass:
         self.my_instance_var = my_instance_var
 
     def my_function(self):
-        pass
+        # ...
 
 # Instantiation
 my_class = MyClass()
@@ -288,7 +288,7 @@ my_class.my_instance_var
 
 # Inheritance
 class MyDerivedClass(MyBaseClass):
-    pass
+    # ...
 
 # Abstract class
 from abc import ABC, abstractmethod
@@ -296,7 +296,17 @@ from abc import ABC, abstractmethod
 class MyAbstractClass(ABC)
     @abstractmethod
     def my_abstract_method(self):
-        pass
+        # ...
+
+# Operator and function overloading
+class MyClass:
+    # Implement + operator
+    def __add__(self, other):
+        # ...
+
+    # Implement len() function
+    def __len__(self):
+        # ...
 
 # Data class
 @dataclass
