@@ -58,10 +58,10 @@ ${my_var1?my_var2} # use my_var2 if my_var1 is null
 a{d,c,b}e # brace expansion: "ade ace abe"
 
 # environment variable (export to all child processes created from that shell)
-export my_var=my_val
+export MY_VAR=my_val
 source .env
 
-my_var=my_val
+MY_VAR=my_val
 set -a && source .env && set +a
 
 # positional parameters
