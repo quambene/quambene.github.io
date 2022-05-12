@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD001 -->
+
 # Git
 
 - [Subcommands](#subcommands)
@@ -35,7 +37,7 @@
 - [Repo size](#repo-size)
 - [Pull request (PR)](#pull-request-pr)
 
-## Subcommands
+### Subcommands
 
 ``` bash
 git status          # Show current branch
@@ -62,7 +64,7 @@ git diff            # Show diffs
 git config          # Get and set repository or global options
 ```
 
-## Status
+### Status
 
 Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git.
 
@@ -70,7 +72,7 @@ Displays paths that have differences between the index file and the current HEAD
 git status
 ```
 
-## Init
+### Init
 
 ``` bash
 git init # Create an empty Git repository or reinitialize an existing one
@@ -79,7 +81,7 @@ git init --shared=group
 git init --shared=0NNN # e.g. --shared=0660
 ```
 
-### Init remote repo
+#### Init remote repo
 
 ``` bash
 sudo mkdir <my_dir>.git # Create directory
@@ -89,7 +91,7 @@ cd <my_dir>.git
 git init --bare
 ```
 
-## Clone
+### Clone
 
 ``` bash
 git clone user@host:path # Clone remote repo
@@ -99,7 +101,7 @@ git clone --depth <N> https://<host_name>/<repo>.git # Clone commit history with
 git clone --mirror <repo-url> temp-dir # Copy full git repo
 ```
 
-## Remote
+### Remote
 
 ``` bash
 git remote -v # Show remote repos
@@ -112,7 +114,7 @@ git remote add origin git@<host_name>:<repo_owner>/<repo_name>.git # SSH
 git remote add origin https://<host_name>/<repo_owner>/<repo_name>.git # HTTPS
 ```
 
-## Checkout
+### Checkout
 
 ``` bash
 git checkout <branch_name> # Switch to branch
@@ -120,13 +122,13 @@ git checkout -b <branch_name> # Create and switch to new branch
 git checkout <commit_id> # Switch to commit
 ```
 
-## Switch
+### Switch
 
 ``` bash
 git switch <branch_name> # Switch branch
 ```
 
-## Branch
+### Branch
 
 ``` bash
 git branch # Show branches
@@ -144,7 +146,7 @@ git branch --merged | grep -v \* | xargs git branch -D # Delete all local branch
 git branch --contains <branch_name> # Check whether a branch has been merged into another branch
 ```
 
-## Add
+### Add
 
 ``` bash
 git add <my_file> # Stage my_file
@@ -153,7 +155,7 @@ git add . # doesn't stage any 'rm' actions
 git add -u # doesn't add any new files
 ```
 
-## Commit
+### Commit
 
 ``` bash
 git commit --amend # Edit commit message; amend recent commit
@@ -162,7 +164,7 @@ git commit -a # Combine git add and commit
 git commit -am "My message" # Add and commit
 ```
 
-## Push
+### Push
 
 ``` bash
 git push # Push changes to the remote repo
@@ -172,7 +174,7 @@ git push -u origin <branch_name> # Set up local branch <branch_name> to track re
 git push --force # Overwrite repo
 ```
 
-### Push existing project
+#### Push existing project
 
 ``` bash
 git init
@@ -182,7 +184,7 @@ git remote add origin git@<host_name>:<account_name>/<repo_name>.git
 git push -u origin master
 ```
 
-## Fetch
+### Fetch
 
 ``` bash
 git fetch
@@ -190,7 +192,7 @@ git fetch <branch> # Download new data from remote branch
 git fetch -p # Prune remote branches
 ```
 
-## Merge
+### Merge
 
 ``` bash
 git merge <branch_name> # Merge branch_name into current branch
@@ -198,7 +200,7 @@ git merge --no-ff --no-commit <branch_name> # --no-ff flag for constructing a me
 git merge --abort # Equivalent to git reset --merge when MERGE_HEAD is present; MERGE_HEAD is present when a merge is in progress
 ```
 
-### Merge feature branch
+#### Merge feature branch
 
 ``` bash
 git checkout master
@@ -208,14 +210,14 @@ git commit # no commit message required; commit message "Merge branch 'branch_na
 git push origin master
 ```
 
-## Pull
+### Pull
 
 ``` bash
 git pull # git fetch plus either git rebase or git merge
 git pull origin <branch_name>
 ```
 
-## Reset
+### Reset
 
 ``` bash
 git reset # Remove files from the current index
@@ -226,7 +228,7 @@ git reset --hard HEAD~ # going back to the commit before HEAD
 git reset --hard HEAD~2 # going back two commits before HEAD
 ```
 
-## Revert
+### Revert
 
 ``` bash
 # Revert (published commit)
@@ -240,26 +242,26 @@ git revert --no-commit <commit_id>
 git commit -m "My message"
 ```
 
-## Stash
+### Stash
 
 ``` bash
 git stash # Saves local modifications
 git stash pop # Reverts local modifications
 ```
 
-## Clean
+### Clean
 
 ``` bash
 git clean -f # Remove untracked files from the working tree
 ```
 
-## Cherry-pick
+### Cherry-pick
 
 ``` bash
 git cherry-pick <commit_id> # Apply the changes introduced by some existing commit
 ```
 
-## Tag
+### Tag
 
 ``` bash
 git tag v1.0.0 # Tag version
@@ -273,7 +275,7 @@ git push --tags
 git checkout tags/<tag_name> -b <branch_name> # Check out specific tag
 ```
 
-### Rename tag
+#### Rename tag
 
 ``` bash
 git tag <new_tag> <old_tag>
@@ -281,7 +283,7 @@ git tag -d <old_tag>
 git push origin <new_tag> :<old_tag>
 ```
 
-## Worktree
+### Worktree
 
 ``` bash
 git worktree add <folder> <branch> # Add worktree
@@ -289,7 +291,7 @@ git worktree list # List all worktrees
 git worktree remove <folder> # Remove worktree
 ```
 
-## Submodule
+### Submodule
 
 ``` bash
 git submodule add git@<host_name>:<repo_owner>/<repo_name>.git <my_submodule>
@@ -304,13 +306,13 @@ git submodule update --recursive --remote # Update remote branches
 git submodule foreach git pull origin master
 ```
 
-## Show
+### Show
 
 ``` bash
 git show <commit_id> # Show commit
 ```
 
-## Log
+### Log
 
 ``` bash
 git log
@@ -323,7 +325,7 @@ git log origin/master
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
 ```
 
-## Diff
+### Diff
 
 ``` bash
 git difftool --tool-help # Help
@@ -336,7 +338,7 @@ git difftool --tool=vscode <branch_1> <branch_2>
 git difftool HEAD <commit-id> -- <file-name>
 ```
 
-### Compare branches
+#### Compare branches
 
 ``` bash
 git diff master # Compare to branch master and list differences
@@ -348,7 +350,7 @@ git log <branch1>..<branch_2> # List commit differences
 git log master..feature −−oneline
 ```
 
-## Config
+### Config
 
 ``` bash
 git config --global user.name "my_username" # Set username
@@ -356,7 +358,7 @@ git config --global user.email "my_email" # Set email
 git config --list # Check settings
 ```
 
-## Gitignore
+### Gitignore
 
 ``` bash
 # Exclude from .gitignore
@@ -369,13 +371,13 @@ git rm -rf --cached . # removes all files from the repository
 git add . # adds them back
 ```
 
-## Repo size
+### Repo size
 
 ``` bash
 du -hs .git
 ```
 
-## Pull request (PR)
+### Pull request (PR)
 
 ``` bash
 git clone git@<host_name>:<repo_owner>/<repo_name>.git
