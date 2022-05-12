@@ -29,3 +29,4 @@ Syntax reminder for
 - [React](/syntax_reminder/19_react.md)
 - [Git](/syntax_reminder/20_git.md)
 - [Fortran](/syntax_reminder/21_fortran.md)
+- [Regex](/syntax_reminder/22_regex.md)
