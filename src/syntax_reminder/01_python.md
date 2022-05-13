@@ -353,7 +353,6 @@ def test_my_func2():
 @pytest.mark.integration
 def test_my_func3():
     assert my_func() == 4
-
 ```
 
 ``` bash
