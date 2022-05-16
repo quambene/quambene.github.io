@@ -6,7 +6,7 @@
 Python, Rust, C/C++, TypeScript, JavaScript, Dart, Solidity
 
 **Web & Mobile Frameworks**<br/>
-Angular, Vue, Nuxt, Flutter, Django
+Angular, Vue, Nuxt, Django, Flutter
 
 **UX/UI Design**<br/>
 HTML, CSS, Widgets (Flutter), Figma, Inkscape, GIMP
