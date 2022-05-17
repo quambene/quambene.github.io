@@ -170,13 +170,14 @@ println!(&quot;:#?&quot;, my_struct); // pretty-print structs
 <span class="boring">}
 </span></code></pre></pre>
 <h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
-<p>Ownership rules:</p>
+<p><strong>Reference</strong>: refer to some value without taking ownership of it</p>
+<p><strong>Ownership rules</strong>:</p>
 <ul>
 <li>each value in Rust has a variable that’s called its owner</li>
 <li>there can only be one owner at a time</li>
 <li>when the owner goes out of scope, the value will be dropped</li>
 </ul>
-<p>Borrowing rules:</p>
+<p><strong>Borrowing rules</strong>:</p>
 <ul>
 <li>at any given time, you can have either one mutable reference or any number of immutable references</li>
 <li>references must always be valid</li>
@@ -191,7 +192,7 @@ let x: i32 = 4; // assign value (typed)
 let _x = 4; // compiler won't warn about variable being unused
 let x = x + 1; // shadowing
 let mut x; // mutable
-let x: &amp;str; // reference: refer to some value without taking ownership of it
+let x: &amp;str; // reference
 *x // dereferencing
 let x: &amp;'a str; // reference with an explicit lifetime
 let x: &amp;'a mut str; // mutable reference with an explicit lifetime
