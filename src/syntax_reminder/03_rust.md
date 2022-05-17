@@ -31,12 +31,18 @@ println!(":#?", my_struct); // pretty-print structs
 
 ### Variables
 
-```rust
-/*  Ownership rules:
-    - each value in Rust has a variable that’s called its owner
-    - there can only be one owner at a time
-    - when the owner goes out of scope, the value will be dropped */
+Ownership rules:
 
+- each value in Rust has a variable that’s called its owner
+- there can only be one owner at a time
+- when the owner goes out of scope, the value will be dropped
+
+Borrowing rules:
+
+- at any given time, you can have either one mutable reference or any number of immutable references
+- references must always be valid
+
+```rust
 let x; // declare
 x = 4; // assign value
 let x = 4;
