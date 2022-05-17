@@ -17,7 +17,8 @@
 - [Crates](#crates)
 - [Packages](#packages)
 - [External packages](#external-packages-cargo.toml)
-- [Cargo](#cargo-package-manager)
+- [Cargo (package manager)](#cargo-package-manager)
+- [Rustup (toolchain manager)](#rustup-toolchain-manager)
 
 ### Print
 
@@ -43,12 +44,12 @@ let x: i32 = 4; // assign value (typed)
 let _x = 4; // compiler won't warn about variable being unused
 let x = x + 1; // shadowing
 let mut x; // mutable
-let x: &i32; // reference: refer to some value without taking ownership of it
+let x: &str; // reference: refer to some value without taking ownership of it
 *x // dereferencing
-let x: &'a i32; // reference with an explicit lifetime
-let x: &'a mut i32; // mutable reference with an explicit lifetime
-let x: *const i32; // const pointer
-let x: *mut i32; // // mut pointer
+let x: &'a str; // reference with an explicit lifetime
+let x: &'a mut str; // mutable reference with an explicit lifetime
+let x: *const str; // const pointer
+let x: *mut str; // // mut pointer
 const MYCONST: f32 = 3.14; // immutable value
 static MYSTATIC: &str = "Rust"; // mutable variable with static lifetime
 let r#fn = "name"; // raw identifier for reserved keywords
@@ -425,4 +426,22 @@ cargo test
 cargo build # Compile source code
 cargo build --release
 cargo clean
+```
+
+### Rustup (toolchain manager)
+
+``` bash
+rustup --version
+rustup show
+rustup self update # Update rustup
+rustup update # Update rust compiler
+rustup update stable # Update stable rust compiler
+rustup toolchain list # List installed toolchains
+rustup toolchain install X.X.X # Install specific Rust version
+rustup toolchain uninstall X.X.X # Uninstall specific Rust version
+rustup toolchain install nightly # Install nightly toolchain
+rustup default stable # Set default toolchain
+rustup override set X.X.X # Set specific Rust version
+rustup override set stable # Switch to stable toolchain
+rustup override set nightly # Switch to nightly toolchain
 ```
