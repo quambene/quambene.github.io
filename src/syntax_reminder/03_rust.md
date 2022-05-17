@@ -52,11 +52,11 @@ let x: i32 = 4; // assign value (typed)
 let _x = 4; // compiler won't warn about variable being unused
 let x = x + 1; // shadowing
 let mut x; // mutable
-let x: &str; // reference
-*x // dereferencing
+let x_borrowed = &x; // reference
+let x_owned = *x; // dereferencing
 let x: &'a str; // reference with an explicit lifetime
 let x: &'a mut str; // mutable reference with an explicit lifetime
-let x: *const str; // const pointer
+let x: *const str; // const pointer (the asterisk isn’t the dereference operator; it’s part of the type name)
 let x: *mut str; // // mut pointer
 const MYCONST: f32 = 3.14; // immutable value
 static MYSTATIC: &str = "Rust"; // mutable variable with static lifetime
