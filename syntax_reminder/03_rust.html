@@ -154,7 +154,6 @@
 <li><a href="#testing">Testing</a></li>
 <li><a href="#modules">Modules</a></li>
 <li><a href="#crates">Crates</a></li>
-<li><a href="#packages">Packages</a></li>
 <li><a href="#external-packages-cargo.toml">External packages</a></li>
 <li><a href="#cargo-package-manager">Cargo (package manager)</a></li>
 <li><a href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></li>
@@ -544,13 +543,10 @@ foo/bar.rs // submodule
 <span class="boring">}
 </span></code></pre></pre>
 <h3 id="crates"><a class="header" href="#crates">Crates</a></h3>
-<pre><code class="language-bash"># A tree of modules that produces a library or executable
-cargo new --lib my-lib # create library crate
+<p>Crate: a tree of modules that produces a library or executable</p>
+<pre><code class="language-bash">cargo init # create binary crate in current directory
 cargo new --bin my-bin # create binary crate
-</code></pre>
-<h3 id="packages"><a class="header" href="#packages">Packages</a></h3>
-<pre><code class="language-bash"># A Cargo feature that lets you build, test, and share crates
-cargo new my-project
+cargo new --lib my-lib # create library crate
 </code></pre>
 <h3 id="external-packages-cargotoml"><a class="header" href="#external-packages-cargotoml">External packages (Cargo.toml)</a></h3>
 <pre><code class="language-toml">[dependencies]
