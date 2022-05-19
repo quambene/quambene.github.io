@@ -15,7 +15,6 @@
 - [Testing](#testing)
 - [Modules](#modules)
 - [Crates](#crates)
-- [Packages](#packages)
 - [External packages](#external-packages-cargo.toml)
 - [Cargo (package manager)](#cargo-package-manager)
 - [Rustup (toolchain manager)](#rustup-toolchain-manager)
@@ -399,17 +398,12 @@ foo/bar.rs // submodule
 
 ### Crates
 
+Crate: a tree of modules that produces a library or executable
+
 ```bash
-# A tree of modules that produces a library or executable
-cargo new --lib my-lib # create library crate
+cargo init # create binary crate in current directory
 cargo new --bin my-bin # create binary crate
-```
-
-### Packages
-
-```bash
-# A Cargo feature that lets you build, test, and share crates
-cargo new my-project
+cargo new --lib my-lib # create library crate
 ```
 
 ### External packages (Cargo.toml)
