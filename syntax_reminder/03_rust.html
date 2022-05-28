@@ -291,10 +291,17 @@ struct User {
     email: &amp;str,
 }
 
-// Smart pointer (Heap allocation)
-Box&lt;T&gt; // pointer type for heap allocation
-Rc&lt;T&gt; // single-threaded reference-counting pointer (reference counted)
-Arc&lt;T&gt; // thread-safe reference-counting pointer (atomically reference counted)
+// Smart pointer (heap allocation)
+Box&lt;T&gt; // exclusive ownership; pointer type for heap allocation
+Rc&lt;T&gt; // shared ownership; single-threaded reference-counting pointer (reference counted)
+Arc&lt;T&gt; // shared ownership; thread-safe reference-counting pointer (atomically reference counted)
+
+// Mutex (mutual exclusion)
+Mutex&lt;T&gt; // thread-safe mutability
+
+// Internal mutability
+Cell&lt;T&gt;
+RefCell&lt;T&gt;
 <span class="boring">}
 </span></code></pre></pre>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
