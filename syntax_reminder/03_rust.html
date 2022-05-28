@@ -402,15 +402,17 @@ impl&lt;T&gt; MyGenericStruct&lt;T&gt; {
 </span><span class="boring">fn main() {
 </span>// A collection of methods defined for an unknown type
 trait MyTrait {
+    type MyAssociatedType;
+
     fn new(name: &amp;'static str) -&gt; Self;
-    fn my_method(&amp;self) -&gt; String;
+    fn my_method(&amp;self, &amp;Self::MyAssociatedType) -&gt; String;
     fn default_method(&amp;self) {
         // ...
     };
 }
 
 impl MyTrait for String {
-    fn my_method(&amp;self) -&gt; String { format!(&quot;string: {}&quot;, *self)
+    fn my_method(&amp;self) -&gt; String { format!(&quot;string: {}&quot;, *self) }
 }
 
 impl MyTrait for u8 {
