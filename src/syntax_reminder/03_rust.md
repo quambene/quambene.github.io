@@ -150,10 +150,17 @@ struct User {
     email: &str,
 }
 
-// Smart pointer (Heap allocation)
-Box<T> // pointer type for heap allocation
-Rc<T> // single-threaded reference-counting pointer (reference counted)
-Arc<T> // thread-safe reference-counting pointer (atomically reference counted)
+// Smart pointer (heap allocation)
+Box<T> // exclusive ownership; pointer type for heap allocation
+Rc<T> // shared ownership; single-threaded reference-counting pointer (reference counted)
+Arc<T> // shared ownership; thread-safe reference-counting pointer (atomically reference counted)
+
+// Mutex (mutual exclusion)
+Mutex<T> // thread-safe mutability
+
+// Internal mutability
+Cell<T>
+RefCell<T>
 ```
 
 ### Control flow
