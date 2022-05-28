@@ -257,15 +257,17 @@ impl<T> MyGenericStruct<T> {
 ```rust
 // A collection of methods defined for an unknown type
 trait MyTrait {
+    type MyAssociatedType;
+
     fn new(name: &'static str) -> Self;
-    fn my_method(&self) -> String;
+    fn my_method(&self, &Self::MyAssociatedType) -> String;
     fn default_method(&self) {
         // ...
     };
 }
 
 impl MyTrait for String {
-    fn my_method(&self) -> String { format!("string: {}", *self)
+    fn my_method(&self) -> String { format!("string: {}", *self) }
 }
 
 impl MyTrait for u8 {
