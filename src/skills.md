@@ -11,14 +11,17 @@ Angular, Vue, Nuxt, Django, Flutter
 **UX/UI Design**<br/>
 HTML, CSS, Widgets (Flutter), Figma, Inkscape, GIMP
 
-**Databases & Spreadsheets**<br/>
-SQL, Postgres, SQLite, LibreOffice Base, LibreOffice Calc, Microsoft Access, Microsoft Excel
+**Databases**<br/>
+SQL, Postgres, SQLite
 
 **Server & Cloud Computing**<br/>
 Debian, Ubuntu, Nginx, AWS, gcloud
 
 **Linux**<br/>
 Bash, Git, Docker, Qemu
+
+**Spreadsheets**<br/>
+LibreOffice Base, LibreOffice Calc, Microsoft Access, Microsoft Excel
 
 **Machine Learning**<br/>
 Labeling of data, training of neural network, PyTorch, NumPy, Pandas
