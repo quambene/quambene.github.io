@@ -2,7 +2,7 @@
 
 # About
 
-Working as Full Stack Developer. Interested in Rust, Machine Learning, and Computer Vision. [More](/skills.md) about my expertise.
+Full Stack Developer with experience in backend and open-source development using Rust. [More](/skills.md) about my expertise.
 
 ## Contact
 
