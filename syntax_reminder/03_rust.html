@@ -505,6 +505,8 @@ fn read_username_from_file() -&gt; Result&lt;String, io::Error&gt; {
 </span>// Unit tests
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
     fn my_unit_test() {
         let my_res = my_add_function(1, 2);
