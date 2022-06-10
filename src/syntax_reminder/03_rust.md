@@ -360,6 +360,8 @@ fn read_username_from_file() -> Result<String, io::Error> {
 // Unit tests
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
     fn my_unit_test() {
         let my_res = my_add_function(1, 2);
