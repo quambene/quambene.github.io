@@ -151,16 +151,15 @@ struct User {
 }
 
 // Smart pointer (heap allocation)
-Box<T> // exclusive ownership; pointer type for heap allocation
-Rc<T> // shared ownership; single-threaded reference-counting pointer (reference counted)
-Arc<T> // shared ownership; thread-safe reference-counting pointer (atomically reference counted)
+Box<T> // exclusive ownership
+Rc<T> // shared ownership (reference counted)
+Arc<T> // shared ownership (atomically reference counted)
 
-// Mutex (mutual exclusion)
-Mutex<T> // thread-safe mutability
-
-// Internal mutability
+// Interior mutability
 Cell<T>
 RefCell<T>
+Mutex<T> // thread-safe
+RwLock<T> // thread-safe
 ```
 
 ### Control flow
