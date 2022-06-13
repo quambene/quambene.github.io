@@ -17,7 +17,7 @@ SQL, Postgres, SQLite
 **Server & Cloud Computing**<br/>
 Debian, Ubuntu, Nginx, AWS, gcloud
 
-**Linux**<br/>
+**DevOps & Linux**<br/>
 Bash, Git, Docker, Qemu
 
 **Spreadsheets**<br/>
