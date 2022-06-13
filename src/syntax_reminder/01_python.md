@@ -12,6 +12,7 @@
 - [Error handling](#error-handling)
 - [Testing](#testing)
 - [Modules](#modules)
+- [Main](#main)
 
 ### Print
 
@@ -377,4 +378,15 @@ def my_func():
 
 ``` python
 from my_module import my_func
+```
+
+### Main
+
+``` python
+def main() -> None:
+    print("Hello world!")
+
+
+if __name__ == "__main__":
+    main()
 ```
