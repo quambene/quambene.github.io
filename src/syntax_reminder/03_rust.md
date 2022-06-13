@@ -30,7 +30,9 @@ println!(":#?", my_struct); // pretty-print structs
 
 ### Variables
 
-**Reference**: refer to some value without taking ownership of it
+**Reference**: Refer to some value without taking ownership of it.
+
+**Lifetime**: The scope for which a reference is valid.
 
 **Ownership rules**:
 
