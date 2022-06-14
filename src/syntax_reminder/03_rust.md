@@ -5,6 +5,7 @@
 - [Print](#print)
 - [Variables](#variables)
 - [Data types](#data-types)
+- [Operators](#operators)
 - [Control flow](#control-flow)
 - [Functions](#functions)
 - [Generics](#generics-parametric-polymorphism)
@@ -162,6 +163,33 @@ Cell<T>
 RefCell<T>
 Mutex<T> // thread-safe
 RwLock<T> // thread-safe
+```
+
+### Operators
+
+``` rust
+// Logical operators
+&& // AND
+|| // OR
+! // NOT
+
+// Arithmetic operators
++ // addition
+- // subtraction
+* // multiplication
+/ // division
+num::pow // exponentiation
+% // modulo (remainder)
+num::integer::div_floor // floor division
+
+// Bitwise operators
+& // AND
+| // OR
+^ // XOR
+! // NOT
+<< // left shift
+>> // right shift
+>>> // right shift with zero
 ```
 
 ### Control flow
