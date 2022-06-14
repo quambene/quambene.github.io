@@ -144,6 +144,7 @@
 <li><a href="#print">Print</a></li>
 <li><a href="#variables">Variables</a></li>
 <li><a href="#data-types">Data types</a></li>
+<li><a href="#operators">Operators</a></li>
 <li><a href="#control-flow">Control flow</a></li>
 <li><a href="#functions">Functions</a></li>
 <li><a href="#generics-parametric-polymorphism">Generics</a></li>
@@ -302,6 +303,34 @@ Cell&lt;T&gt;
 RefCell&lt;T&gt;
 Mutex&lt;T&gt; // thread-safe
 RwLock&lt;T&gt; // thread-safe
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Logical operators
+&amp;&amp; // AND
+|| // OR
+! // NOT
+
+// Arithmetic operators
++ // addition
+- // subtraction
+* // multiplication
+/ // division
+num::pow // exponentiation
+% // modulo (remainder)
+num::integer::div_floor // floor division
+
+// Bitwise operators
+&amp; // AND
+| // OR
+^ // XOR
+! // NOT
+&lt;&lt; // left shift
+&gt;&gt; // right shift
+&gt;&gt;&gt; // right shift with zero
 <span class="boring">}
 </span></code></pre></pre>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
