@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD034 -->
 
 # Rust
 
@@ -27,6 +28,8 @@ let name = "world";
 println!("Hello, {}!", name);
 println!("Debug: {:?}", name); // for debugging
 println!(":#?", my_struct); // pretty-print structs
+println!("{:b}", my_int); // binary representation
+println!("{:08b}", my_int); // binary representation
 ```
 
 ### Variables
@@ -48,10 +51,13 @@ println!(":#?", my_struct); // pretty-print structs
 
 ```rust
 let x; // declare
-x = 4; // assign value
-let x = 4;
-let x: i32 = 4; // assign value (typed)
-let _x = 4; // compiler won't warn about variable being unused
+x = 42; // assign value
+let x = 42;
+let x: i32 = 42; // assign value (typed)
+let x = 0b101010; // binary
+let x = 0x2a // hex
+let x = 0o52 // octal
+let _x = 42; // compiler won't warn about variable being unused
 let x = x + 1; // shadowing
 let mut x; // mutable
 let x_borrowed = &x; // reference
@@ -190,7 +196,13 @@ num::integer::div_floor // floor division
 << // left shift
 >> // right shift
 >>> // right shift with zero
+(value >> index) & 1 // get bit
+value & !(1 << index) // set bit to 0
+value | (1 << index) // set bit to 1
+value ^ (1 << index) // swap bit
 ```
+
+More operators: https://doc.rust-lang.org/book/appendix-02-operators.html
 
 ### Control flow
 
