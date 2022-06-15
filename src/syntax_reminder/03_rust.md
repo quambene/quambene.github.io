@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD001 -->
-<!-- markdownlint-disable MD034 -->
 
 # Rust
 
@@ -202,7 +201,7 @@ value | (1 << index) // set bit to 1
 value ^ (1 << index) // swap bit
 ```
 
-More operators: https://doc.rust-lang.org/book/appendix-02-operators.html
+More operators: [https://doc.rust-lang.org/book/appendix-02-operators.html](https://doc.rust-lang.org/book/appendix-02-operators.html)
 
 ### Control flow
 
