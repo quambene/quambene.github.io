@@ -357,19 +357,36 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 ### Macros
 
+#### Declarative macros
+
 ```rust
-use my_macro::MyMacro;
-use my_macro_derive::MyMacro;
-
-#[derive(MyMacro)]
-struct MyStruct;
-
-fn main() {
-    MyStruct::my_macro();
+#[macro_export]
+macro_rules! my_macro {
+    () => {
+        println!("This is my macro!");
+    };
 }
 
-// other macros
-unimplemented!() // satisfies the type checker without providing an implementation
+fn main() {
+    my_macro!();
+}
+```
+
+#### Procedural macros
+
+``` rust
+// derive macro
+#[derive(MyMacro)]
+struct MyStruct
+
+// attribute-like macro
+#[route(GET, "/")]
+fn index() {}
+
+// function-like macro
+unimplemented!()
+todo!()
+let sql = sql!(select * from posts where id=1);
 ```
 
 ### Error handling
