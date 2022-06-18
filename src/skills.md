@@ -11,6 +11,9 @@ Angular, Vue, Nuxt, Django, Flutter
 **UX/UI Design**<br/>
 HTML, CSS, Widgets (Flutter), Figma, Inkscape, GIMP
 
+**Backend**<br/>
+REST, gRPC, websockets
+
 **Databases**<br/>
 SQL, Postgres, SQLite
 
