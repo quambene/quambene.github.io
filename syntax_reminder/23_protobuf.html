@@ -175,6 +175,7 @@ service MyService {
     rpc MyFunction(MyRequest) returns (MyResponse);
     rpc MyOutputStream(MyRequest) returns (stream MyResponse);
     rpc MyInputStream(stream MyRequest) returns (MyResponse);
+    rpc MyStream(stream MyRequest) returns (stream MyResponse);
 }
 
 // integers are used to identify each field
