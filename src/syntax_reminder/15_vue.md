@@ -7,6 +7,10 @@
 - [Input binding](#input-binding)
 - [Event handling](#event-handling)
 - [Component](#component)
+- [API](#api)
+  - [Class API](#class-api)
+  - [Options API](#options-api)
+  - [Component API](#composition-api)
 - [i18n (component interpolation)](#i18n-component-interpolation)
 
 ### Template
@@ -90,6 +94,57 @@ Vue.component('my-component-name', {
 
 ```html
 <my-component-name />
+```
+
+### API
+
+#### Class API
+
+``` javascript
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component
+export default class PageIndex extends Vue {
+  message: string = "This is a message";
+}
+</script>
+```
+
+#### Options API
+
+``` javascript
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  data() {
+    const message: string = "This is a message";
+
+    return {
+      message,
+    };
+  },
+});
+</script>
+```
+
+#### Composition API
+
+``` javascript
+<script lang="ts">
+import { defineComponent, ref } from "@vue/composition-api";
+
+export default defineComponent({
+  setup() {
+    const message = ref("This is a message");
+
+    return {
+      message,
+    };
+  },
+});
+</script>
 ```
 
 ### i18n (component interpolation)
