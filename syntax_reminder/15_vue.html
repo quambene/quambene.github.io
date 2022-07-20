@@ -146,6 +146,13 @@
 <li><a href="#input-binding">Input binding</a></li>
 <li><a href="#event-handling">Event handling</a></li>
 <li><a href="#component">Component</a></li>
+<li><a href="#api">API</a>
+<ul>
+<li><a href="#class-api">Class API</a></li>
+<li><a href="#options-api">Options API</a></li>
+<li><a href="#composition-api">Component API</a></li>
+</ul>
+</li>
 <li><a href="#i18n-component-interpolation">i18n (component interpolation)</a></li>
 </ul>
 <h3 id="template"><a class="header" href="#template">Template</a></h3>
@@ -209,6 +216,47 @@
 })
 </code></pre>
 <pre><code class="language-html">&lt;my-component-name /&gt;
+</code></pre>
+<h3 id="api"><a class="header" href="#api">API</a></h3>
+<h4 id="class-api"><a class="header" href="#class-api">Class API</a></h4>
+<pre><code class="language-javascript">&lt;script lang=&quot;ts&quot;&gt;
+import { Component, Vue } from &quot;vue-property-decorator&quot;;
+
+@Component
+export default class PageIndex extends Vue {
+  message: string = &quot;This is a message&quot;;
+}
+&lt;/script&gt;
+</code></pre>
+<h4 id="options-api"><a class="header" href="#options-api">Options API</a></h4>
+<pre><code class="language-javascript">&lt;script lang=&quot;ts&quot;&gt;
+import Vue from &quot;vue&quot;;
+
+export default Vue.extend({
+  data() {
+    const message: string = &quot;This is a message&quot;;
+
+    return {
+      message,
+    };
+  },
+});
+&lt;/script&gt;
+</code></pre>
+<h4 id="composition-api"><a class="header" href="#composition-api">Composition API</a></h4>
+<pre><code class="language-javascript">&lt;script lang=&quot;ts&quot;&gt;
+import { defineComponent, ref } from &quot;@vue/composition-api&quot;;
+
+export default defineComponent({
+  setup() {
+    const message = ref(&quot;This is a message&quot;);
+
+    return {
+      message,
+    };
+  },
+});
+&lt;/script&gt;
 </code></pre>
 <h3 id="i18n-component-interpolation"><a class="header" href="#i18n-component-interpolation">i18n (component interpolation)</a></h3>
 <pre><code class="language-html">&lt;i18n path=&quot;paragraph.text&quot; tag=&quot;p&quot;&gt;
