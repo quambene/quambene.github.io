@@ -101,20 +101,17 @@ Vue.component('my-component-name', {
 #### Class API
 
 ``` javascript
-<script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class PageIndex extends Vue {
   message: string = "This is a message";
 }
-</script>
 ```
 
 #### Options API
 
 ``` javascript
-<script lang="ts">
 import Vue from "vue";
 
 export default Vue.extend({
@@ -126,13 +123,11 @@ export default Vue.extend({
     };
   },
 });
-</script>
 ```
 
 #### Composition API
 
 ``` javascript
-<script lang="ts">
 import { defineComponent, ref } from "@vue/composition-api";
 
 export default defineComponent({
@@ -144,7 +139,6 @@ export default defineComponent({
     };
   },
 });
-</script>
 ```
 
 ### i18n (component interpolation)
