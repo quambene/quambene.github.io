@@ -143,9 +143,10 @@
 <ul>
 <li><a href="#template">Template</a></li>
 <li><a href="#directives">Directives</a></li>
-<li><a href="#input-binding">Input binding</a></li>
-<li><a href="#event-handling">Event handling</a></li>
 <li><a href="#component">Component</a></li>
+<li><a href="#prop-binding">Prop binding</a></li>
+<li><a href="#event-handling">Event handling</a></li>
+<li><a href="#input-binding">Input binding</a></li>
 <li><a href="#api">API</a>
 <ul>
 <li><a href="#class-api">Class API</a></li>
@@ -156,54 +157,33 @@
 <li><a href="#i18n-component-interpolation">i18n (component interpolation)</a></li>
 </ul>
 <h3 id="template"><a class="header" href="#template">Template</a></h3>
-<pre><code class="language-html">&lt;div id=&quot;myApp&quot;&gt;  
-    {{ message }}  
-&lt;/div&gt;
+<pre><code class="language-html">&lt;p&gt;{{ message }}&lt;/p&gt; &lt;!-- text interpolation --&gt;
 </code></pre>
 <h3 id="directives"><a class="header" href="#directives">Directives</a></h3>
-<pre><code class="language-html">&lt;div v-if=&quot;isVisible&quot;&gt;&lt;/div&gt;
-&lt;div v-once&gt;{{ permanent message}}&lt;/div&gt;
-&lt;div v-bind:class=&quot;{ 'is-active': isActive }&quot;&gt;&lt;/div&gt;
+<pre><code class="language-html">&lt;div v-if=&quot;isVisible&quot;&gt;&lt;/div&gt; &lt;!-- conditional rendering --&gt;
+&lt;div v-for=&quot;item in items&quot;&gt;{{ item }}&lt;/div&gt; &lt;!-- render list of items --&gt;
+&lt;div v-once&gt;{{ message }}&lt;/div&gt; &lt;!-- render once --&gt;
+
+&lt;div v-bind:class=&quot;{ 'is-active': isActive }&quot;&gt;&lt;/div&gt; &lt;!-- class binding --&gt;
+&lt;div :class=&quot;{ 'is-active': isActive }&quot;&gt;&lt;/div&gt;  &lt;!-- class binding (shorthand) --&gt;
+
+&lt;button v-on:click=&quot;doSomething&quot;&gt;&lt;/button&gt; &lt;!-- event listener --&gt;
+&lt;button @click=&quot;doSomething&quot;&gt;&lt;/button&gt; &lt;!-- event listener (shorthand) --&gt;
+
 &lt;input v-model=&quot;message&quot;&gt;  &lt;!-- two way data binding --&gt;
-&lt;button v-on:click=&quot;doSomething&quot;&gt;&lt;/button&gt;
 
  &lt;!-- Dynamic argument --&gt;
 &lt;a v-bind:[attributeName]=&quot;url&quot;&gt;&lt;/a&gt;
 
  &lt;!-- Modifier --&gt;
  &lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt; &lt;!-- call event.preventDefault() --&gt;
-
-&lt;!-- Shorthand --&gt;
-&lt;div :class=&quot;{ 'is-active': isActive }&quot;&gt;&lt;/div&gt; 
-&lt;button @click=&quot;doSomething&quot;&gt;&lt;/button&gt;
-</code></pre>
-<pre><code class="language-javascript">var app = new Vue({  
-    el: '#app',  
-    data: {  
-        isVisible: true,
-        isActive: false,
-    }  
-})
-</code></pre>
-<h3 id="input-binding"><a class="header" href="#input-binding">Input binding</a></h3>
-<pre><code class="language-html">&lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
-&lt;p&gt;Message is: {{ message }}&lt;/p&gt;
-</code></pre>
-<h3 id="event-handling"><a class="header" href="#event-handling">Event handling</a></h3>
-<pre><code class="language-html">&lt;button v-on:click=&quot;myClickHandler&quot;&gt;Click me!&lt;/button&gt;  
-</code></pre>
-<pre><code class="language-javascript">var app = new Vue({  
-    el: '#app',  
-    methods: {  
-        myClickHandler: (event) =&gt; {  
-            console.log('Button clicked!');  
-        }  
-    }  
-})
 </code></pre>
 <h3 id="component"><a class="header" href="#component">Component</a></h3>
-<pre><code class="language-javascript">Vue.component('my-component-name', {
-    el: '#app',
+<pre><code class="language-javascript">import MyChildComponent from './my-child-component.vue'
+
+export default {
+    name: 'my-component-name',
+    components: { MyChildComponent },
     data: {},
     props: {}
     computed: {},
@@ -213,24 +193,58 @@
     },
     mounted: function () {},
     beforeDestroy: function () {},
-})
+}
 </code></pre>
 <pre><code class="language-html">&lt;my-component-name /&gt;
 </code></pre>
+<h3 id="prop-binding"><a class="header" href="#prop-binding">Prop binding</a></h3>
+<p>Parent component:</p>
+<pre><code class="language-html">&lt;template&gt;
+  &lt;MyChildComponent :child-message=&quot;parentMessage&quot; /&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="language-javascript">export default {
+  components: { MyChildComponent },
+  data() {
+    const parentMessage: string = &quot;My parent message.&quot;;
+
+    return { parentMessage };
+  },
+};
+</code></pre>
+<p>Child component:</p>
+<pre><code class="language-javascript">export default {
+  props: {
+    childMessage: String,
+  },
+};
+</code></pre>
+<h3 id="event-handling"><a class="header" href="#event-handling">Event handling</a></h3>
+<pre><code class="language-html">&lt;button v-on:click=&quot;myClickHandler&quot;&gt;Click me!&lt;/button&gt;  
+</code></pre>
+<pre><code class="language-javascript">export default {
+  methods: {
+    myClickHandler: (event) =&gt; {
+      console.log(&quot;Button clicked!&quot;);
+    },
+  },
+};
+</code></pre>
+<h3 id="input-binding"><a class="header" href="#input-binding">Input binding</a></h3>
+<pre><code class="language-html">&lt;input v-model=&quot;message&quot;&gt;
+&lt;p&gt;Message is: {{ message }}&lt;/p&gt;
+</code></pre>
 <h3 id="api"><a class="header" href="#api">API</a></h3>
 <h4 id="class-api"><a class="header" href="#class-api">Class API</a></h4>
-<pre><code class="language-javascript">&lt;script lang=&quot;ts&quot;&gt;
-import { Component, Vue } from &quot;vue-property-decorator&quot;;
+<pre><code class="language-javascript">import { Component, Vue } from &quot;vue-property-decorator&quot;;
 
 @Component
-export default class PageIndex extends Vue {
+export default class MyComponent extends Vue {
   message: string = &quot;This is a message&quot;;
 }
-&lt;/script&gt;
 </code></pre>
 <h4 id="options-api"><a class="header" href="#options-api">Options API</a></h4>
-<pre><code class="language-javascript">&lt;script lang=&quot;ts&quot;&gt;
-import Vue from &quot;vue&quot;;
+<pre><code class="language-javascript">import Vue from &quot;vue&quot;;
 
 export default Vue.extend({
   data() {
@@ -241,11 +255,9 @@ export default Vue.extend({
     };
   },
 });
-&lt;/script&gt;
 </code></pre>
 <h4 id="composition-api"><a class="header" href="#composition-api">Composition API</a></h4>
-<pre><code class="language-javascript">&lt;script lang=&quot;ts&quot;&gt;
-import { defineComponent, ref } from &quot;@vue/composition-api&quot;;
+<pre><code class="language-javascript">import { defineComponent, ref } from &quot;@vue/composition-api&quot;;
 
 export default defineComponent({
   setup() {
@@ -256,7 +268,6 @@ export default defineComponent({
     };
   },
 });
-&lt;/script&gt;
 </code></pre>
 <h3 id="i18n-component-interpolation"><a class="header" href="#i18n-component-interpolation">i18n (component interpolation)</a></h3>
 <pre><code class="language-html">&lt;i18n path=&quot;paragraph.text&quot; tag=&quot;p&quot;&gt;
@@ -265,7 +276,7 @@ export default defineComponent({
   &lt;/template&gt;
 &lt;/i18n&gt;
 </code></pre>
-<pre><code class="language-javascript">export default Vue.extend({
+<pre><code class="language-javascript">export default {
   i18n: {
     messages: {
       de: {
@@ -273,9 +284,10 @@ export default defineComponent({
           text: &quot;This is my {my-slot}.&quot;,
           link: &quot;My url&quot;,
         },
-      }
-    }
-  }
+      },
+    },
+  },
+};
 </code></pre>
 
                     </main>
