@@ -4,9 +4,10 @@
 
 - [Template](#template)
 - [Directives](#directives)
-- [Input binding](#input-binding)
-- [Event handling](#event-handling)
 - [Component](#component)
+- [Prop binding](#prop-binding)
+- [Event handling](#event-handling)
+- [Input binding](#input-binding)
 - [API](#api)
   - [Class API](#class-api)
   - [Options API](#options-api)
@@ -16,70 +17,39 @@
 ### Template
 
 ```html
-<div id="myApp">  
-    {{ message }}  
-</div>
+<p>{{ message }}</p> <!-- text interpolation -->
 ```
 
 ### Directives
 
 ```html
-<div v-if="isVisible"></div>
-<div v-once>{{ permanent message}}</div>
-<div v-bind:class="{ 'is-active': isActive }"></div>
+<div v-if="isVisible"></div> <!-- conditional rendering -->
+<div v-for="item in items">{{ item }}</div> <!-- render list of items -->
+<div v-once>{{ message }}</div> <!-- render once -->
+
+<div v-bind:class="{ 'is-active': isActive }"></div> <!-- class binding -->
+<div :class="{ 'is-active': isActive }"></div>  <!-- class binding (shorthand) -->
+
+<button v-on:click="doSomething"></button> <!-- event listener -->
+<button @click="doSomething"></button> <!-- event listener (shorthand) -->
+
 <input v-model="message">  <!-- two way data binding -->
-<button v-on:click="doSomething"></button>
 
  <!-- Dynamic argument -->
 <a v-bind:[attributeName]="url"></a>
 
  <!-- Modifier -->
  <form v-on:submit.prevent="onSubmit"></form> <!-- call event.preventDefault() -->
-
-<!-- Shorthand -->
-<div :class="{ 'is-active': isActive }"></div> 
-<button @click="doSomething"></button>
-```
-
-```javascript
-var app = new Vue({  
-    el: '#app',  
-    data: {  
-        isVisible: true,
-        isActive: false,
-    }  
-})
-```
-
-### Input binding
-
-```html
-<input v-model="message" placeholder="edit me">
-<p>Message is: {{ message }}</p>
-```
-
-### Event handling
-
-```html
-<button v-on:click="myClickHandler">Click me!</button>  
-```
-
-```javascript
-var app = new Vue({  
-    el: '#app',  
-    methods: {  
-        myClickHandler: (event) => {  
-            console.log('Button clicked!');  
-        }  
-    }  
-})
 ```
 
 ### Component
 
 ```javascript
-Vue.component('my-component-name', {
-    el: '#app',
+import MyChildComponent from './my-child-component.vue'
+
+export default {
+    name: 'my-component-name',
+    components: { MyChildComponent },
     data: {},
     props: {}
     computed: {},
@@ -89,11 +59,65 @@ Vue.component('my-component-name', {
     },
     mounted: function () {},
     beforeDestroy: function () {},
-})
+}
 ```
 
 ```html
 <my-component-name />
+```
+
+### Prop binding
+
+Parent component:
+
+``` html
+<template>
+  <MyChildComponent :child-message="parentMessage" />
+</template>
+```
+
+``` javascript
+export default {
+  components: { MyChildComponent },
+  data() {
+    const parentMessage: string = "My parent message.";
+
+    return { parentMessage };
+  },
+};
+```
+
+Child component:
+
+``` javascript
+export default {
+  props: {
+    childMessage: String,
+  },
+};
+```
+
+### Event handling
+
+```html
+<button v-on:click="myClickHandler">Click me!</button>  
+```
+
+```javascript
+export default {
+  methods: {
+    myClickHandler: (event) => {
+      console.log("Button clicked!");
+    },
+  },
+};
+```
+
+### Input binding
+
+```html
+<input v-model="message">
+<p>Message is: {{ message }}</p>
 ```
 
 ### API
@@ -104,7 +128,7 @@ Vue.component('my-component-name', {
 import { Component, Vue } from "vue-property-decorator";
 
 @Component
-export default class PageIndex extends Vue {
+export default class MyComponent extends Vue {
   message: string = "This is a message";
 }
 ```
@@ -152,7 +176,7 @@ export default defineComponent({
 ```
 
 ```javascript
-export default Vue.extend({
+export default {
   i18n: {
     messages: {
       de: {
@@ -160,7 +184,8 @@ export default Vue.extend({
           text: "This is my {my-slot}.",
           link: "My url",
         },
-      }
-    }
-  }
+      },
+    },
+  },
+};
 ```
