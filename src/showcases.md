@@ -23,6 +23,13 @@ Some of my projects are showcased as follows. [More](/about.md) about me.
 - tech stack: Angular+Rust
 - website: [https://turtle.community](https://turtle.community)
 
+## Taxel
+
+- functional description: open-source tax application written in Rust
+- technical description: CLI and Rust bindings for the ELSTER Rich Client (ERiC)
+- tech stack: Rust
+- website: [https://github.com/quambene/taxel](https://github.com/quambene/taxel)
+
 ## LibreCRM
 
 - functional description: open-source customer relationship management (CRM) based on LibreOffice
