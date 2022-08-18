@@ -198,6 +198,7 @@ git fetch -p # Prune remote branches
 git merge <branch_name> # Merge branch_name into current branch
 git merge --no-ff --no-commit <branch_name> # --no-ff flag for constructing a merge instead of fast-forwarding
 git merge --abort # Equivalent to git reset --merge when MERGE_HEAD is present; MERGE_HEAD is present when a merge is in progress
+git merge --squash <branch_name> # Squash all commits into one commit
 ```
 
 #### Merge feature branch
