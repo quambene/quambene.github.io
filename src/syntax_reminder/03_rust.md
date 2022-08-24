@@ -434,6 +434,9 @@ cargo test -- --nocapture # Show output
 cargo test -- --show-output # Show output
 cargo test -- --ignored # Run ignored tests
 cargo test -- --test-threads=1 # Run tests serially
+cargo test --no-run # Compile, but don’t run tests
+cargo test my_test_name # Run all tests which names match my_test_name
+cargo test my_test_name -- --exact # Run one specific test
 cargo test --lib # Run unit tests
 cargo test --test '*' # Run integration tests
 ```
