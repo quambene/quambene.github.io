@@ -14,6 +14,7 @@
 - [Macros](#macros)
 - [Error handling](#error-handling)
 - [Testing](#testing)
+- [Documentation](#documentation)
 - [Modules](#modules)
 - [Crates](#crates)
 - [External packages](#external-packages-cargo.toml)
@@ -426,6 +427,65 @@ mod tests {
     }
 }
 ```
+
+``` bash
+cargo test # Run tests
+cargo test -- --nocapture # Show output
+cargo test -- --show-output # Show output
+cargo test -- --ignored # Run ignored tests
+cargo test -- --test-threads=1 # Run tests serially
+cargo test --lib # Run unit tests
+cargo test --test '*' # Run integration tests
+```
+
+### Documentation
+
+``` rust
+// My line comment
+
+/*
+    My block comment
+*/
+
+/// My doc comment
+
+//! My module-level or crate-level doc comment
+
+// links
+/// <https:://my-link.com>
+
+// doc link if item is in scope
+/// [`MyStruct`] 
+
+// doc link if item is not in scope
+/// [`MyStruct`](super::my_module::MyStruct)
+/// [`MyStruct`](crate::my_module::MyStruct)
+
+// doc link if name is ambiguous
+/// [`struct@Foo`]
+/// [`enum@Foo`]
+/// [`foo()`]
+/// [`fn@foo`]
+/// [`mod@foo`]
+
+// inter-crate doc links in workspaces
+/// [`my_crate::MyStruct::my_method`](../my_crate/struct.MyStruct.html#method.my_method)
+
+// define doc link
+/// [`MyStruct`]
+///
+/// [`MyStruct`]: crate::my_module::MyStruct
+```
+
+``` bash
+cargo doc # Build the documentation
+cargo doc --open # Open the documentation
+cargo doc --no-deps # Do not build documentation for dependencies
+cargo doc --document-private-items # Include non-public items in the documentation
+```
+
+- [The rustdoc book, How to write documentation](https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html)
+- [`intra_rustdoc_links`](https://rust-lang.github.io/rfcs/1946-intra-rustdoc-links.html)
 
 ### Modules
 
