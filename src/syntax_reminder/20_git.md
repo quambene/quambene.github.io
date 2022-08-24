@@ -329,11 +329,15 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
 ### Diff
 
 ``` bash
-git difftool --tool-help # Help
-git difftool --tool=meld # Set difftool
 git diff HEAD~1 # Show diff in last commit
 git diff --name-only HEAD~1 # Show diff files in last commit
-git difftool master origin/master
+
+# Difftool
+git difftool dev # Compare to feature branch
+git difftool master # Compare to feature branch
+git difftool master origin/master # Compare local and remote branch
+git difftool --tool-help # Help
+git difftool --tool=meld # Set difftool
 git difftool <branch_1> <branch_2>
 git difftool --tool=vscode <branch_1> <branch_2>
 git difftool HEAD <commit-id> -- <file-name>
@@ -347,7 +351,7 @@ git diff --name-only master # Compare to branch master and list files
 git diff --name-only master origin/master -- <path> # Show different files
 git log <branch1>..<branch_2> # List commit differences
 
-# Returns the commits that are present in the feature branch but are unavailable in the master branch
+# Returns the commits that are present in the feature branch but are not unavailable in the master branch
 git log master..feature −−oneline
 ```
 
