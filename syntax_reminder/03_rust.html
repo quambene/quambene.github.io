@@ -153,6 +153,8 @@
 <li><a href="#macros">Macros</a></li>
 <li><a href="#error-handling">Error handling</a></li>
 <li><a href="#testing">Testing</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#visibility">Visibility</a></li>
 <li><a href="#modules">Modules</a></li>
 <li><a href="#crates">Crates</a></li>
 <li><a href="#external-packages-cargo.toml">External packages</a></li>
@@ -569,6 +571,74 @@ mod tests {
         assert_eq!(my_res, 3)
     }
 }
+<span class="boring">}
+</span></code></pre></pre>
+<pre><code class="language-bash">cargo test # Run tests
+cargo test -- --nocapture # Show output
+cargo test -- --show-output # Show output
+cargo test -- --ignored # Run ignored tests
+cargo test -- --test-threads=1 # Run tests serially
+cargo test --no-run # Compile, but don’t run tests
+cargo test my_test_name # Run all tests which names match my_test_name
+cargo test my_test_name -- --exact # Run one specific test
+cargo test --lib # Run unit tests
+cargo test --test '*' # Run integration tests
+</code></pre>
+<h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// My line comment
+
+/*
+    My block comment
+*/
+
+/// My doc comment
+
+//! My module-level or crate-level doc comment
+
+// links
+/// &lt;https:://my-link.com&gt;
+
+// doc link if item is in scope
+/// [`MyStruct`] 
+
+// doc link if item is not in scope
+/// [`MyStruct`](super::my_module::MyStruct)
+/// [`MyStruct`](crate::my_module::MyStruct)
+
+// doc link if name is ambiguous
+/// [`struct@Foo`]
+/// [`enum@Foo`]
+/// [`foo()`]
+/// [`fn@foo`]
+/// [`mod@foo`]
+
+// inter-crate doc links in workspaces
+/// [`my_crate::MyStruct::my_method`](../my_crate/struct.MyStruct.html#method.my_method)
+
+// define doc link
+/// [`MyStruct`]
+///
+/// [`MyStruct`]: crate::my_module::MyStruct
+<span class="boring">}
+</span></code></pre></pre>
+<pre><code class="language-bash">cargo doc # Build the documentation
+cargo doc --open # Open the documentation
+cargo doc --no-deps # Do not build documentation for dependencies
+cargo doc --document-private-items # Include non-public items in the documentation
+</code></pre>
+<ul>
+<li><a href="https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html">The rustdoc book, How to write documentation</a></li>
+<li><a href="https://rust-lang.github.io/rfcs/1946-intra-rustdoc-links.html"><code>intra_rustdoc_links</code></a></li>
+</ul>
+<h3 id="visibility"><a class="header" href="#visibility">Visibility</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub struct MyStruct { ... }
+pub(crate) struct MyStruct // Use this one, so it is not accidentally exposed to another crate
 <span class="boring">}
 </span></code></pre></pre>
 <h3 id="modules"><a class="header" href="#modules">Modules</a></h3>
