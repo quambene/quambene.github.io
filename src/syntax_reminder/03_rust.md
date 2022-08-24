@@ -15,6 +15,7 @@
 - [Error handling](#error-handling)
 - [Testing](#testing)
 - [Documentation](#documentation)
+- [Visibility](#visibility)
 - [Modules](#modules)
 - [Crates](#crates)
 - [External packages](#external-packages-cargo.toml)
@@ -489,6 +490,13 @@ cargo doc --document-private-items # Include non-public items in the documentati
 
 - [The rustdoc book, How to write documentation](https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html)
 - [`intra_rustdoc_links`](https://rust-lang.github.io/rfcs/1946-intra-rustdoc-links.html)
+
+### Visibility
+
+``` rust
+pub struct MyStruct { ... }
+pub(crate) struct MyStruct // Use this one, so it is not accidentally exposed to another crate
+```
 
 ### Modules
 
