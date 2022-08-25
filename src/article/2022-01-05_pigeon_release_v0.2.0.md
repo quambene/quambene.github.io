@@ -52,8 +52,8 @@ That's it for today. Happy for your feedback. Especially, if you have pain point
 
 TODO: Support oauth2 authentication which is used by gmail for example. Compare with plain SMTP authentication above (username and password) which is used by aws and others.
 
-\[1\] [https://github.com/quambene/pigeon-rs](https://github.com/quambene/pigeon-rs)
+\[1\] <https://github.com/quambene/pigeon-rs>
 
-\[2\] [https://crates.io/crates/lettre](https://crates.io/crates/lettre)
+\[2\] <https://crates.io/crates/lettre>
 
 _First published on [Reddit](https://www.reddit.com/r/rust/comments/rwtkvw/pigeonrs_v020_open_source_email_automation_send/) (2022-01-05)._

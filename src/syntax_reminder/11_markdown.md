@@ -69,6 +69,14 @@
 
 [Link](url)
 
+Short form:
+
+```markdown
+<https://...>
+```
+
+<https://...>
+
 ### Image
 
 ``` bash
