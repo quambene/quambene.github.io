@@ -195,7 +195,7 @@ docker-compose top # Display resource usage of containers
 docker-compose config # Validate and view a docker-compose.yml file
 ```
 
-## Remove volume
+### Remove volume
 
 ``` bash
 docker-compose rm -f -v <volume_name> # Remove anonymous volume
