@@ -1,11 +1,11 @@
 # Docker
 
 - [Help](#help)
-- [Exec](#exec)
 - [Inspect](#inspect)
-- [Restart](#restart)
-- [Logs](#logs)
 - [Containers](#containers)
+  - [Exec](#exec)
+  - [Restart](#restart)
+  - [Logs](#logs)
 - [Volumes](#volumes)
 - [Images](#images)
   - [Image location](#image-location)
@@ -24,34 +24,11 @@
 <docker_command> --help
 ```
 
-## Exec
-
-``` bash
-docker exec -it <container_name> /bin/my_executable
-docker exec -it <container_name> my_script.sh
-```
-
 ## Inspect
 
 ``` bash
 docker inspect <image_id>
 docker inspect <container_id>
-```
-
-## Restart
-
-``` bash
-docker inspect <container_name> | grep -A 3 RestartPolicy # Check restart policy
-docker update --restart=no <container_name> # Turn off restart
-```
-
-## Logs
-
-``` bash
-docker logs <container_id>
-docker logs -n 10000 <container_id> # Show the last lines of the logs
-docker logs --since=60m <container_id> # Show logs for last hour
-docker logs --until=60s <container_id> # Show logs for next minute
 ```
 
 ## Containers
@@ -74,6 +51,29 @@ docker rm <container_name> # Remove container
 docker attach --sig-proxy=false <container_name> # Attach container; Ctrl+C won't kill process (if --sig-proxy is true (the default), CTRL+C sends a SIGINT to the container)
 docker inspect $(docker ps -qa) |  jq -r 'map([.Name, .GraphDriver.Data.MergedDir]) | .[] | "\(.[0])\t\(.[1])"' #  Which container owns which overlay directory
 docker inspect $(docker images) |  jq -r 'map([.Name, .GraphDriver.Data.MergedDir]) | .[] | "\(.[0])\t\(.[1])"' #  Which image owns which overlay directory
+```
+
+### Exec
+
+``` bash
+docker exec -it <container_name> /bin/my_executable
+docker exec -it <container_name> my_script.sh
+```
+
+### Restart
+
+``` bash
+docker inspect <container_name> | grep -A 3 RestartPolicy # Check restart policy
+docker update --restart=no <container_name> # Turn off restart
+```
+
+### Logs
+
+``` bash
+docker logs <container_id>
+docker logs -n 10000 <container_id> # Show the last lines of the logs
+docker logs --since=60m <container_id> # Show logs for last hour
+docker logs --until=60s <container_id> # Show logs for next minute
 ```
 
 ## Volumes
