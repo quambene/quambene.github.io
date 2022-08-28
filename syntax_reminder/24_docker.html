@@ -141,11 +141,14 @@
                         <h1 id="docker"><a class="header" href="#docker">Docker</a></h1>
 <ul>
 <li><a href="#help">Help</a></li>
-<li><a href="#exec">Exec</a></li>
 <li><a href="#inspect">Inspect</a></li>
+<li><a href="#containers">Containers</a>
+<ul>
+<li><a href="#exec">Exec</a></li>
 <li><a href="#restart">Restart</a></li>
 <li><a href="#logs">Logs</a></li>
-<li><a href="#containers">Containers</a></li>
+</ul>
+</li>
 <li><a href="#volumes">Volumes</a></li>
 <li><a href="#images">Images</a>
 <ul>
@@ -167,23 +170,9 @@
 <h2 id="help"><a class="header" href="#help">Help</a></h2>
 <pre><code class="language-bash">&lt;docker_command&gt; --help
 </code></pre>
-<h2 id="exec"><a class="header" href="#exec">Exec</a></h2>
-<pre><code class="language-bash">docker exec -it &lt;container_name&gt; /bin/my_executable
-docker exec -it &lt;container_name&gt; my_script.sh
-</code></pre>
 <h2 id="inspect"><a class="header" href="#inspect">Inspect</a></h2>
 <pre><code class="language-bash">docker inspect &lt;image_id&gt;
 docker inspect &lt;container_id&gt;
-</code></pre>
-<h2 id="restart"><a class="header" href="#restart">Restart</a></h2>
-<pre><code class="language-bash">docker inspect &lt;container_name&gt; | grep -A 3 RestartPolicy # Check restart policy
-docker update --restart=no &lt;container_name&gt; # Turn off restart
-</code></pre>
-<h2 id="logs"><a class="header" href="#logs">Logs</a></h2>
-<pre><code class="language-bash">docker logs &lt;container_id&gt;
-docker logs -n 10000 &lt;container_id&gt; # Show the last lines of the logs
-docker logs --since=60m &lt;container_id&gt; # Show logs for last hour
-docker logs --until=60s &lt;container_id&gt; # Show logs for next minute
 </code></pre>
 <h2 id="containers"><a class="header" href="#containers">Containers</a></h2>
 <pre><code class="language-bash">docker create &lt;image_name&gt; # Create container from image
@@ -203,6 +192,20 @@ docker rm &lt;container_name&gt; # Remove container
 docker attach --sig-proxy=false &lt;container_name&gt; # Attach container; Ctrl+C won't kill process (if --sig-proxy is true (the default), CTRL+C sends a SIGINT to the container)
 docker inspect $(docker ps -qa) |  jq -r 'map([.Name, .GraphDriver.Data.MergedDir]) | .[] | &quot;\(.[0])\t\(.[1])&quot;' #  Which container owns which overlay directory
 docker inspect $(docker images) |  jq -r 'map([.Name, .GraphDriver.Data.MergedDir]) | .[] | &quot;\(.[0])\t\(.[1])&quot;' #  Which image owns which overlay directory
+</code></pre>
+<h3 id="exec"><a class="header" href="#exec">Exec</a></h3>
+<pre><code class="language-bash">docker exec -it &lt;container_name&gt; /bin/my_executable
+docker exec -it &lt;container_name&gt; my_script.sh
+</code></pre>
+<h3 id="restart"><a class="header" href="#restart">Restart</a></h3>
+<pre><code class="language-bash">docker inspect &lt;container_name&gt; | grep -A 3 RestartPolicy # Check restart policy
+docker update --restart=no &lt;container_name&gt; # Turn off restart
+</code></pre>
+<h3 id="logs"><a class="header" href="#logs">Logs</a></h3>
+<pre><code class="language-bash">docker logs &lt;container_id&gt;
+docker logs -n 10000 &lt;container_id&gt; # Show the last lines of the logs
+docker logs --since=60m &lt;container_id&gt; # Show logs for last hour
+docker logs --until=60s &lt;container_id&gt; # Show logs for next minute
 </code></pre>
 <h2 id="volumes"><a class="header" href="#volumes">Volumes</a></h2>
 <pre><code class="language-bash">docker volume create &lt;volumne_name&gt; # Create volume
