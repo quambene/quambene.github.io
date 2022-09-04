@@ -2,7 +2,7 @@
 
 # Summary
 
-[Showcases](./showcases.md)
+[Projects](./projects.md)
 [Skills](./skills.md)
 [About](./about.md)
 

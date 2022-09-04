@@ -1,6 +1,6 @@
-# Showcases
+# Projects
 
-Some of my projects are showcased as follows. [More](/about.md) about me.
+Some of my projects are summarized as follows. [More](/about.md) about me.
 
 ## Pigeon
 
