@@ -248,6 +248,8 @@ git commit -m "My message"
 ``` bash
 git stash # Saves local modifications
 git stash pop # Reverts local modifications
+
+git stash -u # --include-untracked
 ```
 
 ### Clean
