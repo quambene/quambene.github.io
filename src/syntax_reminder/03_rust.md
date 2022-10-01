@@ -567,6 +567,8 @@ cargo test
 cargo build # Compile source code
 cargo build --release
 cargo clean
+cargo add <crate> -F <feature> # Add dependency
+cargo rm <crate> # Remove dependency
 ```
 
 ### Rustup (toolchain manager)
