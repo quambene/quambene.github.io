@@ -18,7 +18,7 @@
 - [Visibility](#visibility)
 - [Modules](#modules)
 - [Crates](#crates)
-- [External packages](#external-packages-cargo.toml)
+- [External packages](#external-packages-cargotoml)
 - [Cargo (package manager)](#cargo-package-manager)
 - [Rustup (toolchain manager)](#rustup-toolchain-manager)
 
