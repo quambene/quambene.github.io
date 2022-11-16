@@ -120,6 +120,7 @@ git remote add origin https://<host_name>/<repo_owner>/<repo_name>.git # HTTPS
 git checkout <branch_name> # Switch to branch
 git checkout -b <branch_name> # Create and switch to new branch
 git checkout <commit_id> # Switch to commit
+git checkout --track origin/<branch_name> # Create <branch_name> and set up "upstream" 
 ```
 
 ### Switch
