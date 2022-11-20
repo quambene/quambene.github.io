@@ -300,9 +300,12 @@ git remote add origin git@&lt;host_name&gt;:&lt;account_name&gt;/&lt;repo_name&g
 git push -u origin master
 </code></pre>
 <h3 id="fetch"><a class="header" href="#fetch">Fetch</a></h3>
-<pre><code class="language-bash">git fetch
-git fetch &lt;branch&gt; # Download new data from remote branch
+<pre><code class="language-bash">git fetch # Fetch all branches from the repository
+git fetch --dry-run # Perform a dry run
+git fetch &lt;remote&gt; # Fetch all of the branches from the repository
+git fetch &lt;remote&gt; &lt;branch&gt; # Download new data from remote branch
 git fetch -p # Prune remote branches
+git fetch --all # Fetches all registered remotes and their branches
 </code></pre>
 <h3 id="merge"><a class="header" href="#merge">Merge</a></h3>
 <pre><code class="language-bash">git merge &lt;branch_name&gt; # Merge branch_name into current branch
