@@ -427,6 +427,9 @@ mod tests {
         assert_eq!(my_res, 3)
     }
 }
+
+// Integration tests
+// tests/common.rs can be used to share code between integration tests.
 ```
 
 ``` bash
