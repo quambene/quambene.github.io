@@ -188,9 +188,12 @@ git push -u origin master
 ### Fetch
 
 ``` bash
-git fetch
-git fetch <branch> # Download new data from remote branch
+git fetch # Fetch all branches from the repository
+git fetch --dry-run # Perform a dry run
+git fetch <remote> # Fetch all of the branches from the repository
+git fetch <remote> <branch> # Download new data from remote branch
 git fetch -p # Prune remote branches
+git fetch --all # Fetches all registered remotes and their branches
 ```
 
 ### Merge
