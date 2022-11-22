@@ -133,6 +133,8 @@ git switch <branch_name> # Switch branch
 
 ``` bash
 git branch # Show branches
+git branch --list # Show branches
+git branch -vv # Show local branches and tracked remote branches
 git branch -a # Show all branches
 git branch -r # Show remote branches
 git branch --no-merged # Show list of branches which haven't been merged into your current branch
