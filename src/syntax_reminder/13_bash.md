@@ -6,6 +6,7 @@
 - [Print](#print)
 - [Input](#input)
 - [Variables](#variables)
+- [Operators](#operators)
 - [Commands](#commands)
 - [Functions](#functions)
 - [Control flow](#control-flow)
@@ -46,6 +47,7 @@ my_variable=my_value
 my_variable='hello world' # single quotes are not interpreted
 my_variable="hello $name" # double quotes allow substitution
 my_dir=/home/dev
+my_array=(1, 2, 3, 4)
 variable=$( my_command ) # save output of command into a variable
 timestamp=$(date +"%Y-%m-%d_%H:%M:%S")
 
@@ -75,6 +77,20 @@ $HOSTNAME # the hostname of the machine the script is running on
 $SECONDS # the number of seconds since the script was started
 $RANDOM # return a random number
 $LINENO # returns the current line number in the script
+```
+
+## Operators
+
+``` bash
+# logical operators
+&& # and
+|| # or
+
+# arithmetic operators inside [] or [[ ]]: 
+-eq, -ne, -lt, -gt, -le, -ge
+
+# arithmetic operators inside (( )):
+==, !=, <, >, <=, >=
 ```
 
 ### Commands
@@ -125,12 +141,6 @@ my_function my_arg1 my_arg2
 ### Control flow
 
 ```bash
-# arithmetic operators inside [[ ]]: 
--eq, -ne, -lt, -gt, -le, -ge
-
-# arithmetic operators inside (( )):
-==, !=, <, >, <=, >=
-
 # if-else
 if (( $a < $b )); then
     # statement
