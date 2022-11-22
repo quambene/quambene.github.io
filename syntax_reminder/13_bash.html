@@ -145,6 +145,7 @@
 <li><a href="#print">Print</a></li>
 <li><a href="#input">Input</a></li>
 <li><a href="#variables">Variables</a></li>
+<li><a href="#operators">Operators</a></li>
 <li><a href="#commands">Commands</a></li>
 <li><a href="#functions">Functions</a></li>
 <li><a href="#control-flow">Control flow</a></li>
@@ -174,6 +175,7 @@ my_variable=my_value
 my_variable='hello world' # single quotes are not interpreted
 my_variable=&quot;hello $name&quot; # double quotes allow substitution
 my_dir=/home/dev
+my_array=(1, 2, 3, 4)
 variable=$( my_command ) # save output of command into a variable
 timestamp=$(date +&quot;%Y-%m-%d_%H:%M:%S&quot;)
 
@@ -203,6 +205,17 @@ $HOSTNAME # the hostname of the machine the script is running on
 $SECONDS # the number of seconds since the script was started
 $RANDOM # return a random number
 $LINENO # returns the current line number in the script
+</code></pre>
+<h2 id="operators"><a class="header" href="#operators">Operators</a></h2>
+<pre><code class="language-bash"># logical operators
+&amp;&amp; # and
+|| # or
+
+# arithmetic operators inside [] or [[ ]]: 
+-eq, -ne, -lt, -gt, -le, -ge
+
+# arithmetic operators inside (( )):
+==, !=, &lt;, &gt;, &lt;=, &gt;=
 </code></pre>
 <h3 id="commands"><a class="header" href="#commands">Commands</a></h3>
 <pre><code class="language-bash"># commands separated by &quot;;&quot; are executed sequentially
@@ -244,13 +257,7 @@ my_function () {
 my_function my_arg1 my_arg2
 </code></pre>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
-<pre><code class="language-bash"># arithmetic operators inside [[ ]]: 
--eq, -ne, -lt, -gt, -le, -ge
-
-# arithmetic operators inside (( )):
-==, !=, &lt;, &gt;, &lt;=, &gt;=
-
-# if-else
+<pre><code class="language-bash"># if-else
 if (( $a &lt; $b )); then
     # statement
 elif (( $a == $b )); then
