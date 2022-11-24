@@ -116,6 +116,7 @@ command1 || command2
 
 # Return a status of 0 or 1 depending on the evaluation of the conditional expression
 # Word splitting and pathname expansion are not performed
+# Improved version for [ expression ]
 [[ expression ]]
 ```
 
@@ -123,7 +124,9 @@ command1 || command2
 
 ```bash
 function my_function {
-    # commands
+    local var=$1
+
+    # ...
 
     # optional return status
     return my_return_status
@@ -131,10 +134,10 @@ function my_function {
 
 # alternative syntax
 my_function () {
-    # commands
+    # ...
 }
 
-# call function
+# call function after declaration
 my_function my_arg1 my_arg2
 ```
 
@@ -143,40 +146,46 @@ my_function my_arg1 my_arg2
 ```bash
 # if-else
 if (( $a < $b )); then
-    # statement
+    # ...
 elif (( $a == $b )); then
-    # statement
+    # ...
 else 
-    # statement
+    # ...
 fi
 
 # for loop
 for i in {1..3}
 do
-    # statement
+    # ...
+done
+
+# for all arguments of function
+for arg in "$@"
+do
+    # ...
 done
 
 # directory exists
 if [[ -d $directory ]]; then
-    # statement
+    # ...
 fi
 
 # file exists
-if [[ -f $directory ]]; then
-    # statement
+if [[ -f $file ]]; then
+    # ...
 fi
 
 # case
 read -p "Continue (yes or no)?" choice
 case "$choice" in 
   yes ) 
-    # statements
+    # ...
     ;;
   no )
-    # statements
+    # ...
     ;;
   * ) 
-    # statements
+    # ...
     ;;
 esac
 ```
