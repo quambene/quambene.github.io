@@ -562,6 +562,9 @@ package_name = "*" # > 0.0.0
 
 ```bash
 cargo --version
+cargo init # Create binary crate in current directory
+cargo new <bin> --bin # Create binary crate
+cargo new <lib> --lib # Create library crate
 cargo fmt # Format source code
 cargo check # Validate source code
 cargo run
