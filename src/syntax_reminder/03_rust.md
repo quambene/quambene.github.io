@@ -572,6 +572,7 @@ cargo build --release
 cargo clean
 cargo add <crate> -F <feature> # Add dependency
 cargo rm <crate> # Remove dependency
+cargo install <crate> # Install Rust binary
 ```
 
 ### Rustup (toolchain manager)
@@ -590,4 +591,9 @@ rustup default stable # Set default toolchain
 rustup override set X.X.X # Set specific Rust version
 rustup override set stable # Switch to stable toolchain
 rustup override set nightly # Switch to nightly toolchain
+rustup component list # List components
+rustup component add <component> # Add component to toolchain
+rustup component add <component> --toolchain nightly # Add component to nightly toolchain
+rustup target add <target> # Install target for toolchain
+rustup target add <target> --toolchain nightly # Install target for nightly toolchain
 ```
