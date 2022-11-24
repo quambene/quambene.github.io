@@ -707,6 +707,7 @@ cargo build --release
 cargo clean
 cargo add &lt;crate&gt; -F &lt;feature&gt; # Add dependency
 cargo rm &lt;crate&gt; # Remove dependency
+cargo install &lt;crate&gt; # Install Rust binary
 </code></pre>
 <h3 id="rustup-toolchain-manager"><a class="header" href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></h3>
 <pre><code class="language-bash">rustup --version
@@ -722,6 +723,11 @@ rustup default stable # Set default toolchain
 rustup override set X.X.X # Set specific Rust version
 rustup override set stable # Switch to stable toolchain
 rustup override set nightly # Switch to nightly toolchain
+rustup component list # List components
+rustup component add &lt;component&gt; # Add component to toolchain
+rustup component add &lt;component&gt; --toolchain nightly # Add component to nightly toolchain
+rustup target add &lt;target&gt; # Install target for toolchain
+rustup target add &lt;target&gt; --toolchain nightly # Install target for nightly toolchain
 </code></pre>
 
                     </main>
