@@ -32,3 +32,6 @@ Syntax reminder for
 - [Regex](/syntax_reminder/22_regex.md)
 - [Protobuf](/syntax_reminder/23_protobuf.md)
 - [Docker](/syntax_reminder/24_docker.md)
+- [Erlang](/syntax_reminder/25_erlang.md)
+- [Elixir](/syntax_reminder/26_elixir.md)
+- [Clojure](/syntax_reminder/27_clojure.md)
