@@ -20,7 +20,7 @@ IO.puts "Hello world"
 
 ``` elixir
 x = 4
-x = "my string"
+x = "hello"
 ```
 
 ### Data types
@@ -52,7 +52,7 @@ map = %{:name => "Peter", :age => 42}
 rem # modulo (remainder)
 div # floor division
 
-% Logical operators
+# Logical operators
 == # equal
 /= # not equal
 === # type check
@@ -63,7 +63,7 @@ not # NOT
 || # non-strict or
 ! # non-strict not
 
-% Bitwise operators
+# Bitwise operators
 &&& # AND
 ||| # OR
 ^^^ # XOR
