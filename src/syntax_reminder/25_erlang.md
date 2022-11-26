@@ -34,7 +34,7 @@ X = 4
 X=4,
 
 % atom
-X = 'MyString',
+X = 'MyAtom',
 
 % Bit string
 Bin1 = <<10,20>>,
