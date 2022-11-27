@@ -35,3 +35,4 @@ Syntax reminder for
 - [Erlang](/syntax_reminder/25_erlang.md)
 - [Elixir](/syntax_reminder/26_elixir.md)
 - [Clojure](/syntax_reminder/27_clojure.md)
+- [Elm](/syntax_reminder/28_elm.md)

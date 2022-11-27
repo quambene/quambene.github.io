@@ -36,6 +36,7 @@
   - [Erlang](./syntax_reminder/25_erlang.md)
   - [Elixir](./syntax_reminder/26_elixir.md)
   - [Clojure](./syntax_reminder/27_clojure.md)
+  - [Elm](./syntax_reminder/28_elm.md)
 - [Article](./article/README.md)
   - [Pigeon Release v0.2.0](./article/2022-01-05_pigeon_release_v0.2.0.md)
   - [Pigeon Release v0.1.0](./article/2021-11-20_pigeon_release_v0.1.0.md)
