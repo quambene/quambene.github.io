@@ -36,3 +36,6 @@ Syntax reminder for
 - [Elixir](/syntax_reminder/26_elixir.md)
 - [Clojure](/syntax_reminder/27_clojure.md)
 - [Elm](/syntax_reminder/28_elm.md)
+- [Ada](/syntax_reminder/29_ada.md)
+- [Nim](/syntax_reminder/30_nim.md)
+- [Zig](/syntax_reminder/31_zig.md)
