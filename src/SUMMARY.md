@@ -8,6 +8,9 @@
 
 ---
 
+- [Article](./article/README.md)
+  - [Pigeon Release v0.2.0](./article/2022-01-05_pigeon_release_v0.2.0.md)
+  - [Pigeon Release v0.1.0](./article/2021-11-20_pigeon_release_v0.1.0.md)
 - [Syntax reminder](./syntax_reminder/README.md)
   - [Python](./syntax_reminder/01_python.md)
   - [Typescript](./syntax_reminder/02_typescript.md)
@@ -40,8 +43,5 @@
   - [Ada](./syntax_reminder/29_ada.md)
   - [Nim](./syntax_reminder/30_nim.md)
   - [Zig](./syntax_reminder/31_zig.md)
-- [Article](./article/README.md)
-  - [Pigeon Release v0.2.0](./article/2022-01-05_pigeon_release_v0.2.0.md)
-  - [Pigeon Release v0.1.0](./article/2021-11-20_pigeon_release_v0.1.0.md)
 
 ---
