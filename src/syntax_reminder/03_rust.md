@@ -101,7 +101,7 @@ let first_arr = arr[0];
 // Tuple
 let tup: (i32, f64, u8) = (500, 6.4, 1);
 let first_tup = tup.0; // access a tuple element
-let (x, y, z ) = tup; // destructuring
+let (x, y, z) = tup; // destructuring
 
 // Vector
 let vec: Vec<i32> = Vec::new();
