@@ -54,7 +54,6 @@ const User = struct {
 ``` zig
 // Arithmetic operators
 % // modulo (remainder)
-// -- floor division
 
 // Logical operators
 == // equal
