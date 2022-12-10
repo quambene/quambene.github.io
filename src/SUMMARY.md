@@ -43,5 +43,6 @@
   - [Ada](./syntax_reminder/29_ada.md)
   - [Nim](./syntax_reminder/30_nim.md)
   - [Zig](./syntax_reminder/31_zig.md)
+  - [Julia](./syntax_reminder/32_julia.md)
 
 ---
