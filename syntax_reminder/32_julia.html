@@ -138,7 +138,96 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="julia"><a class="header" href="#julia">Julia</a></h1>
+                        <!-- markdownlint-disable MD001 -->
+<h1 id="julia"><a class="header" href="#julia">Julia</a></h1>
+<ul>
+<li><a href="#print">Print</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#data-types">Data types</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#control-flow">Control flow</a></li>
+<li><a href="#functions">Functions</a></li>
+</ul>
+<h3 id="print"><a class="header" href="#print">Print</a></h3>
+<pre><code class="language-julia">x = &quot;world&quot;
+println(&quot;hello &quot;, x)
+</code></pre>
+<h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
+<pre><code class="language-julia">x = 4
+x::Int32 = 4
+</code></pre>
+<h3 id="data-types"><a class="header" href="#data-types">Data types</a></h3>
+<pre><code class="language-julia"># Basic types
+x::Int32 = 4
+x::UInt32 = 4
+x::Float32 = 4.5
+x::Bool = true
+
+# Rational number
+x = 4//5
+
+# Complex number
+x = 2 + 3im
+
+# Array
+arr = [1, 2, 3]
+
+# Tuple
+tup = (1, 2, 3)
+
+# Dictionary
+dict = Dict(&quot;key1&quot; =&gt; &quot;val1&quot;, &quot;key2&quot; =&gt; &quot;val2&quot;)
+
+# Set
+set = Set{String}([&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;])
+
+# Struct
+struct User
+    username::String
+    email::String
+end
+</code></pre>
+<h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
+<pre><code class="language-julia"># Arithmetic operators
+% # modulo (remainder)
+// # floor division
+
+# Logical operators
+== # equal
+!= # not equal
+&amp;&amp; # AND
+|| # OR
+! # NOT
+
+# Bitwise operators
+&amp; # AND
+| # OR
+^ # XOR
+~ # NOT
+&lt;&lt; # left shift
+&gt;&gt; # right shift
+&gt;&gt;&gt; # right shift with zero
+</code></pre>
+<h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
+<pre><code class="language-julia">if a &lt; b
+    # statement
+elseif a == b
+    # statement
+else
+    # statement
+end
+</code></pre>
+<h3 id="functions"><a class="header" href="#functions">Functions</a></h3>
+<pre><code class="language-julia">f(x, y) = x + y
+
+function add(x, y)
+    x + y
+end
+
+function add(x::Any, y::Any)
+    x + y
+end
+</code></pre>
 
                     </main>
 
