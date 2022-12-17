@@ -154,7 +154,7 @@
 <li><a href="#views">Views</a></li>
 <li><a href="#performance">Performance</a></li>
 <li><a href="#functions">Functions</a></li>
-<li><a href="#common-table-expressions-cte">Commmon table expressions (CTE)</a></li>
+<li><a href="#commmon-table-expressions-cte">Commmon table expressions (CTE)</a></li>
 </ul>
 <h3 id="data-types"><a class="header" href="#data-types">Data types</a></h3>
 <pre><code class="language-sql">bool
@@ -175,10 +175,10 @@ time
 timetz
 </code></pre>
 <h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
-<pre><code class="language-sql"># Comparison operators
-= # equal
-!= # not equal
-!= all (array [1, 2]) # not in array
+<pre><code class="language-sql">-- Comparison operators
+= -- equal
+!= -- not equal
+!= all (array [1, 2]) -- not in array
 is null
 is not null
 </code></pre>
@@ -208,13 +208,13 @@ on conflict (id) do update set first_name = excluded.first_name,
                                last_name  = excluded.last_name;
 </code></pre>
 <h3 id="update"><a class="header" href="#update">Update</a></h3>
-<pre><code class="language-sql"># Update single row
+<pre><code class="language-sql">-- Update single row
 update table_name
 set first_name = 'Peter',
     last_name  = 'Müller'
 where id = 1;
 
-# Update multiple rows
+-- Update multiple rows
 update table_name t
 set first_name = u.first_name
 from (values (1, 'Peter'),
@@ -222,7 +222,7 @@ from (values (1, 'Peter'),
      ) u(id, first_name)
 where u.id = t.id;
 
-# Update multiple rows
+-- Update multiple rows
 update table_name t
 set my_value = true
 from (select unnest(array [1, 2, 3])) as u(id)
@@ -233,21 +233,21 @@ where t.id = u.id;
 from table_name
 where id = 1;
 
-# delete all rows
+-- delete all rows
 delete from table_name;
 </code></pre>
 <h3 id="read"><a class="header" href="#read">Read</a></h3>
 <pre><code class="language-sql">select * from table_name;
 
-# subquery
+-- subquery
 select * from (select id, name from table_name) sub;
 
-# case
+-- case
 select case when table1.name is null then table2.name else table1.col1 end as name
 from table1
 full outer join table2 on table1.id = table2.id;
 
-# joins
+-- joins
 inner join
 left outer join, left join
 right outer join, right join
@@ -257,7 +257,8 @@ natural join
 
 </code></pre>
 <h3 id="alter"><a class="header" href="#alter">Alter</a></h3>
-<pre><code class="language-sql">alter table table_name
+<pre><code class="language-sql">-- alter table
+alter table table_name
     add column last_name varchar not null;
 
 alter table table_name
@@ -268,21 +269,24 @@ alter table table_name
 
 alter table table_name
     alter column first_name set not null;
+
+-- alter type
+alter type my_enum add value if not exists 'MyVariant';
 </code></pre>
 <h3 id="constraints"><a class="header" href="#constraints">Constraints</a></h3>
 <pre><code class="language-sql">alter table table_name add constraint table_name_column_name_unique unique (column_name);
 alter table table_name drop constraint table_name_column_name_unique;
 
-# Show constraints
+-- Show constraints
 select * from pg_catalog.pg_constraint;
 select * from information_schema.columns where table_name = 'column_name';
 </code></pre>
 <h3 id="keys"><a class="header" href="#keys">Keys</a></h3>
-<pre><code class="language-sql"># primary key info
+<pre><code class="language-sql">-- primary key info
 select * from &lt;my_table&gt;_id_seq;
 </code></pre>
 <h3 id="views"><a class="header" href="#views">Views</a></h3>
-<pre><code class="language-sql"># Show views
+<pre><code class="language-sql">-- Show views
 select table_name
 from information_schema.views
 where table_schema = any (current_schemas(false));
@@ -303,7 +307,7 @@ drop view if exists my_view;
 explain (analyse true, buffers true) [query]
 </code></pre>
 <h3 id="functions"><a class="header" href="#functions">Functions</a></h3>
-<pre><code class="language-sql"># return first non-null value
+<pre><code class="language-sql">-- return first non-null value
 coalesce(arg1, arg2)
 </code></pre>
 <h3 id="commmon-table-expressions-cte"><a class="header" href="#commmon-table-expressions-cte">Commmon table expressions (CTE)</a></h3>
