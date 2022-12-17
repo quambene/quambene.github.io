@@ -153,6 +153,9 @@ alter table table_name
 
 alter table table_name
     alter column first_name set not null;
+
+-- alter type
+alter type my_enum add value if not exists 'MyVariant';
 ```
 
 ### Constraints
