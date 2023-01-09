@@ -268,6 +268,7 @@ git clean -f # Remove untracked files from the working tree
 
 ``` bash
 git cherry-pick <commit_id> # Apply the changes introduced by some existing commit
+git cherry-pick --no-ff --no-commit <commit_id>
 ```
 
 ### Tag
