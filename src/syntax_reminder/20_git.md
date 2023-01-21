@@ -320,6 +320,8 @@ git submodule foreach git pull origin master
 
 ``` bash
 git show <commit_id> # Show commit
+git show src_branch:path/to/file > new/path/to/file # Show file of other branch at different location in the current branch
+git checkout <src_branch> <path/to/file> # Show file of other branch at the same location in the current branch
 ```
 
 ### Log
