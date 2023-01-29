@@ -387,6 +387,15 @@ git rm -rf --cached . # removes all files from the repository
 git add . # adds them back
 ```
 
+`.gitignore`:
+
+``` bash
+# exclude
+my_dir/*
+# include
+!my_dir/README.md
+```
+
 ### Repo size
 
 ``` bash
