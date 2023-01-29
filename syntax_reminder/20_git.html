@@ -444,6 +444,12 @@ git add -f &lt;file_name&gt; # Force to exclude file from gitignore (&quot;!&lt;
 git rm -rf --cached . # removes all files from the repository
 git add . # adds them back
 </code></pre>
+<p><code>.gitignore</code>:</p>
+<pre><code class="language-bash"># exclude
+my_dir/*
+# include
+!my_dir/README.md
+</code></pre>
 <h3 id="repo-size"><a class="header" href="#repo-size">Repo size</a></h3>
 <pre><code class="language-bash">du -hs .git
 </code></pre>
