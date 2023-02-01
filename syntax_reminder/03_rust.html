@@ -696,21 +696,25 @@ package_name = &quot;1.2.*&quot; # &lt; 1.3.0 (wildcard)
 package_name = &quot;*&quot; # &gt; 0.0.0
 </code></pre>
 <h3 id="cargo-package-manager"><a class="header" href="#cargo-package-manager">Cargo (package manager)</a></h3>
-<pre><code class="language-bash">cargo --version
+<pre><code class="language-bash">cargo --version # Show cargo version
 cargo init # Create binary crate in current directory
 cargo new &lt;bin&gt; --bin # Create binary crate
 cargo new &lt;lib&gt; --lib # Create library crate
 cargo fmt # Format source code
 cargo check # Validate source code
-cargo run
-cargo run --release
-cargo test
-cargo build # Compile source code
-cargo build --release
-cargo clean
+cargo run # Run binary in debug mode
+cargo run --release # Run binary in release mode
+cargo watch -x run # Run and watch for changes
+cargo watch -x 'run --bin=my_binary' # Run and watch for changes
+cargo test # Run tests
+cargo build # Compile source code in debug mode
+cargo build --release # Compile source code in release mode
+cargo clean # Remove target directory
+cargo update # Update dependencies in the Cargo.lock file to the latest version
 cargo add &lt;crate&gt; -F &lt;feature&gt; # Add dependency
 cargo rm &lt;crate&gt; # Remove dependency
 cargo install &lt;crate&gt; # Install Rust binary
+cargo bloat --time --release -j 1 # Check which dependencies take the most time to compile
 </code></pre>
 <h3 id="rustup-toolchain-manager"><a class="header" href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></h3>
 <pre><code class="language-bash">rustup --version
