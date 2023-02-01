@@ -561,21 +561,25 @@ package_name = "*" # > 0.0.0
 ### Cargo (package manager)
 
 ```bash
-cargo --version
+cargo --version # Show cargo version
 cargo init # Create binary crate in current directory
 cargo new <bin> --bin # Create binary crate
 cargo new <lib> --lib # Create library crate
 cargo fmt # Format source code
 cargo check # Validate source code
-cargo run
-cargo run --release
-cargo test
-cargo build # Compile source code
-cargo build --release
-cargo clean
+cargo run # Run binary in debug mode
+cargo run --release # Run binary in release mode
+cargo watch -x run # Run and watch for changes
+cargo watch -x 'run --bin=my_binary' # Run and watch for changes
+cargo test # Run tests
+cargo build # Compile source code in debug mode
+cargo build --release # Compile source code in release mode
+cargo clean # Remove target directory
+cargo update # Update dependencies in the Cargo.lock file to the latest version
 cargo add <crate> -F <feature> # Add dependency
 cargo rm <crate> # Remove dependency
 cargo install <crate> # Install Rust binary
+cargo bloat --time --release -j 1 # Check which dependencies take the most time to compile
 ```
 
 ### Rustup (toolchain manager)
