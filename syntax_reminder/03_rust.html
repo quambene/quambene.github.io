@@ -447,9 +447,10 @@ trait MyTrait {
 
     fn new(name: &amp;'static str) -&gt; Self;
     fn my_method(&amp;self, &amp;Self::MyAssociatedType) -&gt; String;
-    fn default_method(&amp;self) {
-        // ...
+    fn my_default_method(&amp;self) {
+        // default implementation
     };
+    fn my_associated_funtion() -&gt; String;
 }
 
 impl MyTrait for String {
@@ -715,6 +716,8 @@ cargo add &lt;crate&gt; -F &lt;feature&gt; # Add dependency
 cargo rm &lt;crate&gt; # Remove dependency
 cargo install &lt;crate&gt; # Install Rust binary
 cargo bloat --time --release -j 1 # Check which dependencies take the most time to compile
+cargo clippy # Run clippy
+cargo clippy --fix # Apply fixes automatically
 </code></pre>
 <h3 id="rustup-toolchain-manager"><a class="header" href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></h3>
 <pre><code class="language-bash">rustup --version
