@@ -303,9 +303,10 @@ trait MyTrait {
 
     fn new(name: &'static str) -> Self;
     fn my_method(&self, &Self::MyAssociatedType) -> String;
-    fn default_method(&self) {
-        // ...
+    fn my_default_method(&self) {
+        // default implementation
     };
+    fn my_associated_funtion() -> String;
 }
 
 impl MyTrait for String {
