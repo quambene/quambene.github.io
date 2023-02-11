@@ -580,6 +580,8 @@ cargo add <crate> -F <feature> # Add dependency
 cargo rm <crate> # Remove dependency
 cargo install <crate> # Install Rust binary
 cargo bloat --time --release -j 1 # Check which dependencies take the most time to compile
+cargo clippy # Run clippy
+cargo clippy --fix # Apply fixes automatically
 ```
 
 ### Rustup (toolchain manager)
