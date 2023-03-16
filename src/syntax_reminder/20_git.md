@@ -26,6 +26,7 @@
 - [Cherry-pick](#cherry-pick)
 - [Tag](#tag)
   - [Rename tag](#rename-tag)
+  - [Overwrite tag](#overwrite-tag)
 - [Worktree](#worktree)
 - [Submodule](#submodule)
 - [Show](#show)
@@ -291,6 +292,13 @@ git checkout tags/<tag_name> -b <branch_name> # Check out specific tag
 git tag <new_tag> <old_tag>
 git tag -d <old_tag>
 git push origin <new_tag> :<old_tag>
+```
+
+#### Overwrite tag
+
+``` bash
+git tag -f v1.0.0
+git push --force origin v1.0.0
 ```
 
 ### Worktree
