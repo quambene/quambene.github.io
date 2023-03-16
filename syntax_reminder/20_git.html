@@ -175,6 +175,7 @@
 <li><a href="#tag">Tag</a>
 <ul>
 <li><a href="#rename-tag">Rename tag</a></li>
+<li><a href="#overwrite-tag">Overwrite tag</a></li>
 </ul>
 </li>
 <li><a href="#worktree">Worktree</a></li>
@@ -373,6 +374,10 @@ git checkout tags/&lt;tag_name&gt; -b &lt;branch_name&gt; # Check out specific t
 <pre><code class="language-bash">git tag &lt;new_tag&gt; &lt;old_tag&gt;
 git tag -d &lt;old_tag&gt;
 git push origin &lt;new_tag&gt; :&lt;old_tag&gt;
+</code></pre>
+<h4 id="overwrite-tag"><a class="header" href="#overwrite-tag">Overwrite tag</a></h4>
+<pre><code class="language-bash">git tag -f v1.0.0
+git push --force origin v1.0.0
 </code></pre>
 <h3 id="worktree"><a class="header" href="#worktree">Worktree</a></h3>
 <pre><code class="language-bash">git worktree add &lt;folder&gt; &lt;branch&gt; # Add worktree
