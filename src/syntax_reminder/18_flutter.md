@@ -4,7 +4,7 @@
 
 - [Stateless widget](#stateless-widget)
 - [Stateful widget](#stateful-widget)
-- [Dependencies](#dependencies)
+- [Dependencies (pubspec.yaml)](#dependencies-pubspecyaml)
 
 ### Stateless widget
 
@@ -41,7 +41,7 @@ class _MyWidgetState extends State<MyWidget> {
 }
 ```
 
-### Dependencies
+### Dependencies (pubspec.yaml)
 
 ``` yaml
 dependencies:
