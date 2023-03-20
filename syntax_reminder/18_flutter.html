@@ -141,8 +141,9 @@
                         <!-- markdownlint-disable MD001 -->
 <h1 id="flutter"><a class="header" href="#flutter">Flutter</a></h1>
 <ul>
-<li><a href="#stateless-widgets">Stateless widget</a></li>
-<li><a href="#stateful-widgets">Stateful widget</a></li>
+<li><a href="#stateless-widget">Stateless widget</a></li>
+<li><a href="#stateful-widget">Stateful widget</a></li>
+<li><a href="#dependencies-pubspecyaml">Dependencies (pubspec.yaml)</a></li>
 </ul>
 <h3 id="stateless-widget"><a class="header" href="#stateless-widget">Stateless widget</a></h3>
 <pre><code class="language-dart">class MyWidget extends StatelessWidget {
@@ -172,6 +173,13 @@ class _MyWidgetState extends State&lt;MyWidget&gt; {
     );
   }
 }
+</code></pre>
+<h3 id="dependencies-pubspecyaml"><a class="header" href="#dependencies-pubspecyaml">Dependencies (pubspec.yaml)</a></h3>
+<pre><code class="language-yaml">dependencies:
+  package_name: ^1.2.3 # &lt; 2.0.0 (caret)
+  package_name: ~1.2.3 # &lt; 1.3.0 (tilde)
+  package_name: 1.2.* # &lt; 1.3.0 (wildcard)
+  package_name: * # &gt; 0.0.0
 </code></pre>
 
                     </main>
