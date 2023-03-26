@@ -270,6 +270,8 @@ git branch &lt;branch_name&gt; # Create new branch
 git branch -m &lt;new_name&gt; # Rename current branch
 git checkout &lt;old_name&gt; &amp;&amp; git branch -m &lt;new_name&gt; # Rename branch
 git checkout master &amp;&amp; git branch -m &lt;old_name&gt; &lt;new_name&gt; # Rename branch
+git branch --merged # List merged branches into HEAD
+git branch --merged dev # List merged branches into dev
 git branch -d &lt;branch_name&gt; # Delete local branch (--delete)
 git branch -D &lt;branch_name&gt; # Delete local branch (--delete --force)
 git push origin --delete &lt;branch_name&gt; # Delete remote branch
