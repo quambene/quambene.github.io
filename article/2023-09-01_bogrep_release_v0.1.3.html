@@ -169,7 +169,7 @@
 <li><a href="https://crates.io/crates/ripgrep">ripgrep</a> for full-text search in all my markdown files</li>
 <li><a href="https://crates.io/crates/ripgrep_all">ripgrep-all</a> for full-text search in LibreOffice documents and PDFs</li>
 </ul>
-<p>Now you can also use <a href="https://crates.io/crates/bogrep">bogrep</a> [3, 4] to grep through your bookmarks in full-text search.</p>
+<p>Now you can also use <a href="https://crates.io/crates/bogrep">bogrep</a> to grep through your bookmarks in full-text search.</p>
 <p>Supported browsers are Firefox and Chrome. You can configure bogrep to import
 some specific bookmark <code>--folders</code> from your browser:</p>
 <pre><code class="language-bash"># Configure bogrep to use bookmarks from Firefox for my_profile:
@@ -184,7 +184,11 @@ bogrep fetch
 # Finally, grep through your bookmarks
 bogrep &lt;pattern&gt;
 </code></pre>
-<p>Fetching of bookmarks is conservatively throttled for bookmarks from the same host. So that using bogrep shouldn't lead to any kind of rate limiting. You can configure the <code>request_throttling</code> yourself in the created <code>settings.json</code> file, placed at <code>~/.config/bogrep</code> in your home directory.</p>
+<p>Fetching of bookmarks is conservatively throttled for bookmarks from the same
+host. So that using bogrep shouldn't lead to any kind of rate limiting. You can
+configure the <code>request_throttling</code> yourself in the created <code>settings.json</code> file,
+placed at <code>~/.config/bogrep</code> in your home directory.</p>
+<p>Check out the repo for more information: <a href="https://github.com/quambene/bogrep">https://github.com/quambene/bogrep</a>.</p>
 
                     </main>
 
