@@ -9,6 +9,7 @@
 ---
 
 - [Article](./article/README.md)
+  - [Bogrep Release v0.1.3](./article/2023-09-01_bogrep_release_v0.1.3.md)
   - [Pigeon Release v0.2.0](./article/2022-01-05_pigeon_release_v0.2.0.md)
   - [Pigeon Release v0.1.0](./article/2021-11-20_pigeon_release_v0.1.0.md)
 - [Syntax reminder](./syntax_reminder/README.md)
