@@ -7,7 +7,7 @@ I'm already using
 - [ripgrep](https://crates.io/crates/ripgrep) for full-text search in all my markdown files
 - [ripgrep-all](https://crates.io/crates/ripgrep_all) for full-text search in LibreOffice documents and PDFs
 
-Now you can also use [bogrep](https://crates.io/crates/bogrep) [3, 4] to grep through your bookmarks in full-text search.
+Now you can also use [bogrep](https://crates.io/crates/bogrep) to grep through your bookmarks in full-text search.
 
 Supported browsers are Firefox and Chrome. You can configure bogrep to import
 some specific bookmark `--folders` from your browser:
@@ -26,4 +26,9 @@ bogrep fetch
 bogrep <pattern>
 ```
 
-Fetching of bookmarks is conservatively throttled for bookmarks from the same host. So that using bogrep shouldn't lead to any kind of rate limiting. You can configure the `request_throttling` yourself in the created `settings.json` file, placed at `~/.config/bogrep` in your home directory.
+Fetching of bookmarks is conservatively throttled for bookmarks from the same
+host. So that using bogrep shouldn't lead to any kind of rate limiting. You can
+configure the `request_throttling` yourself in the created `settings.json` file,
+placed at `~/.config/bogrep` in your home directory.
+
+Check out the repo for more information: <https://github.com/quambene/bogrep>.
