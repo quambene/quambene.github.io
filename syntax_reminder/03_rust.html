@@ -7,8 +7,7 @@
 
 
         <!-- Custom HTML head -->
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -32,14 +31,15 @@
 
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -55,7 +55,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -67,12 +67,14 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -80,16 +82,38 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../projects.html">Projects</a></li><li class="chapter-item expanded affix "><a href="../skills.html">Skills</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../article/index.html"><strong aria-hidden="true">1.</strong> Article</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../article/2022-01-05_pigeon_release_v0.2.0.html"><strong aria-hidden="true">1.1.</strong> Pigeon Release v0.2.0</a></li><li class="chapter-item expanded "><a href="../article/2021-11-20_pigeon_release_v0.1.0.html"><strong aria-hidden="true">1.2.</strong> Pigeon Release v0.1.0</a></li></ol></li><li class="chapter-item expanded "><a href="../syntax_reminder/index.html"><strong aria-hidden="true">2.</strong> Syntax reminder</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../syntax_reminder/01_python.html"><strong aria-hidden="true">2.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/02_typescript.html"><strong aria-hidden="true">2.2.</strong> Typescript</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/03_rust.html" class="active"><strong aria-hidden="true">2.3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/04_go.html"><strong aria-hidden="true">2.4.</strong> Go</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/05_java.html"><strong aria-hidden="true">2.5.</strong> Java</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/06_c.html"><strong aria-hidden="true">2.6.</strong> C</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/07_cpp.html"><strong aria-hidden="true">2.7.</strong> C++</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/08_scheme.html"><strong aria-hidden="true">2.8.</strong> Scheme</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/09_dart.html"><strong aria-hidden="true">2.9.</strong> Dart</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/10_postgres.html"><strong aria-hidden="true">2.10.</strong> Postgres</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/11_markdown.html"><strong aria-hidden="true">2.11.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/12_html.html"><strong aria-hidden="true">2.12.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/13_bash.html"><strong aria-hidden="true">2.13.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/14_css.html"><strong aria-hidden="true">2.14.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/15_vue.html"><strong aria-hidden="true">2.15.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/16_nginx.html"><strong aria-hidden="true">2.16.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/17_angular.html"><strong aria-hidden="true">2.17.</strong> Angular</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/18_flutter.html"><strong aria-hidden="true">2.18.</strong> Flutter</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/19_react.html"><strong aria-hidden="true">2.19.</strong> React</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/20_git.html"><strong aria-hidden="true">2.20.</strong> Git</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/21_fortran.html"><strong aria-hidden="true">2.21.</strong> Fortran</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/22_regex.html"><strong aria-hidden="true">2.22.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/23_protobuf.html"><strong aria-hidden="true">2.23.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/24_docker.html"><strong aria-hidden="true">2.24.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/25_erlang.html"><strong aria-hidden="true">2.25.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/26_elixir.html"><strong aria-hidden="true">2.26.</strong> Elixir</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/27_clojure.html"><strong aria-hidden="true">2.27.</strong> Clojure</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/28_elm.html"><strong aria-hidden="true">2.28.</strong> Elm</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/29_ada.html"><strong aria-hidden="true">2.29.</strong> Ada</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/30_nim.html"><strong aria-hidden="true">2.30.</strong> Nim</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/31_zig.html"><strong aria-hidden="true">2.31.</strong> Zig</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/32_julia.html"><strong aria-hidden="true">2.32.</strong> Julia</a></li><li class="spacer"></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../projects.html">Projects</a></li><li class="chapter-item expanded affix "><a href="../skills.html">Skills</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../article/index.html"><strong aria-hidden="true">1.</strong> Article</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../article/2023-09-01_bogrep_release_v0.1.3.html"><strong aria-hidden="true">1.1.</strong> Bogrep Release v0.1.3</a></li><li class="chapter-item expanded "><a href="../article/2022-01-05_pigeon_release_v0.2.0.html"><strong aria-hidden="true">1.2.</strong> Pigeon Release v0.2.0</a></li><li class="chapter-item expanded "><a href="../article/2021-11-20_pigeon_release_v0.1.0.html"><strong aria-hidden="true">1.3.</strong> Pigeon Release v0.1.0</a></li></ol></li><li class="chapter-item expanded "><a href="../syntax_reminder/index.html"><strong aria-hidden="true">2.</strong> Syntax reminder</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../syntax_reminder/01_python.html"><strong aria-hidden="true">2.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/02_typescript.html"><strong aria-hidden="true">2.2.</strong> Typescript</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/03_rust.html" class="active"><strong aria-hidden="true">2.3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/04_go.html"><strong aria-hidden="true">2.4.</strong> Go</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/05_java.html"><strong aria-hidden="true">2.5.</strong> Java</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/06_c.html"><strong aria-hidden="true">2.6.</strong> C</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/07_cpp.html"><strong aria-hidden="true">2.7.</strong> C++</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/08_scheme.html"><strong aria-hidden="true">2.8.</strong> Scheme</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/09_dart.html"><strong aria-hidden="true">2.9.</strong> Dart</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/10_postgres.html"><strong aria-hidden="true">2.10.</strong> Postgres</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/11_markdown.html"><strong aria-hidden="true">2.11.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/12_html.html"><strong aria-hidden="true">2.12.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/13_bash.html"><strong aria-hidden="true">2.13.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/14_css.html"><strong aria-hidden="true">2.14.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/15_vue.html"><strong aria-hidden="true">2.15.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/16_nginx.html"><strong aria-hidden="true">2.16.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/17_angular.html"><strong aria-hidden="true">2.17.</strong> Angular</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/18_flutter.html"><strong aria-hidden="true">2.18.</strong> Flutter</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/19_react.html"><strong aria-hidden="true">2.19.</strong> React</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/20_git.html"><strong aria-hidden="true">2.20.</strong> Git</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/21_fortran.html"><strong aria-hidden="true">2.21.</strong> Fortran</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/22_regex.html"><strong aria-hidden="true">2.22.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/23_protobuf.html"><strong aria-hidden="true">2.23.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/24_docker.html"><strong aria-hidden="true">2.24.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/25_erlang.html"><strong aria-hidden="true">2.25.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/26_elixir.html"><strong aria-hidden="true">2.26.</strong> Elixir</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/27_clojure.html"><strong aria-hidden="true">2.27.</strong> Clojure</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/28_elm.html"><strong aria-hidden="true">2.28.</strong> Elm</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/29_ada.html"><strong aria-hidden="true">2.29.</strong> Ada</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/30_nim.html"><strong aria-hidden="true">2.30.</strong> Nim</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/31_zig.html"><strong aria-hidden="true">2.31.</strong> Zig</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/32_julia.html"><strong aria-hidden="true">2.32.</strong> Julia</a></li><li class="spacer"></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -98,7 +122,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -128,7 +152,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -162,8 +186,7 @@
 <li><a href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></li>
 </ul>
 <h3 id="print"><a class="header" href="#print">Print</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let name = &quot;world&quot;;
 println!(&quot;Hello, {}!&quot;, name);
@@ -171,8 +194,7 @@ println!(&quot;Debug: {:?}&quot;, name); // for debugging
 println!(&quot;:#?&quot;, my_struct); // pretty-print structs
 println!(&quot;{:b}&quot;, my_int); // binary representation
 println!(&quot;{:08b}&quot;, my_int); // binary representation
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
 <p><strong>Reference</strong>: Refer to some value without taking ownership of it.</p>
 <p><strong>Lifetime</strong>: The scope for which a reference is valid.</p>
@@ -187,8 +209,7 @@ println!(&quot;{:08b}&quot;, my_int); // binary representation
 <li>at any given time, you can have either one mutable reference or any number of immutable references</li>
 <li>references must always be valid</li>
 </ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let x; // declare
 x = 42; // assign value
@@ -209,11 +230,9 @@ let x: *mut str; // // mut pointer
 const MYCONST: f32 = 3.14; // immutable value
 static MYSTATIC: &amp;str = &quot;Rust&quot;; // mutable variable with static lifetime
 let r#fn = &quot;name&quot;; // raw identifier for reserved keywords
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="data-types"><a class="header" href="#data-types">Data types</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// Basic types
 let x: i32; // signed integer
@@ -310,11 +329,9 @@ Cell&lt;T&gt;
 RefCell&lt;T&gt;
 Mutex&lt;T&gt; // thread-safe
 RwLock&lt;T&gt; // thread-safe
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// Logical operators
 &amp;&amp; // AND
@@ -342,12 +359,10 @@ num::integer::div_floor // floor division
 value &amp; !(1 &lt;&lt; index) // set bit to 0
 value | (1 &lt;&lt; index) // set bit to 1
 value ^ (1 &lt;&lt; index) // swap bit
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>More operators: <a href="https://doc.rust-lang.org/book/appendix-02-operators.html">https://doc.rust-lang.org/book/appendix-02-operators.html</a></p>
 <h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// for loop
 for element in set {
@@ -390,11 +405,9 @@ if let Some(i) = my_option {
 while let Some(i) = my_option  {
     println!(&quot;Matched {}&quot;, i)
 }
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="functions"><a class="header" href="#functions">Functions</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn my_function(x: i32) -&gt; i32 {
     let y = 3; // statement
@@ -420,11 +433,9 @@ MyStruct::my_function(42); // call associated function
 // Closure
 let my_closure = |i| i + 1;
 let my_closure = |i: i32| -&gt; i32 { i + 1 }; // typed
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="generics-parametric-polymorphism"><a class="header" href="#generics-parametric-polymorphism">Generics (parametric polymorphism)</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn my_generic_function&lt;T&gt;(list: &amp;[T]) -&gt; T {
     // ...
@@ -435,11 +446,9 @@ impl&lt;T&gt; MyGenericStruct&lt;T&gt; {
         // ...
     }
 }
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="traits-ad-hoc-polymorphism"><a class="header" href="#traits-ad-hoc-polymorphism">Traits (ad-hoc polymorphism)</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// A collection of methods defined for an unknown type
 trait MyTrait {
@@ -496,11 +505,9 @@ where
 trait MyTrait: MySuperTrait {
     fn my_method(&amp;self) -&gt; String;
 }
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="lifetimes"><a class="header" href="#lifetimes">Lifetimes</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>/*  Every reference has a lifetime;
     and lifetime parameters for functions or structs
@@ -512,8 +519,7 @@ fn longest&lt;'a&gt;(x: &amp;'a str, y: &amp;'a str) -&gt; &amp;'a str {
         y
     }
 }
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="macros"><a class="header" href="#macros">Macros</a></h3>
 <h4 id="declarative-macros"><a class="header" href="#declarative-macros">Declarative macros</a></h4>
 <pre><pre class="playground"><code class="language-rust">#[macro_export]
@@ -525,11 +531,9 @@ macro_rules! my_macro {
 
 fn main() {
     my_macro!();
-}
-</code></pre></pre>
+}</code></pre></pre>
 <h4 id="procedural-macros"><a class="header" href="#procedural-macros">Procedural macros</a></h4>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// derive macro
 #[derive(MyMacro)]
@@ -543,11 +547,9 @@ fn index() {}
 unimplemented!()
 todo!()
 let sql = sql!(select * from posts where id=1);
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="error-handling"><a class="header" href="#error-handling">Error handling</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// ? operator (propagating errors)
 fn read_username_from_file() -&gt; Result&lt;String, io::Error&gt; {
@@ -555,11 +557,9 @@ fn read_username_from_file() -&gt; Result&lt;String, io::Error&gt; {
     File::open(&quot;hello.txt&quot;)?.read_to_string(&amp;mut s)?;
     Ok(s)
 }
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="testing"><a class="header" href="#testing">Testing</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// Unit tests
 #[cfg(test)]
@@ -575,8 +575,7 @@ mod tests {
 
 // Integration tests
 // tests/common.rs can be used to share code between integration tests.
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <pre><code class="language-bash">cargo test # Run tests
 cargo test -- --nocapture # Show output
 cargo test -- --show-output # Show output
@@ -589,8 +588,7 @@ cargo test --lib # Run unit tests
 cargo test --test '*' # Run integration tests
 </code></pre>
 <h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// My line comment
 
@@ -626,8 +624,7 @@ cargo test --test '*' # Run integration tests
 /// [`MyStruct`]
 ///
 /// [`MyStruct`]: crate::my_module::MyStruct
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <pre><code class="language-bash">cargo doc # Build the documentation
 cargo doc --open # Open the documentation
 cargo doc --no-deps # Do not build documentation for dependencies
@@ -638,16 +635,13 @@ cargo doc --document-private-items # Include non-public items in the documentati
 <li><a href="https://rust-lang.github.io/rfcs/1946-intra-rustdoc-links.html"><code>intra_rustdoc_links</code></a></li>
 </ul>
 <h3 id="visibility"><a class="header" href="#visibility">Visibility</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>pub struct MyStruct { ... }
 pub(crate) struct MyStruct // Use this one, so it is not accidentally exposed to another crate
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="modules"><a class="header" href="#modules">Modules</a></h3>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>// A collection of items: functions, structs, traits, impl blocks, and other modules
 mod my_mod {
@@ -681,8 +675,7 @@ use self::f::Future;
 // submodules
 foo.rs // module
 foo/bar.rs // submodule
-<span class="boring">}
-</span></code></pre></pre>
+<span class="boring">}</span></code></pre></pre>
 <h3 id="crates"><a class="header" href="#crates">Crates</a></h3>
 <p>Crate: a tree of modules that produces a library or executable</p>
 <pre><code class="language-bash">cargo init # create binary crate in current directory
@@ -772,21 +765,22 @@ rustup target add &lt;target&gt; --toolchain nightly # Install target for nightl
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
 
+    </div>
     </body>
 </html>
