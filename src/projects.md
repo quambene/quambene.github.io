@@ -2,6 +2,13 @@
 
 Some of my projects are summarized as follows. [More](/about.md) about me.
 
+## Bogrep
+
+- functional description: full-text search on your bookmarks
+- technical description: command line tool
+- tech stack: Rust
+- website: <https://github.com/quambene/bogrep>
+
 ## Pigeon
 
 - functional description: open-source email automation written in Rust
