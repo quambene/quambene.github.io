@@ -14,7 +14,9 @@ some specific bookmark `--folders` from your browser:
 
 ```bash
 # Configure bogrep to use bookmarks from Firefox for my_profile:
-bogrep config --source ~/snap/firefox/common/.mozilla/firefox/<my_profile>/bookmarkbackups --folders dev,science,articles
+bogrep config \
+    --source ~/snap/firefox/common/.mozilla/firefox/<my_profile>/bookmarkbackups \
+    --folders dev,science,articles
 
 # Import bookmarks
 bogrep import
@@ -32,3 +34,5 @@ configure the `request_throttling` yourself in the created `settings.json` file,
 placed at `~/.config/bogrep` in your home directory.
 
 Check out the repo for more information: <https://github.com/quambene/bogrep>.
+
+_Published on 2023-09-01._
