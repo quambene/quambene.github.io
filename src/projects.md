@@ -2,6 +2,13 @@
 
 Some of my projects are summarized as follows. [More](/about.md) about me.
 
+## Vacuna
+
+- functional description: smart vaccination app
+- technical description: mobile development with focus on UX/UI design
+- tech stack: Flutter+Rust
+- website: <https://vacuna.io>
+
 ## Bogrep
 
 - functional description: full-text search on your bookmarks
@@ -16,12 +23,12 @@ Some of my projects are summarized as follows. [More](/about.md) about me.
 - tech stack: Rust
 - website: <https://github.com/quambene/pigeon-rs>
 
-## Vacuna
+## Taxel
 
-- functional description: smart vaccination app
-- technical description: mobile development with focus on UX/UI design
-- tech stack: Flutter+Rust
-- website: <https://vacuna.io>
+- functional description: open-source tax application written in Rust
+- technical description: CLI and Rust bindings for the ELSTER Rich Client (ERiC)
+- tech stack: Rust
+- website: <https://github.com/quambene/taxel>
 
 ## Turtle
 
@@ -30,23 +37,9 @@ Some of my projects are summarized as follows. [More](/about.md) about me.
 - tech stack: Angular+Rust
 - website: <https://turtle.community>
 
-## Taxel
-
-- functional description: open-source tax application written in Rust
-- technical description: CLI and Rust bindings for the ELSTER Rich Client (ERiC)
-- tech stack: Rust
-- website: <https://github.com/quambene/taxel>
-
 ## LibreCRM
 
 - functional description: open-source customer relationship management (CRM) based on LibreOffice
 - technical description: flexibility of spreadsheets combined with consistency of databases
 - tech stack: LibreOffice Base
 - website: <https://github.com/quambene/libre_crm>
-
-## Blockchain demo
-
-- functional description: prototyping on the Ethereum blockchain
-- technical description: smart contract written in Solidity and deployed on the Ethereum mainnet
-- tech stack: Solidity
-- website: <https://startuptwister.com/register>
