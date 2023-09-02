@@ -173,7 +173,9 @@
 <p>Supported browsers are Firefox and Chrome. You can configure bogrep to import
 some specific bookmark <code>--folders</code> from your browser:</p>
 <pre><code class="language-bash"># Configure bogrep to use bookmarks from Firefox for my_profile:
-bogrep config --source ~/snap/firefox/common/.mozilla/firefox/&lt;my_profile&gt;/bookmarkbackups --folders dev,science,articles
+bogrep config \
+    --source ~/snap/firefox/common/.mozilla/firefox/&lt;my_profile&gt;/bookmarkbackups \
+    --folders dev,science,articles
 
 # Import bookmarks
 bogrep import
@@ -189,6 +191,7 @@ host. So that using bogrep shouldn't lead to any kind of rate limiting. You can
 configure the <code>request_throttling</code> yourself in the created <code>settings.json</code> file,
 placed at <code>~/.config/bogrep</code> in your home directory.</p>
 <p>Check out the repo for more information: <a href="https://github.com/quambene/bogrep">https://github.com/quambene/bogrep</a>.</p>
+<p><em>Published on 2023-09-01.</em></p>
 
                     </main>
 
