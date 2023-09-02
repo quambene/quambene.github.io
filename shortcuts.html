@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Shortcuts - quambene&#x27;s blog</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="projects.html">Projects</a></li><li class="chapter-item expanded affix "><a href="skills.html">Skills</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="article/index.html"><strong aria-hidden="true">1.</strong> Article</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="article/2023-09-01_bogrep_release_v0.1.3.html"><strong aria-hidden="true">1.1.</strong> Bogrep Release v0.1.3</a></li><li class="chapter-item expanded "><a href="article/2022-01-05_pigeon_release_v0.2.0.html"><strong aria-hidden="true">1.2.</strong> Pigeon Release v0.2.0</a></li><li class="chapter-item expanded "><a href="article/2021-11-20_pigeon_release_v0.1.0.html"><strong aria-hidden="true">1.3.</strong> Pigeon Release v0.1.0</a></li></ol></li><li class="chapter-item expanded "><a href="shortcuts.html" class="active"><strong aria-hidden="true">2.</strong> Shortcuts</a></li><li class="chapter-item expanded "><a href="syntax_reminder/index.html"><strong aria-hidden="true">3.</strong> Syntax reminder</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="syntax_reminder/01_python.html"><strong aria-hidden="true">3.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="syntax_reminder/02_typescript.html"><strong aria-hidden="true">3.2.</strong> Typescript</a></li><li class="chapter-item expanded "><a href="syntax_reminder/03_rust.html"><strong aria-hidden="true">3.3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="syntax_reminder/04_go.html"><strong aria-hidden="true">3.4.</strong> Go</a></li><li class="chapter-item expanded "><a href="syntax_reminder/05_java.html"><strong aria-hidden="true">3.5.</strong> Java</a></li><li class="chapter-item expanded "><a href="syntax_reminder/06_c.html"><strong aria-hidden="true">3.6.</strong> C</a></li><li class="chapter-item expanded "><a href="syntax_reminder/07_cpp.html"><strong aria-hidden="true">3.7.</strong> C++</a></li><li class="chapter-item expanded "><a href="syntax_reminder/08_scheme.html"><strong aria-hidden="true">3.8.</strong> Scheme</a></li><li class="chapter-item expanded "><a href="syntax_reminder/09_dart.html"><strong aria-hidden="true">3.9.</strong> Dart</a></li><li class="chapter-item expanded "><a href="syntax_reminder/10_postgres.html"><strong aria-hidden="true">3.10.</strong> Postgres</a></li><li class="chapter-item expanded "><a href="syntax_reminder/11_markdown.html"><strong aria-hidden="true">3.11.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="syntax_reminder/12_html.html"><strong aria-hidden="true">3.12.</strong> HTML</a></li><li class="chapter-item expanded "><a href="syntax_reminder/13_bash.html"><strong aria-hidden="true">3.13.</strong> Bash</a></li><li class="chapter-item expanded "><a href="syntax_reminder/14_css.html"><strong aria-hidden="true">3.14.</strong> CSS</a></li><li class="chapter-item expanded "><a href="syntax_reminder/15_vue.html"><strong aria-hidden="true">3.15.</strong> Vue</a></li><li class="chapter-item expanded "><a href="syntax_reminder/16_nginx.html"><strong aria-hidden="true">3.16.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="syntax_reminder/17_angular.html"><strong aria-hidden="true">3.17.</strong> Angular</a></li><li class="chapter-item expanded "><a href="syntax_reminder/18_flutter.html"><strong aria-hidden="true">3.18.</strong> Flutter</a></li><li class="chapter-item expanded "><a href="syntax_reminder/19_react.html"><strong aria-hidden="true">3.19.</strong> React</a></li><li class="chapter-item expanded "><a href="syntax_reminder/20_git.html"><strong aria-hidden="true">3.20.</strong> Git</a></li><li class="chapter-item expanded "><a href="syntax_reminder/21_fortran.html"><strong aria-hidden="true">3.21.</strong> Fortran</a></li><li class="chapter-item expanded "><a href="syntax_reminder/22_regex.html"><strong aria-hidden="true">3.22.</strong> Regex</a></li><li class="chapter-item expanded "><a href="syntax_reminder/23_protobuf.html"><strong aria-hidden="true">3.23.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="syntax_reminder/24_docker.html"><strong aria-hidden="true">3.24.</strong> Docker</a></li><li class="chapter-item expanded "><a href="syntax_reminder/25_erlang.html"><strong aria-hidden="true">3.25.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="syntax_reminder/26_elixir.html"><strong aria-hidden="true">3.26.</strong> Elixir</a></li><li class="chapter-item expanded "><a href="syntax_reminder/27_clojure.html"><strong aria-hidden="true">3.27.</strong> Clojure</a></li><li class="chapter-item expanded "><a href="syntax_reminder/28_elm.html"><strong aria-hidden="true">3.28.</strong> Elm</a></li><li class="chapter-item expanded "><a href="syntax_reminder/29_ada.html"><strong aria-hidden="true">3.29.</strong> Ada</a></li><li class="chapter-item expanded "><a href="syntax_reminder/30_nim.html"><strong aria-hidden="true">3.30.</strong> Nim</a></li><li class="chapter-item expanded "><a href="syntax_reminder/31_zig.html"><strong aria-hidden="true">3.31.</strong> Zig</a></li><li class="chapter-item expanded "><a href="syntax_reminder/32_julia.html"><strong aria-hidden="true">3.32.</strong> Julia</a></li><li class="spacer"></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">quambene&#x27;s blog</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- markdownlint-disable MD033 -->
+<h1 id="shortcuts"><a class="header" href="#shortcuts">Shortcuts</a></h1>
+<ul>
+<li><a href="#terminal">Terminal</a></li>
+<li><a href="#vs-code">VS Code</a></li>
+<li><a href="#firefox">Firefox</a></li>
+<li><a href="#libreoffice-writer">LibreOffice Writer</a></li>
+<li><a href="#nautilus-file-manager">Nautilus (file manager)</a></li>
+<li><a href="#ubuntu">Ubuntu</a></li>
+</ul>
+<h2 id="terminal"><a class="header" href="#terminal">Terminal</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td>Ctrl+R</td><td>command line history</td></tr>
+<tr><td>Ctrl+C</td><td>kill the current foreground process</td></tr>
+<tr><td>Ctrl+Z</td><td>suspend the current foreground process</td></tr>
+<tr><td>Ctrl+D</td><td>close tab</td></tr>
+<tr><td>Ctrl+Shift+T</td><td>new tab</td></tr>
+<tr><td>Ctrl+Alt+T</td><td>new window</td></tr>
+</tbody></table>
+</div>
+<h2 id="vs-code"><a class="header" href="#vs-code">VS Code</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td>Ctrl+P</td><td>search for file <br /> <code># &lt;my_search&gt;</code> (navigate symbols within a file) <br /> <code>@ &lt;my_search&gt;</code> (navigate symbols across files)</td></tr>
+<tr><td>Ctrl+Tab</td><td>view a list of all open files</td></tr>
+<tr><td>Ctrl+Shift+O</td><td>navigate within a file; switch between current and most recent tab</td></tr>
+<tr><td>Alt+LeftArrow or Alt+RightArrow</td><td>switch between current and most recent tab</td></tr>
+<tr><td>Ctrl+G</td><td>go to line</td></tr>
+<tr><td>Ctrl+Shift+P</td><td>open command palette; open <code>settings.json</code> file</td></tr>
+<tr><td>Ctrl+Shift+V</td><td>open markdown preview (in new tab)</td></tr>
+<tr><td>Ctrl+Alt+V</td><td>open markdown preview (in split view)</td></tr>
+<tr><td>Alt+z</td><td>toggle word wrap</td></tr>
+<tr><td>Ctrl+Shift+A</td><td>comment multiple lines</td></tr>
+<tr><td>Ctrl+Shift+I</td><td>format code</td></tr>
+<tr><td>Ctrl+K</td><td>comment line</td></tr>
+<tr><td>Ctrl+J</td><td>toggle console</td></tr>
+<tr><td>Ctrl+Shift+S</td><td>save all files</td></tr>
+<tr><td>Ctrl+Shift+E</td><td>open explorer tab</td></tr>
+<tr><td>Ctrl+Shift+F</td><td>open search tab</td></tr>
+<tr><td>Ctrl+Shift+G</td><td>open source control tab</td></tr>
+<tr><td>Ctrl+.</td><td>import module</td></tr>
+<tr><td>Ctrl+R R</td><td>Rust analyzer - run</td></tr>
+<tr><td>Ctrl+R S</td><td>Rust analyzer - restart server</td></tr>
+<tr><td>Ctrl+F5</td><td>Flutter - run app</td></tr>
+<tr><td>F5</td><td>Flutter - run app in debug mode</td></tr>
+<tr><td>Ctrl+T</td><td>Flutter - run all tests</td></tr>
+<tr><td>Alt+Q</td><td>rewrap extension - rewrap comment</td></tr>
+</tbody></table>
+</div>
+<h2 id="firefox"><a class="header" href="#firefox">Firefox</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td>Alt+Left</td><td>back</td></tr>
+<tr><td>Alt+Right</td><td>forward</td></tr>
+<tr><td>Ctrl+L</td><td>enter location</td></tr>
+<tr><td>Ctrl+T</td><td>new tab</td></tr>
+<tr><td>Ctrl+Shift+T</td><td>undo close tab</td></tr>
+<tr><td>Ctrl+W</td><td>close tab</td></tr>
+<tr><td>Ctrl+B</td><td>show bookmarks sidebar</td></tr>
+<tr><td>Ctrl+H</td><td>show history sidebar</td></tr>
+<tr><td>Ctrl+Shift+P</td><td>new private window</td></tr>
+<tr><td>Ctrl+Shift+H</td><td>show history</td></tr>
+<tr><td>Ctrl+Shift+Del</td><td>clear page data</td></tr>
+<tr><td>Ctrl+Shift+A</td><td>show add-ons</td></tr>
+<tr><td>Super+left</td><td>left dock window</td></tr>
+<tr><td>Super+right</td><td>right dock window</td></tr>
+<tr><td>F12</td><td>browser developer console</td></tr>
+<tr><td>F5</td><td>reload</td></tr>
+<tr><td>Ctrl+F5</td><td>reload and re-downloading the entire website</td></tr>
+<tr><td>Space</td><td>page down</td></tr>
+<tr><td>Shift+Space</td><td>page up</td></tr>
+</tbody></table>
+</div>
+<h2 id="libreoffice-writer"><a class="header" href="#libreoffice-writer">LibreOffice Writer</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td>Ctrl+P</td><td>export as PDF</td></tr>
+</tbody></table>
+</div>
+<h2 id="nautilus-file-manager"><a class="header" href="#nautilus-file-manager">Nautilus (file manager)</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td>Ctrl+Shift+N</td><td>new folder</td></tr>
+<tr><td>Ctrl+L</td><td>show full path of location</td></tr>
+<tr><td>Ctrl+F10</td><td>open context menu to create new document</td></tr>
+</tbody></table>
+</div>
+<h2 id="ubuntu"><a class="header" href="#ubuntu">Ubuntu</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Shortcut</th><th>Description</th></tr></thead><tbody>
+<tr><td>Super+D</td><td>minimize all windows (show/hide desktop)</td></tr>
+<tr><td>Super+Space</td><td>change keyboard layout</td></tr>
+<tr><td>Alt+F4</td><td>close window</td></tr>
+<tr><td>Alt+F10</td><td>maximize window</td></tr>
+<tr><td>Super+A</td><td>show applications <br /> Super - get back to desktop</td></tr>
+<tr><td>Alt+Tab</td><td>switch windows</td></tr>
+<tr><td>Alt+^</td><td>switch windows within an application</td></tr>
+<tr><td>Ctrl+Tab</td><td>switch tabs within an application</td></tr>
+<tr><td>Alt+F2</td><td>run application <br /> <code>r</code> - reload shell</td></tr>
+<tr><td>Ctrl+Alt+left</td><td>switch workspaces</td></tr>
+<tr><td>Ctrl+Alt+right</td><td>switch workspaces</td></tr>
+<tr><td>Ctrl+Alt+Shift+left/right</td><td>move current window to left /right workspace</td></tr>
+<tr><td>Ctrl+Alt+Del</td><td>log out</td></tr>
+<tr><td>Ctrl+Alt+End</td><td>shut down menu</td></tr>
+<tr><td>Alt+Print+REISUB</td><td>force reboot</td></tr>
+<tr><td>Ctrl+Alt+F1</td><td>connect to screen</td></tr>
+<tr><td>F11</td><td>full screen</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="article/2021-11-20_pigeon_release_v0.1.0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="syntax_reminder/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="article/2021-11-20_pigeon_release_v0.1.0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="syntax_reminder/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
