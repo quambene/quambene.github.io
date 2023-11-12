@@ -150,6 +150,7 @@ git branch -D <branch_name> # Delete local branch (--delete --force)
 git push origin --delete <branch_name> # Delete remote branch
 git branch --merged | grep -v \* | xargs git branch -D # Delete all local branches
 git branch --contains <branch_name> # Check whether a branch has been merged into another branch
+git branch --unset-upstream # Unset the upstream tracking for the local branch
 ```
 
 ### Add
