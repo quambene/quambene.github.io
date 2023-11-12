@@ -301,6 +301,7 @@ git branch -D &lt;branch_name&gt; # Delete local branch (--delete --force)
 git push origin --delete &lt;branch_name&gt; # Delete remote branch
 git branch --merged | grep -v \* | xargs git branch -D # Delete all local branches
 git branch --contains &lt;branch_name&gt; # Check whether a branch has been merged into another branch
+git branch --unset-upstream # Unset the upstream tracking for the local branch
 </code></pre>
 <h3 id="add"><a class="header" href="#add">Add</a></h3>
 <pre><code class="language-bash">git add &lt;my_file&gt; # Stage my_file
