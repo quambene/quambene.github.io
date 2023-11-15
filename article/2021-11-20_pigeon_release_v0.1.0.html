@@ -163,6 +163,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="pigeon-release-v010-open-source-email-automation-written-in-rust"><a class="header" href="#pigeon-release-v010-open-source-email-automation-written-in-rust">Pigeon Release v0.1.0: Open source email automation written in Rust</a></h1>
+<p><em>First published on <a href="https://www.reddit.com/r/rust/comments/qy85sg/pigeonrs_open_source_email_automation_written_in/">Reddit</a> (2021-11-20).</em></p>
 <p>I found that email automation solutions like Mailchimp or ConvertKit are quite expensive. I was using Pigeon for my projects already a while ago, but figured it could be more useful as an open source project.</p>
 <p><a href="https://github.com/quambene/pigeon-rs">Pigeon</a> is a command line tool based on the excellent libraries <a href="https://crates.io/crates/clap">clap</a>, <a href="https://crates.io/crates/connectorx">connectorx</a>, and <a href="https://crates.io/crates/polars">polars</a>.</p>
 <p>Using clap, it is super easy to create a command line tool. Everything just boils down to a <code>match</code>ing exercise for all subcommands and command line arguments. Rust's <code>Option</code> shows its full power here. Et voilà, after hardcore <code>match</code>ing for a few hours, you will be gifted with a stable and production-ready application.</p>
@@ -303,7 +304,6 @@ elie@cartan.com ... ok
 </div>
 <p>Currently, you have to connect your database and your email provider via environment variables which is not quite user-friendly. It's working for me quite well, but I would be interested in your feedback for potential improvements.</p>
 <p>Edit: Polars is not exactly the Rust equivalent of Python's pandas. There is a Python version of polars, too. <a href="https://h2oai.github.io/db-benchmark/">Here</a> is a benchmark for both.</p>
-<p><em>First published on <a href="https://www.reddit.com/r/rust/comments/qy85sg/pigeonrs_open_source_email_automation_written_in/">Reddit</a> (2021-11-20).</em></p>
 
                     </main>
 
