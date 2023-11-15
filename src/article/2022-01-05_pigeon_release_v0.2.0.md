@@ -1,5 +1,7 @@
 # Pigeon Release v0.2.0: Send email to arbitrary SMTP endpoints
 
+_First published on [Reddit](https://www.reddit.com/r/rust/comments/rwtkvw/pigeonrs_v020_open_source_email_automation_send/) (2022-01-05)._
+
 [Pigeon](https://github.com/quambene/pigeon-rs)  is a command line tool for cheap and efficient email automation written in Rust.
 
 New features in release v0.2.0 \[1\] include support for MIME and SMTP. Both standards are implemented in Pigeon via library Lettre \[2\].
@@ -55,5 +57,3 @@ TODO: Support oauth2 authentication which is used by gmail for example. Compare 
 \[1\] <https://github.com/quambene/pigeon-rs>
 
 \[2\] <https://crates.io/crates/lettre>
-
-_First published on [Reddit](https://www.reddit.com/r/rust/comments/rwtkvw/pigeonrs_v020_open_source_email_automation_send/) (2022-01-05)._

@@ -1,5 +1,7 @@
 # Bogrep Release v0.1.3: Grep your bookmarks (decently fast)
 
+_Published on 2023-09-01._
+
 As a bookmark hoarder, I often need to search through my bookmarks. Usually, I will find what I'm searching for just by using the browser search. Sometimes, I need full-text search on the website's content though to find some specific bookmark I added a while ago.
 
 I'm already using
@@ -34,5 +36,3 @@ configure the `request_throttling` yourself in the created `settings.json` file,
 placed at `~/.config/bogrep` in your home directory.
 
 Check out the repo for more information: <https://github.com/quambene/bogrep>.
-
-_Published on 2023-09-01._

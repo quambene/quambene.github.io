@@ -1,5 +1,7 @@
 # Pigeon Release v0.1.0: Open source email automation written in Rust
 
+_First published on [Reddit](https://www.reddit.com/r/rust/comments/qy85sg/pigeonrs_open_source_email_automation_written_in/) (2021-11-20)._
+
 I found that email automation solutions like Mailchimp or ConvertKit are quite expensive. I was using Pigeon for my projects already a while ago, but figured it could be more useful as an open source project.
 
 [Pigeon](https://github.com/quambene/pigeon-rs) is a command line tool based on the excellent libraries [clap](https://crates.io/crates/clap), [connectorx](https://crates.io/crates/connectorx), and [polars](https://crates.io/crates/polars).
@@ -160,5 +162,3 @@ Currently, Pigeon is based on AWS Simple Email Service as email provider which i
 Currently, you have to connect your database and your email provider via environment variables which is not quite user-friendly. It's working for me quite well, but I would be interested in your feedback for potential improvements.
 
 Edit: Polars is not exactly the Rust equivalent of Python's pandas. There is a Python version of polars, too. [Here](https://h2oai.github.io/db-benchmark/) is a benchmark for both.
-
-_First published on [Reddit](https://www.reddit.com/r/rust/comments/qy85sg/pigeonrs_open_source_email_automation_written_in/) (2021-11-20)._
