@@ -280,8 +280,8 @@ git cherry-pick --no-ff --no-commit <commit_id>
 ``` bash
 git tag v1.0.0 # Tag version
 git tag v1.0.0 -m 'My message' # Tag version with message
-git tag --delete <tag_name> # Delete tag
-git push --delete origin <tag_name> # Delete tag in remote repo
+git tag -d <tag_name> # Delete tag
+git push -d origin <tag_name> # Delete tag in remote repo
 git tag --list # Show all tags
 git tag -l # Show all tags
 git pull --tags
