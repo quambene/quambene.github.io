@@ -66,7 +66,7 @@ let x_owned = *x; // dereferencing
 let x: &'a str; // reference with an explicit lifetime
 let x: &'a mut str; // mutable reference with an explicit lifetime
 let x: *const str; // const pointer (the asterisk isn’t the dereference operator; it’s part of the type name)
-let x: *mut str; // // mut pointer
+let x: *mut str; // mut pointer
 const MYCONST: f32 = 3.14; // immutable value
 static MYSTATIC: &str = "Rust"; // mutable variable with static lifetime
 let r#fn = "name"; // raw identifier for reserved keywords
