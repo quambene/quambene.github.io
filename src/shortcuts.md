@@ -8,6 +8,7 @@
 - [LibreOffice Writer](#libreoffice-writer)
 - [Nautilus (file manager)](#nautilus-file-manager)
 - [Ubuntu](#ubuntu)
+- [Notion](#notion)
 
 ## Terminal
 
@@ -99,7 +100,7 @@
 | Alt+Tab                   | switch windows                                       |
 | Alt+^                     | switch windows within an application                 |
 | Ctrl+Tab                  | switch tabs within an application                    |
-| Alt+F2                    | run application <br /> `r` - reload shell              |
+| Alt+F2                    | run application <br /> `r` - reload shell            |
 | Ctrl+Alt+left             | switch workspaces                                    |
 | Ctrl+Alt+right            | switch workspaces                                    |
 | Ctrl+Alt+Shift+left/right | move current window to left /right workspace         |
@@ -108,3 +109,9 @@
 | Alt+Print+REISUB          | force reboot                                         |
 | Ctrl+Alt+F1               | connect to screen                                    |
 | F11                       | full screen                                          |
+
+## Notion
+
+| Shortcut    | Description       |
+| ----------- | ----------------- |
+| Shift+Enter | insert line break |
