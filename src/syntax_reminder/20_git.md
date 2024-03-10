@@ -128,6 +128,7 @@ git checkout --track origin/<branch_name> # Create <branch_name> and set up "ups
 
 ``` bash
 git switch <branch_name> # Switch branch
+git switch -c <branch_name> # Create branch
 ```
 
 ### Branch
