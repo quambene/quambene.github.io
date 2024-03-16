@@ -18,6 +18,7 @@
 - [Fetch](#fetch)
 - [Merge](#merge)
   - [Merge feature branch](#merge-feature-branch)
+- [Rebase](#rebase)
 - [Pull](#pull)
 - [Reset](#reset)
 - [Revert](#revert)
@@ -220,6 +221,12 @@ git pull origin master
 git merge --no-ff --no-commit <branch_name>
 git commit # no commit message required; commit message "Merge branch 'branch_name'" created automatically
 git push origin master
+```
+
+### Rebase
+
+``` bash
+git rebase master # Incorporate changes from master into the current branch
 ```
 
 ### Pull
