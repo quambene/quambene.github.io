@@ -190,6 +190,7 @@
 <li><a href="#merge-feature-branch">Merge feature branch</a></li>
 </ul>
 </li>
+<li><a href="#rebase">Rebase</a></li>
 <li><a href="#pull">Pull</a></li>
 <li><a href="#reset">Reset</a></li>
 <li><a href="#revert">Revert</a></li>
@@ -350,6 +351,9 @@ git pull origin master
 git merge --no-ff --no-commit &lt;branch_name&gt;
 git commit # no commit message required; commit message &quot;Merge branch 'branch_name'&quot; created automatically
 git push origin master
+</code></pre>
+<h3 id="rebase"><a class="header" href="#rebase">Rebase</a></h3>
+<pre><code class="language-bash">git rebase master # Incorporate changes from master into the current branch
 </code></pre>
 <h3 id="pull"><a class="header" href="#pull">Pull</a></h3>
 <pre><code class="language-bash">git pull # git fetch plus either git rebase or git merge
