@@ -9,6 +9,7 @@
 - [Nautilus (file manager)](#nautilus-file-manager)
 - [Ubuntu](#ubuntu)
 - [Notion](#notion)
+- [macOS](#macos)
 
 ## Terminal
 
@@ -115,3 +116,9 @@
 | Shortcut    | Description       |
 | ----------- | ----------------- |
 | Shift+Enter | insert line break |
+
+## macOS
+
+| Shortcut        | Description       |
+| --------------- | ----------------- |
+| Cmd + Shift + . | Show hidden files |
