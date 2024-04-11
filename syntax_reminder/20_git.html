@@ -270,10 +270,10 @@ git clone --mirror &lt;repo-url&gt; temp-dir # Copy full git repo
 git remote show origin # Show more information
 git remote rename origin &lt;repo_name&gt; # Rename repo
 git remote rm origin # Remove remote repo
-
 git remote add &lt;shortname&gt; &lt;url&gt; # Add remote repo named &lt;shortname&gt; for the repository at &lt;url&gt;
-git remote add origin git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git # SSH
-git remote add origin https://&lt;host_name&gt;/&lt;repo_owner&gt;/&lt;repo_name&gt;.git # HTTPS
+git remote add origin git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git # Add remote repo (SSH)
+git remote add origin https://&lt;host_name&gt;/&lt;repo_owner&gt;/&lt;repo_name&gt;.git # Add remote repo (HTTPS)
+git remote set-url git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git # Change remote repo
 </code></pre>
 <h3 id="checkout"><a class="header" href="#checkout">Checkout</a></h3>
 <pre><code class="language-bash">git checkout &lt;branch_name&gt; # Switch to branch
