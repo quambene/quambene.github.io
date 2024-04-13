@@ -113,7 +113,7 @@ git remote rm origin # Remove remote repo
 git remote add <shortname> <url> # Add remote repo named <shortname> for the repository at <url>
 git remote add origin git@<host_name>:<repo_owner>/<repo_name>.git # Add remote repo (SSH)
 git remote add origin https://<host_name>/<repo_owner>/<repo_name>.git # Add remote repo (HTTPS)
-git remote set-url git@<host_name>:<repo_owner>/<repo_name>.git # Change remote repo
+git remote set-url origin git@<host_name>:<repo_owner>/<repo_name>.git # Change remote repo
 ```
 
 ### Checkout
