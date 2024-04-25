@@ -205,6 +205,7 @@
 </li>
 <li><a href="#worktree">Worktree</a></li>
 <li><a href="#submodule">Submodule</a></li>
+<li><a href="#subtree">Subtree</a></li>
 <li><a href="#show">Show</a></li>
 <li><a href="#log">Log</a></li>
 <li><a href="#diff">Diff</a>
@@ -427,6 +428,16 @@ git submodule update --remote
 git submodule update --init --recursive # First time repo is checked out
 git submodule update --recursive --remote # Update remote branches
 git submodule foreach git pull origin master
+</code></pre>
+<h3 id="subtree"><a class="header" href="#subtree">Subtree</a></h3>
+<pre><code class="language-bash"># Seperate subdirectory into new repo
+git subtree split -P &lt;my_folder&gt; -b &lt;my_branch&gt;
+
+# Display commited files on branch
+git ls-tree -r &lt;my_branch&gt;
+
+# Push branch to main
+git push origin &lt;my_branch&gt;:main
 </code></pre>
 <h3 id="show"><a class="header" href="#show">Show</a></h3>
 <pre><code class="language-bash">git show &lt;commit_id&gt; # Show commit
