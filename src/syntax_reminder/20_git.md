@@ -30,6 +30,7 @@
   - [Overwrite tag](#overwrite-tag)
 - [Worktree](#worktree)
 - [Submodule](#submodule)
+- [Subtree](#subtree)
 - [Show](#show)
 - [Log](#log)
 - [Diff](#diff)
@@ -333,6 +334,19 @@ git submodule update --remote
 git submodule update --init --recursive # First time repo is checked out
 git submodule update --recursive --remote # Update remote branches
 git submodule foreach git pull origin master
+```
+
+### Subtree
+
+``` bash
+# Seperate subdirectory into new repo
+git subtree split -P <my_folder> -b <my_branch>
+
+# Display commited files on branch
+git ls-tree -r <my_branch>
+
+# Push branch to main
+git push origin <my_branch>:main
 ```
 
 ### Show
