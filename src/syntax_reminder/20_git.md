@@ -123,6 +123,7 @@ git remote set-url origin git@<host_name>:<repo_owner>/<repo_name>.git # Change 
 git checkout <branch_name> # Switch to branch
 git checkout -b <branch_name> # Create and switch to new branch
 git checkout <commit_id> # Switch to commit
+git checkout <tag_name> # Switch to tag
 git checkout --track origin/<branch_name> # Create <branch_name> and set up "upstream" 
 ```
 
