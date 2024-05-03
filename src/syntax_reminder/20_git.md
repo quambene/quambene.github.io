@@ -235,6 +235,7 @@ git rebase master # Incorporate changes from master into the current branch
 ``` bash
 git pull # git fetch plus either git rebase or git merge
 git pull origin <branch_name>
+git pull --rebase # Fetch and rebase
 ```
 
 ### Reset
