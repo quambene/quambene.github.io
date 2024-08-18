@@ -11,8 +11,8 @@ Full Stack Developer with experience in backend and open-source development usin
 [Linkedin](https://www.linkedin.com/in/quambene)<br/>
 [Email](mailto:contact.quambene@gmail.com)<br/>
 
-## Latest Post
+## Latest Release
 
-[[2023-09-01] Bogrep Release v0.1.3](./releases/2023-09-01_bogrep_release_v0.1.3.md)
+[[2024-08-18] Eric Release](./releases/2024-08-18_eric_release.md)
 
-[All posts](./releases)
+[All releases](./releases)

@@ -8,10 +8,11 @@
 
 ---
 
-- [Article](./article/README.md)
-  - [Bogrep Release v0.1.3](./article/2023-09-01_bogrep_release_v0.1.3.md)
-  - [Pigeon Release v0.2.0](./article/2022-01-05_pigeon_release_v0.2.0.md)
-  - [Pigeon Release v0.1.0](./article/2021-11-20_pigeon_release_v0.1.0.md)
+- [Releases](./releases/README.md)
+  - [Eric Release](./releases/2024-08-18_eric_release.md)
+  - [Bogrep Release v0.1.3](./releases/2023-09-01_bogrep_release_v0.1.3.md)
+  - [Pigeon Release v0.2.0](./releases/2022-01-05_pigeon_release_v0.2.0.md)
+  - [Pigeon Release v0.1.0](./releases/2021-11-20_pigeon_release_v0.1.0.md)
 - [Shortcuts](./shortcuts.md)
 - [Syntax reminder](./syntax_reminder/README.md)
   - [Python](./syntax_reminder/01_python.md)
