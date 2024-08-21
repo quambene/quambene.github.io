@@ -23,11 +23,18 @@ Some of my projects are summarized as follows. [More](/about.md) about me.
 - tech stack: Rust
 - website: <https://github.com/quambene/pigeon-rs>
 
+## Eric
+
+- functional description: Rust bindings for the German tax library
+- technical description: Bindings and SDK for the ELSTER Rich Client (ERiC)
+- tech stack: Rust
+- website: <https://github.com/quambene/eric-rs>
+
 ## Taxel
 
 - functional description: open-source tax application written in Rust
-- technical description: CLI and Rust bindings for the ELSTER Rich Client (ERiC)
-- tech stack: Rust
+- technical description: CLI for the electronic balance sheet (eBilanz)
+- tech stack: Rust, Python
 - website: <https://github.com/quambene/taxel>
 
 ## Turtle
