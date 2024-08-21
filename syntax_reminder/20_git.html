@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="../favicon.svg">
         <link rel="shortcut icon" href="../favicon.png">
@@ -30,7 +30,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -60,31 +60,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../projects.html">Projects</a></li><li class="chapter-item expanded affix "><a href="../skills.html">Skills</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../releases/index.html"><strong aria-hidden="true">1.</strong> Releases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../releases/2024-08-18_eric_release.html"><strong aria-hidden="true">1.1.</strong> Eric Release</a></li><li class="chapter-item expanded "><a href="../releases/2023-09-01_bogrep_release_v0.1.3.html"><strong aria-hidden="true">1.2.</strong> Bogrep Release v0.1.3</a></li><li class="chapter-item expanded "><a href="../releases/2022-01-05_pigeon_release_v0.2.0.html"><strong aria-hidden="true">1.3.</strong> Pigeon Release v0.2.0</a></li><li class="chapter-item expanded "><a href="../releases/2021-11-20_pigeon_release_v0.1.0.html"><strong aria-hidden="true">1.4.</strong> Pigeon Release v0.1.0</a></li></ol></li><li class="chapter-item expanded "><a href="../shortcuts.html"><strong aria-hidden="true">2.</strong> Shortcuts</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/index.html"><strong aria-hidden="true">3.</strong> Syntax reminder</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../syntax_reminder/01_python.html"><strong aria-hidden="true">3.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/02_typescript.html"><strong aria-hidden="true">3.2.</strong> Typescript</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/03_rust.html"><strong aria-hidden="true">3.3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/04_go.html"><strong aria-hidden="true">3.4.</strong> Go</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/05_java.html"><strong aria-hidden="true">3.5.</strong> Java</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/06_c.html"><strong aria-hidden="true">3.6.</strong> C</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/07_cpp.html"><strong aria-hidden="true">3.7.</strong> C++</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/08_scheme.html"><strong aria-hidden="true">3.8.</strong> Scheme</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/09_dart.html"><strong aria-hidden="true">3.9.</strong> Dart</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/10_postgres.html"><strong aria-hidden="true">3.10.</strong> Postgres</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/11_markdown.html"><strong aria-hidden="true">3.11.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/12_html.html"><strong aria-hidden="true">3.12.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/13_bash.html"><strong aria-hidden="true">3.13.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/14_css.html"><strong aria-hidden="true">3.14.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/15_vue.html"><strong aria-hidden="true">3.15.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/16_nginx.html"><strong aria-hidden="true">3.16.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/17_angular.html"><strong aria-hidden="true">3.17.</strong> Angular</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/18_flutter.html"><strong aria-hidden="true">3.18.</strong> Flutter</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/19_react.html"><strong aria-hidden="true">3.19.</strong> React</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/20_git.html" class="active"><strong aria-hidden="true">3.20.</strong> Git</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/21_fortran.html"><strong aria-hidden="true">3.21.</strong> Fortran</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/22_regex.html"><strong aria-hidden="true">3.22.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/23_protobuf.html"><strong aria-hidden="true">3.23.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/24_docker.html"><strong aria-hidden="true">3.24.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/25_erlang.html"><strong aria-hidden="true">3.25.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/26_elixir.html"><strong aria-hidden="true">3.26.</strong> Elixir</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/27_clojure.html"><strong aria-hidden="true">3.27.</strong> Clojure</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/28_elm.html"><strong aria-hidden="true">3.28.</strong> Elm</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/29_ada.html"><strong aria-hidden="true">3.29.</strong> Ada</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/30_nim.html"><strong aria-hidden="true">3.30.</strong> Nim</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/31_zig.html"><strong aria-hidden="true">3.31.</strong> Zig</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/32_julia.html"><strong aria-hidden="true">3.32.</strong> Julia</a></li><li class="spacer"></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../projects.html">Projects</a></li><li class="chapter-item expanded affix "><a href="../skills.html">Skills</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../releases/index.html"><strong aria-hidden="true">1.</strong> Releases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../releases/2024-08-18_eric_release.html"><strong aria-hidden="true">1.1.</strong> Eric Release</a></li><li class="chapter-item expanded "><a href="../releases/2023-09-01_bogrep_release_v0.1.3.html"><strong aria-hidden="true">1.2.</strong> Bogrep Release v0.1.3</a></li><li class="chapter-item expanded "><a href="../releases/2022-01-05_pigeon_release_v0.2.0.html"><strong aria-hidden="true">1.3.</strong> Pigeon Release v0.2.0</a></li><li class="chapter-item expanded "><a href="../releases/2021-11-20_pigeon_release_v0.1.0.html"><strong aria-hidden="true">1.4.</strong> Pigeon Release v0.1.0</a></li></ol></li><li class="chapter-item expanded "><a href="../shortcuts.html"><strong aria-hidden="true">2.</strong> Shortcuts</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/index.html"><strong aria-hidden="true">3.</strong> Syntax reminder</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../syntax_reminder/01_python.html"><strong aria-hidden="true">3.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/02_typescript.html"><strong aria-hidden="true">3.2.</strong> Typescript</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/03_rust.html"><strong aria-hidden="true">3.3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/04_go.html"><strong aria-hidden="true">3.4.</strong> Go</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/05_java.html"><strong aria-hidden="true">3.5.</strong> Java</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/06_c.html"><strong aria-hidden="true">3.6.</strong> C</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/07_cpp.html"><strong aria-hidden="true">3.7.</strong> C++</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/08_scheme.html"><strong aria-hidden="true">3.8.</strong> Scheme</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/09_dart.html"><strong aria-hidden="true">3.9.</strong> Dart</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/10_postgres.html"><strong aria-hidden="true">3.10.</strong> Postgres</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/11_markdown.html"><strong aria-hidden="true">3.11.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/12_html.html"><strong aria-hidden="true">3.12.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/13_bash.html"><strong aria-hidden="true">3.13.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/14_css.html"><strong aria-hidden="true">3.14.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/15_vue.html"><strong aria-hidden="true">3.15.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/16_nginx.html"><strong aria-hidden="true">3.16.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/17_angular.html"><strong aria-hidden="true">3.17.</strong> Angular</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/18_flutter.html"><strong aria-hidden="true">3.18.</strong> Flutter</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/19_react.html"><strong aria-hidden="true">3.19.</strong> React</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/20_git.html" class="active"><strong aria-hidden="true">3.20.</strong> Git</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/21_fortran.html"><strong aria-hidden="true">3.21.</strong> Fortran</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/22_regex.html"><strong aria-hidden="true">3.22.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/23_protobuf.html"><strong aria-hidden="true">3.23.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/24_docker.html"><strong aria-hidden="true">3.24.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/25_erlang.html"><strong aria-hidden="true">3.25.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/26_elixir.html"><strong aria-hidden="true">3.26.</strong> Elixir</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/27_clojure.html"><strong aria-hidden="true">3.27.</strong> Clojure</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/28_elm.html"><strong aria-hidden="true">3.28.</strong> Elm</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/29_ada.html"><strong aria-hidden="true">3.29.</strong> Ada</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/30_nim.html"><strong aria-hidden="true">3.30.</strong> Nim</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/31_zig.html"><strong aria-hidden="true">3.31.</strong> Zig</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/32_julia.html"><strong aria-hidden="true">3.32.</strong> Julia</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -115,9 +122,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -281,7 +288,7 @@ git remote set-url origin git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name
 git checkout -b &lt;branch_name&gt; # Create and switch to new branch
 git checkout &lt;commit_id&gt; # Switch to commit
 git checkout &lt;tag_name&gt; # Switch to tag
-git checkout --track origin/&lt;branch_name&gt; # Create &lt;branch_name&gt; and set up &quot;upstream&quot; 
+git checkout --track origin/&lt;branch_name&gt; # Create &lt;branch_name&gt; and set up "upstream" 
 </code></pre>
 <h3 id="switch"><a class="header" href="#switch">Switch</a></h3>
 <pre><code class="language-bash">git switch &lt;branch_name&gt; # Switch branch
@@ -309,7 +316,7 @@ git branch --unset-upstream # Unset the upstream tracking for the local branch
 </code></pre>
 <h3 id="add"><a class="header" href="#add">Add</a></h3>
 <pre><code class="language-bash">git add &lt;my_file&gt; # Stage my_file
-git add -A # inlcudes &quot;git add .&quot; and &quot;git add -u&quot;
+git add -A # inlcudes "git add ." and "git add -u"
 git add . # doesn't stage any 'rm' actions
 git add -u # doesn't add any new files
 </code></pre>
@@ -317,7 +324,7 @@ git add -u # doesn't add any new files
 <pre><code class="language-bash">git commit --amend # Edit commit message; amend recent commit
 git commit -m 'My message' # Commit with message
 git commit -a # Combine git add and commit
-git commit -am &quot;My message&quot; # Add and commit
+git commit -am "My message" # Add and commit
 </code></pre>
 <h3 id="push"><a class="header" href="#push">Push</a></h3>
 <pre><code class="language-bash">git push # Push changes to the remote repo
@@ -351,7 +358,7 @@ git merge --squash &lt;branch_name&gt; # Squash all commits into one commit
 <pre><code class="language-bash">git checkout master
 git pull origin master
 git merge --no-ff --no-commit &lt;branch_name&gt;
-git commit # no commit message required; commit message &quot;Merge branch 'branch_name'&quot; created automatically
+git commit # no commit message required; commit message "Merge branch 'branch_name'" created automatically
 git push origin master
 </code></pre>
 <h3 id="rebase"><a class="header" href="#rebase">Rebase</a></h3>
@@ -379,7 +386,7 @@ git revert &lt;commit_id&gt; -m 2
 # Revert multiple commits
 git revert --no-commit &lt;commit_id&gt;
 git revert --no-commit &lt;commit_id&gt;
-git commit -m &quot;My message&quot;
+git commit -m "My message"
 </code></pre>
 <h3 id="stash"><a class="header" href="#stash">Stash</a></h3>
 <pre><code class="language-bash">git stash # Saves local modifications
@@ -421,7 +428,7 @@ git worktree remove &lt;folder&gt; # Remove worktree
 </code></pre>
 <h3 id="submodule"><a class="header" href="#submodule">Submodule</a></h3>
 <pre><code class="language-bash">git submodule add git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git &lt;my_submodule&gt;
-git commit -m &quot;Add my submodule&quot;
+git commit -m "Add my submodule"
 
 git submodule status
 git submodule add -b master
@@ -480,15 +487,15 @@ git log &lt;branch1&gt;..&lt;branch_2&gt; # List commit differences
 git log master..feature −−oneline
 </code></pre>
 <h3 id="config"><a class="header" href="#config">Config</a></h3>
-<pre><code class="language-bash">git config --global user.name &quot;my_username&quot; # Set username
-git config --global user.email &quot;my_email&quot; # Set email
+<pre><code class="language-bash">git config --global user.name "my_username" # Set username
+git config --global user.email "my_email" # Set email
 git config --list # Check settings
 </code></pre>
 <h3 id="gitignore"><a class="header" href="#gitignore">Gitignore</a></h3>
 <pre><code class="language-bash"># Exclude from .gitignore
 git reset &lt;file_name&gt; # Unstage file
 git rm --cached &lt;file_name&gt; # Remove the file from the repo
-git add -f &lt;file_name&gt; # Force to exclude file from gitignore (&quot;!&lt;file_name&gt;&quot;)
+git add -f &lt;file_name&gt; # Force to exclude file from gitignore ("!&lt;file_name&gt;")
 
 # Include in .gitignore
 git rm -rf --cached . # removes all files from the repository
@@ -512,7 +519,7 @@ git checkout master
 git pull upstream master
 # git pull --rebase upstream master
 git checkout -b &lt;my_feature_branch&gt;
-git commit -m &quot;My fix&quot;
+git commit -m "My fix"
 git push origin &lt;my_feature_branch&gt;
 </code></pre>
 
@@ -524,7 +531,7 @@ git push origin &lt;my_feature_branch&gt;
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../syntax_reminder/21_fortran.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../syntax_reminder/21_fortran.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -538,7 +545,7 @@ git push origin &lt;my_feature_branch&gt;
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../syntax_reminder/21_fortran.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../syntax_reminder/21_fortran.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
