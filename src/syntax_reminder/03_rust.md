@@ -18,7 +18,7 @@
 - [Visibility](#visibility)
 - [Modules](#modules)
 - [Crates](#crates)
-- [External packages](#external-packages-cargotoml)
+- [Packages](#packages-cargotoml)
 - [Cargo (package manager)](#cargo-package-manager)
 - [Rustup (toolchain manager)](#rustup-toolchain-manager)
 
@@ -549,7 +549,9 @@ cargo new --bin my-bin # create binary crate
 cargo new --lib my-lib # create library crate
 ```
 
-### External packages (Cargo.toml)
+### Packages (Cargo.toml)
+
+- crate registry: <https://crates.io>
 
 ```toml
 [dependencies]
