@@ -185,6 +185,7 @@
 <li><a href="#concurrency">Concurrency</a></li>
 <li><a href="#error-handling">Error handling</a></li>
 <li><a href="#null-safety">Null safety</a></li>
+<li><a href="#packages-pubspecyaml">Packages (pubspec.yaml)</a></li>
 </ul>
 <h3 id="print"><a class="header" href="#print">Print</a></h3>
 <pre><code class="language-dart">var name = "world";
@@ -469,6 +470,16 @@ class MyClass {
         }
     }
 }
+</code></pre>
+<h3 id="packages-pubspecyaml"><a class="header" href="#packages-pubspecyaml">Packages (pubspec.yaml)</a></h3>
+<ul>
+<li>package repository: <a href="https://pub.dev/packages">https://pub.dev/packages</a></li>
+</ul>
+<pre><code class="language-yaml">dependencies:
+  flutter:
+    sdk: flutter
+  package_name: ^1.2.3 # &lt; 2.0.0 (caret)
+  package_name: ~1.2.3 # &lt; 1.3.0 (caret)
 </code></pre>
 
                     </main>
