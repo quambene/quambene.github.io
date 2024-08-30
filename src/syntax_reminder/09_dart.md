@@ -349,5 +349,5 @@ dependencies:
   flutter:
     sdk: flutter
   package_name: ^1.2.3 # < 2.0.0 (caret)
-  package_name: ~1.2.3 # < 1.3.0 (caret)
+  package_name: ~1.2.3 # < 1.3.0 (tilde)
 ```
