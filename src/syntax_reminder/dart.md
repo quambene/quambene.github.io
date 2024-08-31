@@ -15,6 +15,7 @@
 - [Concurrency](#concurrency)
 - [Error handling](#error-handling)
 - [Null safety](#null-safety)
+- [Documentation](#documentation)
 - [Packages (pubspec.yaml)](#packages-pubspecyaml)
 
 ### Print
@@ -338,6 +339,18 @@ class MyClass {
         }
     }
 }
+```
+
+## Documentation
+
+``` dart
+/// My doc comment
+
+/// [my_parameter]
+
+/// ``` dart
+/// var my_var = 4;
+/// ```
 ```
 
 ### Packages (pubspec.yaml)
