@@ -348,4 +348,6 @@ Package repository: <https://pub.dev/packages>
 dependencies:
   package_name: ^1.2.3 # < 2.0.0 (caret)
   package_name: ~1.2.3 # < 1.3.0 (tilde)
+  package_name: 1.2.* # < 1.3.0 (wildcard)
+  package_name: * # > 0.0.0
 ```
