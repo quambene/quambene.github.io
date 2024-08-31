@@ -1,0 +1,795 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rust - quambene&#x27;s blog</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../projects.html">Projects</a></li><li class="chapter-item expanded affix "><a href="../skills.html">Skills</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../releases/index.html"><strong aria-hidden="true">1.</strong> Releases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../releases/2024-08-18_eric_release.html"><strong aria-hidden="true">1.1.</strong> Eric Release</a></li><li class="chapter-item expanded "><a href="../releases/2023-09-01_bogrep_release_v0.1.3.html"><strong aria-hidden="true">1.2.</strong> Bogrep Release v0.1.3</a></li><li class="chapter-item expanded "><a href="../releases/2022-01-05_pigeon_release_v0.2.0.html"><strong aria-hidden="true">1.3.</strong> Pigeon Release v0.2.0</a></li><li class="chapter-item expanded "><a href="../releases/2022-04-29_libre_crm_release.html"><strong aria-hidden="true">1.4.</strong> LibreCRM Release v0.1.0</a></li><li class="chapter-item expanded "><a href="../releases/2021-11-20_pigeon_release_v0.1.0.html"><strong aria-hidden="true">1.5.</strong> Pigeon Release v0.1.0</a></li></ol></li><li class="chapter-item expanded "><a href="../shortcuts.html"><strong aria-hidden="true">2.</strong> Shortcuts</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/index.html"><strong aria-hidden="true">3.</strong> Syntax reminder</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../syntax_reminder/python.html"><strong aria-hidden="true">3.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/rust.html" class="active"><strong aria-hidden="true">3.2.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/go.html"><strong aria-hidden="true">3.3.</strong> Go</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/java.html"><strong aria-hidden="true">3.4.</strong> Java</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/c.html"><strong aria-hidden="true">3.5.</strong> C</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/cpp.html"><strong aria-hidden="true">3.6.</strong> C++</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/typescript.html"><strong aria-hidden="true">3.7.</strong> Typescript</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/dart.html"><strong aria-hidden="true">3.8.</strong> Dart</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/flutter.html"><strong aria-hidden="true">3.9.</strong> Flutter</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/html.html"><strong aria-hidden="true">3.10.</strong> HTML</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/css.html"><strong aria-hidden="true">3.11.</strong> CSS</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/vue.html"><strong aria-hidden="true">3.12.</strong> Vue</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/angular.html"><strong aria-hidden="true">3.13.</strong> Angular</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/react.html"><strong aria-hidden="true">3.14.</strong> React</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/postgres.html"><strong aria-hidden="true">3.15.</strong> Postgres</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/markdown.html"><strong aria-hidden="true">3.16.</strong> Markdown</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/bash.html"><strong aria-hidden="true">3.17.</strong> Bash</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/nginx.html"><strong aria-hidden="true">3.18.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/git.html"><strong aria-hidden="true">3.19.</strong> Git</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/regex.html"><strong aria-hidden="true">3.20.</strong> Regex</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/protobuf.html"><strong aria-hidden="true">3.21.</strong> Protobuf</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/docker.html"><strong aria-hidden="true">3.22.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/fortran.html"><strong aria-hidden="true">3.23.</strong> Fortran</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/scheme.html"><strong aria-hidden="true">3.24.</strong> Scheme</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/erlang.html"><strong aria-hidden="true">3.25.</strong> Erlang</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/elixir.html"><strong aria-hidden="true">3.26.</strong> Elixir</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/clojure.html"><strong aria-hidden="true">3.27.</strong> Clojure</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/elm.html"><strong aria-hidden="true">3.28.</strong> Elm</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/ada.html"><strong aria-hidden="true">3.29.</strong> Ada</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/nim.html"><strong aria-hidden="true">3.30.</strong> Nim</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/zig.html"><strong aria-hidden="true">3.31.</strong> Zig</a></li><li class="chapter-item expanded "><a href="../syntax_reminder/julia.html"><strong aria-hidden="true">3.32.</strong> Julia</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">quambene&#x27;s blog</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- markdownlint-disable MD001 -->
+<h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<ul>
+<li><a href="#print">Print</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#data-types">Data types</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#control-flow">Control flow</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#generics-parametric-polymorphism">Generics</a></li>
+<li><a href="#traits-ad-hoc-polymorphism">Traits</a></li>
+<li><a href="#lifetimes">Lifetimes</a></li>
+<li><a href="#macros">Macros</a></li>
+<li><a href="#error-handling">Error handling</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#visibility">Visibility</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#crates">Crates</a></li>
+<li><a href="#packages-cargotoml">Packages</a></li>
+<li><a href="#cargo-package-manager">Cargo (package manager)</a></li>
+<li><a href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></li>
+</ul>
+<h3 id="print"><a class="header" href="#print">Print</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let name = "world";
+println!("Hello, {}!", name);
+println!("Debug: {:?}", name); // for debugging
+println!(":#?", my_struct); // pretty-print structs
+println!("{:b}", my_int); // binary representation
+println!("{:08b}", my_int); // binary representation
+<span class="boring">}</span></code></pre></pre>
+<h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
+<p><strong>Reference</strong>: Refer to some value without taking ownership of it.</p>
+<p><strong>Lifetime</strong>: The scope for which a reference is valid.</p>
+<p><strong>Ownership rules</strong>:</p>
+<ul>
+<li>each value in Rust has a variable that’s called its owner</li>
+<li>there can only be one owner at a time</li>
+<li>when the owner goes out of scope, the value will be dropped</li>
+</ul>
+<p><strong>Borrowing rules</strong>:</p>
+<ul>
+<li>at any given time, you can have either one mutable reference or any number of immutable references</li>
+<li>references must always be valid</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x; // declare
+x = 42; // assign value
+let x = 42;
+let x: i32 = 42; // assign value (typed)
+let x = 0b101010; // binary
+let x = 0x2a // hex
+let x = 0o52 // octal
+let _x = 42; // compiler won't warn about variable being unused
+let x = x + 1; // shadowing
+let mut x; // mutable
+let x_borrowed = &amp;x; // reference
+let x_owned = *x; // dereferencing
+let x: &amp;'a str; // reference with an explicit lifetime
+let x: &amp;'a mut str; // mutable reference with an explicit lifetime
+let x: *const str; // const pointer (the asterisk isn’t the dereference operator; it’s part of the type name)
+let x: *mut str; // mut pointer
+const MYCONST: f32 = 3.14; // immutable value
+static MYSTATIC: &amp;str = "Rust"; // mutable variable with static lifetime
+let r#fn = "name"; // raw identifier for reserved keywords
+<span class="boring">}</span></code></pre></pre>
+<h3 id="data-types"><a class="header" href="#data-types">Data types</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Basic types
+let x: i32; // signed integer
+let x: i64;
+let x: u32; // unsigned integer
+let x: u64;
+let x: f32; // floating point
+let x: f64;
+let x: &amp;str; // borrowed string slice
+let x: String; // owned string type
+let x: &amp;'static str; // string with static lifetime
+let x: bool;
+let x: char = 'ℤ'; // unicode character
+let x: &amp;[T]; // slice
+let x: &amp;mut [T]; // mutable slice
+
+// Type alias
+type MyId = u32;
+type Point = (u8, u8);
+
+// Array
+let arr: [i32; 5] = [1, 2, 3, 4, 5];
+let first_arr = arr[0];
+
+// Tuple
+let tup: (i32, f64, u8) = (500, 6.4, 1);
+let first_tup = tup.0; // access a tuple element
+let (x, y, z) = tup; // destructuring
+
+// Vector
+let vec: Vec&lt;i32&gt; = Vec::new();
+let vec = vec![1, 2, 3];
+let first_vec = vec.get(0);
+let first_vec = &amp;vec[0];
+vec.push(4);
+
+// Slice
+// view into a vector, cannot grow
+let s = &amp;my_arr[1..3]
+let s = &amp;my_vec[1..3]
+
+// Hash map
+let mut my_hashmap = HashMap::new();
+my_hashmap.insert(String::from("Key1"), String::from("Value1"));
+
+// Enum
+enum Option&lt;T&gt; {
+    Some(T),
+    None,
+}
+
+enum Result&lt;T, E&gt; {
+    Ok(T),
+    Err(E),
+}
+
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
+let red = Color::Red;
+
+// Struct (custom data type)
+struct MyStruct; // unit struct
+struct MyStruct(i32, i32); // tuple struct
+struct Email(String) // newtype pattern
+
+struct User {
+    username: String,
+    email: String,
+}
+
+// Instantiation of struct
+let user = User {
+    email: String::from("someone@example.com"),
+    username: String::from("someusername"),
+}
+
+// Store references (see lifetimes)
+struct User {
+    username: &amp;str,
+    email: &amp;str,
+}
+
+// Smart pointer (heap allocation)
+Box&lt;T&gt; // exclusive ownership
+Rc&lt;T&gt; // shared ownership (reference counted)
+Arc&lt;T&gt; // shared ownership (atomically reference counted)
+
+// Interior mutability
+Cell&lt;T&gt;
+RefCell&lt;T&gt;
+Mutex&lt;T&gt; // thread-safe
+RwLock&lt;T&gt; // thread-safe
+<span class="boring">}</span></code></pre></pre>
+<h3 id="operators"><a class="header" href="#operators">Operators</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Logical operators
+&amp;&amp; // AND
+|| // OR
+! // NOT
+
+// Arithmetic operators
++ // addition
+- // subtraction
+* // multiplication
+/ // division
+num::pow // exponentiation
+% // modulo (remainder)
+num::integer::div_floor // floor division
+
+// Bitwise operators
+&amp; // AND
+| // OR
+^ // XOR
+! // NOT
+&lt;&lt; // left shift
+&gt;&gt; // right shift
+&gt;&gt;&gt; // right shift with zero
+(value &gt;&gt; index) &amp; 1 // get bit
+value &amp; !(1 &lt;&lt; index) // set bit to 0
+value | (1 &lt;&lt; index) // set bit to 1
+value ^ (1 &lt;&lt; index) // swap bit
+<span class="boring">}</span></code></pre></pre>
+<p>More operators: <a href="https://doc.rust-lang.org/book/appendix-02-operators.html">https://doc.rust-lang.org/book/appendix-02-operators.html</a></p>
+<h3 id="control-flow"><a class="header" href="#control-flow">Control flow</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// for loop
+for element in set {
+    // statement
+};
+
+// while loop
+while i &lt; 3 {
+    // statement
+};
+
+// if-else
+if a &lt; b {
+    // statement
+} else if a == b {
+    // statement
+} else {
+    // statement
+};
+
+// pattern matching
+match my_option {
+    Some(i) =&gt; Some(i + 1),
+    None =&gt; None,
+}
+
+match some_value {
+    4 =&gt; println!("four"),
+    _ =&gt; (),
+}
+
+// if let
+if let Some(i) = my_option {
+    println!("Matched {}", i)
+} else {
+    println!("Didn't match")
+}
+
+// while let
+while let Some(i) = my_option  {
+    println!("Matched {}", i)
+}
+<span class="boring">}</span></code></pre></pre>
+<h3 id="functions"><a class="header" href="#functions">Functions</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn my_function(x: i32) -&gt; i32 {
+    let y = 3; // statement
+    x + y // expression (return value without semicolon)
+}
+
+// Method (similar to classes in OOP)
+impl MyStruct { // implement struct
+    fn my_function(&amp;self) -&gt; i32 {
+        // ...
+    }
+}
+my_struct.my_function(); // call method
+
+// Associated function
+impl MyStruct {
+    fn my_function(x: i32) -&gt; i32 {
+        // ...
+    }
+}
+MyStruct::my_function(42); // call associated function
+
+// Closure
+let my_closure = |i| i + 1;
+let my_closure = |i: i32| -&gt; i32 { i + 1 }; // typed
+<span class="boring">}</span></code></pre></pre>
+<h3 id="generics-parametric-polymorphism"><a class="header" href="#generics-parametric-polymorphism">Generics (parametric polymorphism)</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn my_generic_function&lt;T&gt;(list: &amp;[T]) -&gt; T {
+    // ...
+}
+
+impl&lt;T&gt; MyGenericStruct&lt;T&gt; {
+    fn my_function(&amp;self) -&gt; &amp;T {
+        // ...
+    }
+}
+<span class="boring">}</span></code></pre></pre>
+<h3 id="traits-ad-hoc-polymorphism"><a class="header" href="#traits-ad-hoc-polymorphism">Traits (ad-hoc polymorphism)</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// A collection of methods defined for an unknown type
+trait MyTrait {
+    type MyAssociatedType;
+
+    fn new(name: &amp;'static str) -&gt; Self;
+    fn my_method(&amp;self, &amp;Self::MyAssociatedType) -&gt; String;
+    fn my_default_method(&amp;self) {
+        // default implementation
+    };
+    fn my_associated_funtion() -&gt; String;
+}
+
+impl MyTrait for String {
+    fn my_method(&amp;self) -&gt; String { format!("string: {}", *self) }
+}
+
+impl MyTrait for u8 {
+    // ...
+}
+
+impl MyTrait for MyStruct {
+    // ...
+}
+
+// static dispatch
+fn do_something&lt;T: MyTrait&gt;(x: T) {
+    x.my_method();
+}
+
+// dynamic dispatch
+fn do_something(x: &amp;MyTrait) { // trait object &amp;MyTrait
+    x.my_method();
+}
+
+impl dyn MyTrait {
+    // ...
+}
+
+// trait bounds
+struct MyStruct&lt;T: MyTraitBound&gt;(T);
+
+fn my_function&lt;T: MyTraitBound&gt;(t: T) {}
+
+fn my_function(t: impl MyTraitBound) {}
+
+fn my_function&lt;T, U&gt;(t: &amp;T, u: &amp;U) 
+where 
+    T: Display + Clone,
+    U: AsRef&lt;str&gt;,
+{}
+
+// Supertrait (a superset of another trait)
+trait MyTrait: MySuperTrait {
+    fn my_method(&amp;self) -&gt; String;
+}
+<span class="boring">}</span></code></pre></pre>
+<h3 id="lifetimes"><a class="header" href="#lifetimes">Lifetimes</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>/*  Every reference has a lifetime;
+    and lifetime parameters for functions or structs
+    that use references have to be specified */
+fn longest&lt;'a&gt;(x: &amp;'a str, y: &amp;'a str) -&gt; &amp;'a str {
+    if x.len() &gt; y.len() {
+        x
+    } else {
+        y
+    }
+}
+<span class="boring">}</span></code></pre></pre>
+<h3 id="macros"><a class="header" href="#macros">Macros</a></h3>
+<h4 id="declarative-macros"><a class="header" href="#declarative-macros">Declarative macros</a></h4>
+<pre><pre class="playground"><code class="language-rust">#[macro_export]
+macro_rules! my_macro {
+    () =&gt; {
+        println!("This is my macro!");
+    };
+}
+
+fn main() {
+    my_macro!();
+}</code></pre></pre>
+<h4 id="procedural-macros"><a class="header" href="#procedural-macros">Procedural macros</a></h4>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// derive macro
+#[derive(MyMacro)]
+struct MyStruct
+
+// attribute-like macro
+#[route(GET, "/")]
+fn index() {}
+
+// function-like macro
+unimplemented!()
+todo!()
+let sql = sql!(select * from posts where id=1);
+<span class="boring">}</span></code></pre></pre>
+<h3 id="error-handling"><a class="header" href="#error-handling">Error handling</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ? operator (propagating errors)
+fn read_username_from_file() -&gt; Result&lt;String, io::Error&gt; {
+    let mut s = String::new();
+    File::open("hello.txt")?.read_to_string(&amp;mut s)?;
+    Ok(s)
+}
+<span class="boring">}</span></code></pre></pre>
+<h3 id="testing"><a class="header" href="#testing">Testing</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Unit tests
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn my_unit_test() {
+        let my_res = my_add_function(1, 2);
+        assert_eq!(my_res, 3)
+    }
+}
+
+// Integration tests
+// tests/common.rs can be used to share code between integration tests.
+<span class="boring">}</span></code></pre></pre>
+<pre><code class="language-bash">cargo test # Run tests
+cargo test -- --nocapture # Show output
+cargo test -- --show-output # Show output
+cargo test -- --ignored # Run ignored tests
+cargo test -- --test-threads=1 # Run tests serially
+cargo test --no-run # Compile, but don’t run tests
+cargo test my_test_name # Run all tests which names match my_test_name
+cargo test my_test_name -- --exact # Run one specific test
+cargo test --lib # Run unit tests
+cargo test --test '*' # Run integration tests
+</code></pre>
+<h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// My line comment
+
+/*
+    My block comment
+*/
+
+/// My doc comment
+
+//! My module-level or crate-level doc comment
+
+// links
+/// &lt;https:://my-link.com&gt;
+
+// doc link if item is in scope
+/// [`MyStruct`] 
+
+// doc link if item is not in scope
+/// [`MyStruct`](super::my_module::MyStruct)
+/// [`MyStruct`](crate::my_module::MyStruct)
+
+// doc link if name is ambiguous
+/// [`struct@Foo`]
+/// [`enum@Foo`]
+/// [`foo()`]
+/// [`fn@foo`]
+/// [`mod@foo`]
+
+// inter-crate doc links in workspaces
+/// [`my_crate::MyStruct::my_method`](../my_crate/struct.MyStruct.html#method.my_method)
+
+// define doc link
+/// [`MyStruct`]
+///
+/// [`MyStruct`]: crate::my_module::MyStruct
+<span class="boring">}</span></code></pre></pre>
+<pre><code class="language-bash">cargo doc # Build the documentation
+cargo doc --open # Open the documentation
+cargo doc --no-deps # Do not build documentation for dependencies
+cargo doc --document-private-items # Include non-public items in the documentation
+</code></pre>
+<ul>
+<li><a href="https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html">The rustdoc book, How to write documentation</a></li>
+<li><a href="https://rust-lang.github.io/rfcs/1946-intra-rustdoc-links.html"><code>intra_rustdoc_links</code></a></li>
+</ul>
+<h3 id="visibility"><a class="header" href="#visibility">Visibility</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub struct MyStruct { ... }
+pub(crate) struct MyStruct // Use this one, so it is not accidentally exposed to another crate
+<span class="boring">}</span></code></pre></pre>
+<h3 id="modules"><a class="header" href="#modules">Modules</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// A collection of items: functions, structs, traits, impl blocks, and other modules
+mod my_mod {
+    fn my_private_function() {
+        // ...
+    }
+
+    pub fn my_public_function() {
+        // ...
+    }
+
+    pub struct MyPublicStruct {
+        // ...
+    }
+}
+
+// absolute path
+use crate::my_crate::my_function(); // referring to an item in the module tree
+
+// relative path
+self::my_function(); // current module scope
+super::my_function(); // parent scope
+
+// external crate
+use std::io;
+
+// renaming external crate
+use futures as f;
+use self::f::Future;
+
+// submodules
+foo.rs // module
+foo/bar.rs // submodule
+<span class="boring">}</span></code></pre></pre>
+<h3 id="crates"><a class="header" href="#crates">Crates</a></h3>
+<p>Crate: a tree of modules that produces a library or executable</p>
+<pre><code class="language-bash">cargo init # create binary crate in current directory
+cargo new --bin my-bin # create binary crate
+cargo new --lib my-lib # create library crate
+</code></pre>
+<h3 id="packages-cargotoml"><a class="header" href="#packages-cargotoml">Packages (Cargo.toml)</a></h3>
+<p>Crate registry: <a href="https://crates.io">https://crates.io</a></p>
+<pre><code class="language-toml">[dependencies]
+package_name = "^1.2.3" # &lt; 2.0.0 (caret)
+package_name = "~1.2.3" # &lt; 1.3.0 (tilde)
+package_name = "1.2.*" # &lt; 1.3.0 (wildcard)
+package_name = "=1.2.3" # = 1.2.3
+package_name = "*" # &gt; 0.0.0
+</code></pre>
+<h3 id="cargo-package-manager"><a class="header" href="#cargo-package-manager">Cargo (package manager)</a></h3>
+<pre><code class="language-bash">cargo --version # Show cargo version
+cargo init # Create binary crate in current directory
+cargo new &lt;bin&gt; --bin # Create binary crate
+cargo new &lt;lib&gt; --lib # Create library crate
+cargo fmt # Format source code
+cargo check # Validate source code
+cargo run # Run binary in debug mode
+cargo run --release # Run binary in release mode
+cargo watch -x run # Run and watch for changes
+cargo watch -x 'run --bin=my_binary' # Run and watch for changes
+cargo test # Run tests
+cargo build # Compile source code in debug mode
+cargo build --release # Compile source code in release mode
+cargo clean # Remove target directory
+cargo update # Update dependencies in the Cargo.lock file to the latest version
+cargo add &lt;crate&gt; -F &lt;feature&gt; # Add dependency
+cargo rm &lt;crate&gt; # Remove dependency
+cargo install &lt;crate&gt; # Install Rust binary
+cargo bloat --time --release -j 1 # Check which dependencies take the most time to compile
+cargo clippy # Run clippy
+cargo clippy --fix # Apply fixes automatically
+</code></pre>
+<h3 id="rustup-toolchain-manager"><a class="header" href="#rustup-toolchain-manager">Rustup (toolchain manager)</a></h3>
+<pre><code class="language-bash">rustup --version
+rustup show
+rustup self update # Update rustup
+rustup update # Update rust compiler
+rustup update stable # Update stable rust compiler
+rustup toolchain list # List installed toolchains
+rustup toolchain install X.X.X # Install specific Rust version
+rustup toolchain uninstall X.X.X # Uninstall specific Rust version
+rustup toolchain install nightly # Install nightly toolchain
+rustup default stable # Set default toolchain
+rustup override set X.X.X # Set specific Rust version
+rustup override set stable # Switch to stable toolchain
+rustup override set nightly # Switch to nightly toolchain
+rustup component list # List components
+rustup component add &lt;component&gt; # Add component to toolchain
+rustup component add &lt;component&gt; --toolchain nightly # Add component to nightly toolchain
+rustup target add &lt;target&gt; # Install target for toolchain
+rustup target add &lt;target&gt; --toolchain nightly # Install target for nightly toolchain
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../syntax_reminder/python.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../syntax_reminder/go.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../syntax_reminder/python.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../syntax_reminder/go.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
