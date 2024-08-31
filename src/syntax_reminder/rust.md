@@ -551,7 +551,7 @@ cargo new --lib my-lib # create library crate
 
 ### Packages (Cargo.toml)
 
-- crate registry: <https://crates.io>
+Crate registry: <https://crates.io>
 
 ```toml
 [dependencies]
