@@ -33,7 +33,7 @@ Labeling of data, training of neural network, PyTorch, NumPy, Pandas
 Image segmentation, object detection, text recognition, OpenCV, various neural networks
 
 **Blockchain**<br/>
-Ethereum (web3.js, ethers.js), Sui, smart contracts (Solidity, Move), tools (Truffle, Ganache)
+Ethereum, Sui, smart contracts (Solidity, Move)
 
 **Regulatory Knowhow**<br/>
 GDPR, Privacy Impact Assessment (PIA)
