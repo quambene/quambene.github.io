@@ -21,4 +21,4 @@ sheet, income statement, or any other event in the context of tax declaration,
 and checks the provided data for plausibility. The validated XML file can then
 be sent to the tax authorities.
 
-Check out the repo for more information: <https://github.com/quambene/eric-rs>.
+The `eric-bindings` and `eric-sdk` were released in v0.4.1 and v0.3.1. Check out the repo for more information: <https://github.com/quambene/eric-rs>.
