@@ -395,7 +395,10 @@ git difftool HEAD <commit-id> -- <file-name>
 git diff master # Compare to branch master and list differences
 git diff --name-only master # Compare to branch master and list files
 git diff --name-only master origin/master -- <path> # Show different files
-git log <branch1>..<branch_2> # List commit differences
+git diff <tag1> <tag2> # Compare tags
+git diff <tag1> <tag2> --stat # Compare changed files between tags
+git log <tag1>..<tag2> # List commit differences between tags
+git log <branch1>..<branch_2> # List commit differences between branches
 
 # Returns the commits that are present in the feature branch but are not unavailable in the master branch
 git log master..feature −−oneline
