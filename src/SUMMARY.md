@@ -48,5 +48,6 @@
   - [Nim](./syntax_reminder/nim.md)
   - [Zig](./syntax_reminder/zig.md)
   - [Julia](./syntax_reminder/julia.md)
+  - [XML](./syntax_reminder/xml.md)
 
 ---
