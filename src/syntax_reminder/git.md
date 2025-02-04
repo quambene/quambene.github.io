@@ -248,6 +248,11 @@ git reset HEAD <file> # Unstage file; remove file from the current index
 git reset --hard HEAD # going back to HEAD; any changes since last commit are discarded
 git reset --hard HEAD~ # going back to the commit before HEAD
 git reset --hard HEAD~2 # going back two commits before HEAD
+
+# Squash commits
+git reset --soft HEAD~N # Reset last N commits
+git commit -m "My commit message" # Create a single commit
+git push origin my-branch --force
 ```
 
 ### Revert
