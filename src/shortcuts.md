@@ -3,6 +3,7 @@
 # Shortcuts
 
 - [Terminal](#terminal)
+- [Vim](#vim)
 - [VS Code](#vs-code)
 - [Firefox](#firefox)
 - [LibreOffice Writer](#libreoffice-writer)
@@ -21,6 +22,20 @@
 | Ctrl+D       | close tab                              |
 | Ctrl+Shift+T | new tab                                |
 | Ctrl+Alt+T   | new window                             |
+
+## Vim
+
+| Shortcut     | Description                                |
+| ------------ | ------------------------------------------ |
+| ESC i        | enter insert mode                          |
+| Ctrl+Shift+V | paste                                      |
+| ESC :        | enter command mode (last line mode)        |
+| :q           | quit (if no unsaved changes)               |
+| :q!          | quit without saving                        |
+| :wq          | write and quit                             |
+| :wq!         | write and quit (even if read-only)         |
+| :x           | write and quit (only if changes were made) |
+| :qa          | quit all                                   |
 
 ## VS Code
 
