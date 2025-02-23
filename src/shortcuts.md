@@ -3,14 +3,15 @@
 # Shortcuts
 
 - [Terminal](#terminal)
+- [htop](#htop)
 - [Vim](#vim)
 - [VS Code](#vs-code)
 - [Firefox](#firefox)
 - [LibreOffice Writer](#libreoffice-writer)
 - [Nautilus (file manager)](#nautilus-file-manager)
 - [Ubuntu](#ubuntu)
-- [Notion](#notion)
 - [macOS](#macos)
+- [Notion](#notion)
 
 ## Terminal
 
@@ -22,6 +23,15 @@
 | Ctrl+D       | close tab                              |
 | Ctrl+Shift+T | new tab                                |
 | Ctrl+Alt+T   | new window                             |
+
+## htop
+
+| Shortcut | Description                            |
+| -------- | -------------------------------------- |
+| F5       | disable/enable tree view         |
+| t        | disable/enable tree view               |
+| *        | collapse all branches of the tree view |
+| Shift+Z  | freeze process list                    |
 
 ## Vim
 
@@ -126,14 +136,14 @@
 | Ctrl+Alt+F1               | connect to screen                                    |
 | F11                       | full screen                                          |
 
-## Notion
-
-| Shortcut    | Description       |
-| ----------- | ----------------- |
-| Shift+Enter | insert line break |
-
 ## macOS
 
 | Shortcut        | Description       |
 | --------------- | ----------------- |
 | Cmd + Shift + . | Show hidden files |
+
+## Notion
+
+| Shortcut    | Description       |
+| ----------- | ----------------- |
+| Shift+Enter | insert line break |
