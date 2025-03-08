@@ -229,6 +229,7 @@ git push origin master
 
 ``` bash
 git rebase master # Incorporate changes from master into the current branch
+git push -f
 ```
 
 ### Pull
