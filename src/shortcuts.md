@@ -51,7 +51,7 @@
 
 | Shortcut                        | Description                                                                                                                    |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Ctrl+P                          | search for file <br /> `# <my_search>` (navigate symbols within a file) <br /> `@ <my_search>` (navigate symbols across files) |
+| Ctrl+P                          | search for file <br /> `# <my_search>` (navigate symbols across workspace) <br /> `@ <my_search>` (navigate symbols inside current file) |
 | Ctrl+Tab                        | view a list of all open files                                                                                                  |
 | Ctrl+Shift+O                    | navigate within a file; switch between current and most recent tab                                                             |
 | Alt+LeftArrow or Alt+RightArrow | switch between current and most recent tab                                                                                     |
