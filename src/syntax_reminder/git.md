@@ -254,6 +254,10 @@ git reset --hard HEAD~2 # going back two commits before HEAD
 git reset --soft HEAD~N # Reset last N commits
 git commit -m "My commit message" # Create a single commit
 git push origin my-branch --force
+
+# Replace local main branch by remote branch
+git checkout main
+git reset --hard origin/main
 ```
 
 ### Revert
