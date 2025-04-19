@@ -4,7 +4,9 @@
 
 - [Terminal](#terminal)
 - [htop](#htop)
+- [Zellij](#zellij)
 - [Vim](#vim)
+- [Helix](#helix)
 - [VS Code](#vs-code)
 - [Firefox](#firefox)
 - [LibreOffice Writer](#libreoffice-writer)
@@ -28,10 +30,18 @@
 
 | Shortcut | Description                            |
 | -------- | -------------------------------------- |
-| F5       | disable/enable tree view         |
+| F5       | disable/enable tree view               |
 | t        | disable/enable tree view               |
 | *        | collapse all branches of the tree view |
 | Shift+Z  | freeze process list                    |
+
+## Zellij
+
+| Shortcut | Description             |
+| -------- | ----------------------- |
+| Ctrl+p   | pane mode               |
+| Ctrl+p r | split pane horizontally |
+| Ctrl+p d | split pane vertically   |
 
 ## Vim
 
@@ -47,34 +57,66 @@
 | :x           | write and quit (only if changes were made) |
 | :qa          | quit all                                   |
 
+## Helix
+
+| Shortcut   | Description                                                      |
+| ---------- | ---------------------------------------------------------------- |
+| i           | insert mode                                                               |
+| :           | command mode                                                                 |
+| Ctrl+w     | open window menu                                                 |
+| space+e    | open file explorer                                               |
+| space+E    | open file explorer at current directory                          |
+| space+f    | open file picker                                                 |
+| space+F    | open file picker at current directory                            |
+| space+s    | open symbol picker                                               |
+| space+S    | open workspace symbol picker                                     |
+| space+d    | open diagnostic picker                                           |
+| space+D    | open workspace diagnostic picker                                 |
+| space+b    | open buffer picker                                               |
+| space+a    | perform code actions                                             |
+| space+k    | show documentation                                               |
+| space+/    | search across all files                                          |
+| :o         | open file                                                        |
+| j, k, l, h | move cursor                                                      |
+| Ctrl+d     | jump half a screen down                                          |
+| Ctrl+u     | jump half a screen up                                            |
+| Ctrl+f     | full screen forward                                              |
+| Ctrl+b     | full screen backward                                             |
+| gg         | go to first line                                                 |
+| ge         | go to last line                                                  |
+| gl         | go to line end                                                   |
+| gh         | go to line start                                                 |
+| 42gg       | go to line 42                                                    |
+| /          | search, n to go to the next match, N to go to the previous match |
+
 ## VS Code
 
-| Shortcut                        | Description                                                                                                                    |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Shortcut                        | Description                                                                                                                              |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Ctrl+P                          | search for file <br /> `# <my_search>` (navigate symbols across workspace) <br /> `@ <my_search>` (navigate symbols inside current file) |
-| Ctrl+Tab                        | view a list of all open files                                                                                                  |
-| Ctrl+Shift+O                    | navigate within a file; switch between current and most recent tab                                                             |
-| Alt+LeftArrow or Alt+RightArrow | switch between current and most recent tab                                                                                     |
-| Ctrl+G                          | go to line                                                                                                                     |
-| Ctrl+Shift+P                    | open command palette; open `settings.json` file                                                                                |
-| Ctrl+Shift+V                    | open markdown preview (in new tab)                                                                                             |
-| Ctrl+Alt+V                      | open markdown preview (in split view)                                                                                          |
-| Alt+z                           | toggle word wrap                                                                                                               |
-| Ctrl+Shift+A                    | comment multiple lines                                                                                                         |
-| Ctrl+Shift+I                    | format code                                                                                                                    |
-| Ctrl+K                          | comment line                                                                                                                   |
-| Ctrl+J                          | toggle console                                                                                                                 |
-| Ctrl+Shift+S                    | save all files                                                                                                                 |
-| Ctrl+Shift+E                    | open explorer tab                                                                                                              |
-| Ctrl+Shift+F                    | open search tab                                                                                                                |
-| Ctrl+Shift+G                    | open source control tab                                                                                                        |
-| Ctrl+.                          | import module                                                                                                                  |
-| Ctrl+R R                        | Rust analyzer - run                                                                                                            |
-| Ctrl+R S                        | Rust analyzer - restart server                                                                                                 |
-| Ctrl+F5                         | Flutter - run app                                                                                                              |
-| F5                              | Flutter - run app in debug mode                                                                                                |
-| Ctrl+T                          | Flutter - run all tests                                                                                                        |
-| Alt+Q                           | rewrap extension - rewrap comment                                                                                              |
+| Ctrl+Tab                        | view a list of all open files                                                                                                            |
+| Ctrl+Shift+O                    | navigate within a file; switch between current and most recent tab                                                                       |
+| Alt+LeftArrow or Alt+RightArrow | switch between current and most recent tab                                                                                               |
+| Ctrl+G                          | go to line                                                                                                                               |
+| Ctrl+Shift+P                    | open command palette; open `settings.json` file                                                                                          |
+| Ctrl+Shift+V                    | open markdown preview (in new tab)                                                                                                       |
+| Ctrl+Alt+V                      | open markdown preview (in split view)                                                                                                    |
+| Alt+z                           | toggle word wrap                                                                                                                         |
+| Ctrl+Shift+A                    | comment multiple lines                                                                                                                   |
+| Ctrl+Shift+I                    | format code                                                                                                                              |
+| Ctrl+K                          | comment line                                                                                                                             |
+| Ctrl+J                          | toggle console                                                                                                                           |
+| Ctrl+Shift+S                    | save all files                                                                                                                           |
+| Ctrl+Shift+E                    | open explorer tab                                                                                                                        |
+| Ctrl+Shift+F                    | open search tab                                                                                                                          |
+| Ctrl+Shift+G                    | open source control tab                                                                                                                  |
+| Ctrl+.                          | import module                                                                                                                            |
+| Ctrl+R R                        | Rust analyzer - run                                                                                                                      |
+| Ctrl+R S                        | Rust analyzer - restart server                                                                                                           |
+| Ctrl+F5                         | Flutter - run app                                                                                                                        |
+| F5                              | Flutter - run app in debug mode                                                                                                          |
+| Ctrl+T                          | Flutter - run all tests                                                                                                                  |
+| Alt+Q                           | rewrap extension - rewrap comment                                                                                                        |
 
 ## Firefox
 
