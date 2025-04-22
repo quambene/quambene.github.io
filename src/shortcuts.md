@@ -3,6 +3,7 @@
 # Shortcuts
 
 - [Terminal](#terminal)
+- [tmux](#tmux)
 - [htop](#htop)
 - [Zellij](#zellij)
 - [Vim](#vim)
@@ -25,6 +26,17 @@
 | Ctrl+D       | close tab                              |
 | Ctrl+Shift+T | new tab                                |
 | Ctrl+Alt+T   | new window                             |
+
+## tmux
+
+| Shortcut      | Description                              |
+| ------------- | ---------------------------------------- |
+| Ctrl+Space    | prefix                                   |
+| prefix+"      | split horizontally (add pane below)      |
+| prefix+%      | split vertically (add pane to the right) |
+| prefix+number | switch between windows                   |
+| prefix+number | switch between windows                   |
+| Alt+arrow     | switch between panes                     |
 
 ## htop
 
@@ -61,8 +73,8 @@
 
 | Shortcut   | Description                                                      |
 | ---------- | ---------------------------------------------------------------- |
-| i           | insert mode                                                               |
-| :           | command mode                                                                 |
+| i          | insert mode                                                      |
+| :          | command mode                                                     |
 | Ctrl+w     | open window menu                                                 |
 | space+e    | open file explorer                                               |
 | space+E    | open file explorer at current directory                          |
