@@ -34,9 +34,8 @@
 | Ctrl+Space    | prefix                                   |
 | prefix+"      | split horizontally (add pane below)      |
 | prefix+%      | split vertically (add pane to the right) |
-| prefix+number | switch between windows                   |
-| prefix+number | switch between windows                   |
-| Alt+arrow     | switch between panes                     |
+| prefix+number | switch windows                           |
+| Alt+arrow     | switch panes                             |
 
 ## htop
 
