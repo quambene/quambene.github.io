@@ -4,6 +4,7 @@
 
 - [Terminal](#terminal)
 - [tmux](#tmux)
+- [Yazi](#yazi)
 - [htop](#htop)
 - [Zellij](#zellij)
 - [Vim](#vim)
@@ -36,6 +37,19 @@
 | prefix+%      | split vertically (add pane to the right) |
 | prefix+number | switch windows                           |
 | Alt+arrow     | switch panes                             |
+
+## Yazi
+
+| Shortcut | Description                        |
+| -------- | ---------------------------------- |
+| q        | quit                               |
+| ESC      | cancel selection                   |
+| v        | select files                       |
+| o        | open file                          |
+| a        | create file                        |
+| d        | trash selected file                |
+| .        | toggle visibility for hidden files |
+| ;        | run shell command                  |
 
 ## htop
 
