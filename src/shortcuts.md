@@ -33,9 +33,10 @@
 | Shortcut      | Description                              |
 | ------------- | ---------------------------------------- |
 | Ctrl+Space    | prefix                                   |
-| prefix+"      | split horizontally (add pane below)      |
-| prefix+%      | split vertically (add pane to the right) |
+| prefix+h      | split horizontally (add pane below)      |
+| prefix+v      | split vertically (add pane to the right) |
 | prefix+number | switch windows                           |
+| prefix+?      | show keybindings                         |
 | Alt+arrow     | switch panes                             |
 
 ## Yazi
