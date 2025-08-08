@@ -293,6 +293,7 @@ git clean -f # Remove untracked files from the working tree
 
 ``` bash
 git cherry-pick <commit_id> # Apply the changes introduced by some existing commit
+git cherry-pick commitA^..commitB # Apply commits up to commitB from another branch, including commitA
 git cherry-pick --no-ff --no-commit <commit_id>
 ```
 
