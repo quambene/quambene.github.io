@@ -287,8 +287,9 @@ git remote set-url origin git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name
 <pre><code class="language-bash">git checkout &lt;branch_name&gt; # Switch to branch
 git checkout -b &lt;branch_name&gt; # Create and switch to new branch
 git checkout &lt;commit_id&gt; # Switch to commit
+git checkout -b &lt;branch_name&gt; &lt;commit_id&gt; # Checkout new branch and keep the commits of the source branch until &lt;commit_id&gt;
 git checkout &lt;tag_name&gt; # Switch to tag
-git checkout --track origin/&lt;branch_name&gt; # Create &lt;branch_name&gt; and set up "upstream" 
+git checkout --track origin/&lt;branch_name&gt; # Create &lt;branch_name&gt; and set up "upstream"
 </code></pre>
 <h3 id="switch"><a class="header" href="#switch">Switch</a></h3>
 <pre><code class="language-bash">git switch &lt;branch_name&gt; # Switch branch
