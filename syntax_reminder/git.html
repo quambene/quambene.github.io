@@ -183,7 +183,11 @@
 <li><a href="#remote">Remote</a></li>
 <li><a href="#checkout">Checkout</a></li>
 <li><a href="#switch">Switch</a></li>
-<li><a href="#branch">Branch</a></li>
+<li><a href="#branch">Branch</a>
+<ul>
+<li><a href="#rename-branch">Rename branch</a></li>
+</ul>
+</li>
 <li><a href="#add">Add</a></li>
 <li><a href="#commit">Commit</a></li>
 <li><a href="#push">Push</a>
@@ -314,6 +318,12 @@ git push origin --delete &lt;branch_name&gt; # Delete remote branch
 git branch --merged | grep -v \* | xargs git branch -D # Delete all local branches
 git branch --contains &lt;branch_name&gt; # Check whether a branch has been merged into another branch
 git branch --unset-upstream # Unset the upstream tracking for the local branch
+</code></pre>
+<h4 id="rename-branch"><a class="header" href="#rename-branch">Rename branch</a></h4>
+<pre><code class="language-bash">git branch -m &lt;new_name&gt; # Rename branch
+git push origin &lt;new_name&gt; # Push renamed branch
+git push -u origin &lt;new_name&gt; # Set upstream for renamed branch
+git push origin -d &lt;old_name&gt; # Delete old branch
 </code></pre>
 <h3 id="add"><a class="header" href="#add">Add</a></h3>
 <pre><code class="language-bash">git add &lt;my_file&gt; # Stage my_file
