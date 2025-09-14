@@ -11,6 +11,7 @@
 - [Checkout](#checkout)
 - [Switch](#switch)
 - [Branch](#branch)
+  - [Rename branch](#rename-branch)
 - [Add](#add)
 - [Commit](#commit)
 - [Push](#push)
@@ -156,6 +157,15 @@ git push origin --delete <branch_name> # Delete remote branch
 git branch --merged | grep -v \* | xargs git branch -D # Delete all local branches
 git branch --contains <branch_name> # Check whether a branch has been merged into another branch
 git branch --unset-upstream # Unset the upstream tracking for the local branch
+```
+
+#### Rename branch
+
+``` bash
+git branch -m <new_name> # Rename branch
+git push origin <new_name> # Push renamed branch
+git push -u origin <new_name> # Set upstream for renamed branch
+git push origin -d <old_name> # Delete old branch
 ```
 
 ### Add
