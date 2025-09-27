@@ -409,6 +409,7 @@ git difftool --tool=meld # Set difftool
 git difftool <branch_1> <branch_2>
 git difftool --tool=vscode <branch_1> <branch_2>
 git difftool HEAD <commit-id> -- <file-name>
+git difftool v0.1.0:Cargo.toml main:Cargo.toml # Compare tag with main
 ```
 
 #### Compare branches
