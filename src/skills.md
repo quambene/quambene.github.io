@@ -21,7 +21,7 @@ SQL, Postgres, SQLite
 Debian, Ubuntu, Nginx, AWS, gcloud
 
 **DevOps & Linux**<br/>
-Bash, Git, Docker, Qemu
+Bash, Git, Docker, Qemu, Argo CD, ControlMonkey
 
 **Spreadsheets**<br/>
 LibreOffice Base, LibreOffice Calc, Microsoft Access, Microsoft Excel
