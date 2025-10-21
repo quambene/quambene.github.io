@@ -12,13 +12,13 @@ Angular, Vue, Nuxt, Django, Flutter
 HTML, CSS, Widgets (Flutter), Figma, Inkscape, GIMP
 
 **Backend**<br/>
-REST, gRPC, websockets
+REST, gRPC, websockets, FIX
 
 **Databases**<br/>
 SQL, Postgres, SQLite, Redis, MongoDB
 
 **Server & Cloud Computing**<br/>
-Debian, Ubuntu, Nginx, AWS, gcloud
+Debian, Ubuntu, Nginx, AWS, gcloud, Azure
 
 **DevOps & Linux**<br/>
 Bash, Git, Docker, Qemu, Argo CD, ControlMonkey
