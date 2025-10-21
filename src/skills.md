@@ -15,7 +15,7 @@ HTML, CSS, Widgets (Flutter), Figma, Inkscape, GIMP
 REST, gRPC, websockets
 
 **Databases**<br/>
-SQL, Postgres, SQLite
+SQL, Postgres, SQLite, Redis, MongoDB
 
 **Server & Cloud Computing**<br/>
 Debian, Ubuntu, Nginx, AWS, gcloud
