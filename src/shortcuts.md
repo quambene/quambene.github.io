@@ -217,6 +217,7 @@
 | Shortcut        | Description       |
 | --------------- | ----------------- |
 | Cmd + Shift + . | Show hidden files |
+| Ctrl + Cmd + Q  | Lock screen       |
 
 ## Notion
 
