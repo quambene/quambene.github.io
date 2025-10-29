@@ -12,6 +12,7 @@
 - [VS Code](#vs-code)
 - [Firefox](#firefox)
 - [LibreOffice Writer](#libreoffice-writer)
+- [OnlyOffice](#onlyoffice)
 - [Nautilus (file manager)](#nautilus-file-manager)
 - [Ubuntu](#ubuntu)
 - [macOS](#macos)
@@ -170,9 +171,16 @@
 
 ## LibreOffice Writer
 
-| Shortcut | Description   |
-| -------- | ------------- |
-| Ctrl+P   | export as PDF |
+| Shortcut | Description            |
+| -------- | ---------------------- |
+| Ctrl+P   | export as PDF          |
+| Tab      | indention of list item |
+
+## OnlyOffice
+
+| Shortcut          | Description            |
+| ----------------- | ---------------------- |
+| Select line + Tab | indention of list item |
 
 ## Nautilus (file manager)
 
