@@ -214,11 +214,12 @@
 
 ## macOS
 
-| Shortcut        | Description              |
-| --------------- | ------------------------ |
-| Cmd + Shift + . | Show hidden files        |
-| Ctrl + Cmd + Q  | Lock screen              |
-| Shift + Cmd + 4 | Screenshot selected area |
+| Shortcut               | Description                                  |
+| ---------------------- | -------------------------------------------- |
+| Cmd + Shift + .        | Show hidden files                            |
+| Ctrl + Cmd + Q         | Lock screen                                  |
+| Shift + Cmd + 4        | Screenshot selected area                     |
+| Ctrl + Shift + Cmd + 4 | Screenshot selected area & copy to clipboard |
 
 ## Notion
 
