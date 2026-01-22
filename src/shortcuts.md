@@ -220,6 +220,7 @@
 | Ctrl + Cmd + Q         | Lock screen                                  |
 | Shift + Cmd + 4        | Screenshot selected area                     |
 | Ctrl + Shift + Cmd + 4 | Screenshot selected area & copy to clipboard |
+| Cmd + Shift + R        | hard refresh (browser)                       |
 
 ## Notion
 
