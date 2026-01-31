@@ -20,6 +20,7 @@
 - [Merge](#merge)
   - [Merge feature branch](#merge-feature-branch)
 - [Rebase](#rebase)
+  - [Interactive rebase](#interactive-rebase)
 - [Pull](#pull)
 - [Reset](#reset)
 - [Revert](#revert)
@@ -241,7 +242,33 @@ git push origin master
 ``` bash
 git rebase master # Incorporate changes from master into the current branch
 git push -f
+
+git rebase -i main # Interactive rebase
+
+git commit --fixup <commit> # Create fixup commit
+
+git rebase -i --autosquash main # Squash fixup! and squash! commits
+
+# Squash all commits
+git reset --soft main
+git commit -m "My combined commit"
 ```
+
+#### Interactive rebase
+
+| Command | Abbreviation | Description                                   |
+| ------- | ------------ | --------------------------------------------- |
+| pick    | `p`          | use commit as-is                              |
+| reword  | `r`          | use commit, but edit the message              |
+| edit    | `e`          | use commit, then stop for amending            |
+| squash  | `s`          | combine with previous commit, edit message    |
+| fixup   | `f`          | combine with previous commit, discard message |
+| exec    | `x`          | run a shell command                           |
+| drop    | `d`          | remove the commit                             |
+| break   | `b`          | stop here (like a pause)                      |
+| label   | `l`          | label the current HEAD                        |
+| reset   | `t`          | reset HEAD to a label                         |
+| merge   | `m`          | create a merge commit                         |
 
 ### Pull
 
@@ -402,8 +429,8 @@ git diff --name-only HEAD~1 # Show diff files in last commit
 
 # Difftool
 git difftool dev # Compare to feature branch
-git difftool master # Compare to feature branch
-git difftool master origin/master # Compare local and remote branch
+git difftool main # Compare to feature branch
+git difftool main origin/main # Compare local and remote branch
 git difftool --tool-help # Help
 git difftool --tool=meld # Set difftool
 git difftool <branch_1> <branch_2>
@@ -415,16 +442,18 @@ git difftool v0.1.0:Cargo.toml main:Cargo.toml # Compare tag with main
 #### Compare branches
 
 ``` bash
-git diff master # Compare to branch master and list differences
-git diff --name-only master # Compare to branch master and list files
-git diff --name-only master origin/master -- <path> # Show different files
+git diff main # Compare current state to main
+git diff main my-branch # Compare main and my-branch
+git diff..main my-branch # Show what was added by my-branch
+git diff --name-only main # Compare to main and list files
+git diff --name-only main origin/main -- <path> # Show different files
 git diff <tag1> <tag2> # Compare tags
 git diff <tag1> <tag2> --stat # Compare changed files between tags
 git log <tag1>..<tag2> # List commit differences between tags
 git log <branch1>..<branch_2> # List commit differences between branches
 
-# Returns the commits that are present in the feature branch but are not unavailable in the master branch
-git log master..feature −−oneline
+# Returns the commits that are present in the feature branch but are not unavailable in the main branch
+git log main..feature −−oneline
 ```
 
 ### Config
