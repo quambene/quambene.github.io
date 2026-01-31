@@ -201,7 +201,11 @@
 <li><a href="#merge-feature-branch">Merge feature branch</a></li>
 </ul>
 </li>
-<li><a href="#rebase">Rebase</a></li>
+<li><a href="#rebase">Rebase</a>
+<ul>
+<li><a href="#interactive-rebase">Interactive rebase</a></li>
+</ul>
+</li>
 <li><a href="#pull">Pull</a></li>
 <li><a href="#reset">Reset</a></li>
 <li><a href="#revert">Revert</a></li>
@@ -375,7 +379,32 @@ git push origin master
 <h3 id="rebase"><a class="header" href="#rebase">Rebase</a></h3>
 <pre><code class="language-bash">git rebase master # Incorporate changes from master into the current branch
 git push -f
+
+git rebase -i main # Interactive rebase
+
+git commit --fixup &lt;commit&gt; # Create fixup commit
+
+git rebase -i --autosquash main # Squash fixup! and squash! commits
+
+# Squash all commits
+git reset --soft main
+git commit -m "My combined commit"
 </code></pre>
+<h4 id="interactive-rebase"><a class="header" href="#interactive-rebase">Interactive rebase</a></h4>
+<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Abbreviation</th><th>Description</th></tr></thead><tbody>
+<tr><td>pick</td><td><code>p</code></td><td>use commit as-is</td></tr>
+<tr><td>reword</td><td><code>r</code></td><td>use commit, but edit the message</td></tr>
+<tr><td>edit</td><td><code>e</code></td><td>use commit, then stop for amending</td></tr>
+<tr><td>squash</td><td><code>s</code></td><td>combine with previous commit, edit message</td></tr>
+<tr><td>fixup</td><td><code>f</code></td><td>combine with previous commit, discard message</td></tr>
+<tr><td>exec</td><td><code>x</code></td><td>run a shell command</td></tr>
+<tr><td>drop</td><td><code>d</code></td><td>remove the commit</td></tr>
+<tr><td>break</td><td><code>b</code></td><td>stop here (like a pause)</td></tr>
+<tr><td>label</td><td><code>l</code></td><td>label the current HEAD</td></tr>
+<tr><td>reset</td><td><code>t</code></td><td>reset HEAD to a label</td></tr>
+<tr><td>merge</td><td><code>m</code></td><td>create a merge commit</td></tr>
+</tbody></table>
+</div>
 <h3 id="pull"><a class="header" href="#pull">Pull</a></h3>
 <pre><code class="language-bash">git pull # git fetch plus either git rebase or git merge
 git pull origin &lt;branch_name&gt;
@@ -491,8 +520,8 @@ git diff --name-only HEAD~1 # Show diff files in last commit
 
 # Difftool
 git difftool dev # Compare to feature branch
-git difftool master # Compare to feature branch
-git difftool master origin/master # Compare local and remote branch
+git difftool main # Compare to feature branch
+git difftool main origin/main # Compare local and remote branch
 git difftool --tool-help # Help
 git difftool --tool=meld # Set difftool
 git difftool &lt;branch_1&gt; &lt;branch_2&gt;
@@ -501,16 +530,18 @@ git difftool HEAD &lt;commit-id&gt; -- &lt;file-name&gt;
 git difftool v0.1.0:Cargo.toml main:Cargo.toml # Compare tag with main
 </code></pre>
 <h4 id="compare-branches"><a class="header" href="#compare-branches">Compare branches</a></h4>
-<pre><code class="language-bash">git diff master # Compare to branch master and list differences
-git diff --name-only master # Compare to branch master and list files
-git diff --name-only master origin/master -- &lt;path&gt; # Show different files
+<pre><code class="language-bash">git diff main # Compare current state to main
+git diff main my-branch # Compare main and my-branch
+git diff..main my-branch # Show what was added by my-branch
+git diff --name-only main # Compare to main and list files
+git diff --name-only main origin/main -- &lt;path&gt; # Show different files
 git diff &lt;tag1&gt; &lt;tag2&gt; # Compare tags
 git diff &lt;tag1&gt; &lt;tag2&gt; --stat # Compare changed files between tags
 git log &lt;tag1&gt;..&lt;tag2&gt; # List commit differences between tags
 git log &lt;branch1&gt;..&lt;branch_2&gt; # List commit differences between branches
 
-# Returns the commits that are present in the feature branch but are not unavailable in the master branch
-git log master..feature −−oneline
+# Returns the commits that are present in the feature branch but are not unavailable in the main branch
+git log main..feature −−oneline
 </code></pre>
 <h3 id="config"><a class="header" href="#config">Config</a></h3>
 <pre><code class="language-bash">git config --global user.name "my_username" # Set username
