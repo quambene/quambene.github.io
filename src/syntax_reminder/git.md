@@ -248,10 +248,6 @@ git rebase -i main # Interactive rebase
 git commit --fixup <commit> # Create fixup commit
 
 git rebase -i --autosquash main # Squash fixup! and squash! commits
-
-# Squash all commits
-git reset --soft main
-git commit -m "My combined commit"
 ```
 
 #### Interactive rebase
@@ -287,6 +283,10 @@ git reset HEAD <file> # Unstage file; remove file from the current index
 git reset --hard HEAD # going back to HEAD; any changes since last commit are discarded
 git reset --hard HEAD~ # going back to the commit before HEAD
 git reset --hard HEAD~2 # going back two commits before HEAD
+
+# Squash all commits
+git reset --soft main
+git commit -m "My combined commit"
 
 # Squash commits
 git reset --soft HEAD~N # Reset last N commits
