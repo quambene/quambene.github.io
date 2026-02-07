@@ -221,6 +221,7 @@
 | Shift + Cmd + 4        | Screenshot selected area                     |
 | Ctrl + Shift + Cmd + 4 | Screenshot selected area & copy to clipboard |
 | Cmd + Shift + R        | hard refresh (browser)                       |
+| Cmd + Backspace        | move file/folder to trash in Finder          |
 
 ## Notion
 
