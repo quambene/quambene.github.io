@@ -11,6 +11,7 @@
 - [Helix](#helix)
 - [VS Code](#vs-code)
 - [Firefox](#firefox)
+- [Chrome](#chrome)
 - [LibreOffice Writer](#libreoffice-writer)
 - [OnlyOffice](#onlyoffice)
 - [Nautilus (file manager)](#nautilus-file-manager)
@@ -151,6 +152,7 @@
 | -------------- | -------------------------------------------- |
 | Alt+Left       | back                                         |
 | Alt+Right      | forward                                      |
+| Ctrl+Tab       | cycle through tabs in recently used order    |
 | Ctrl+L         | enter location                               |
 | Ctrl+T         | new tab                                      |
 | Ctrl+Shift+T   | undo close tab                               |
@@ -168,6 +170,16 @@
 | Ctrl+F5        | reload and re-downloading the entire website |
 | Space          | page down                                    |
 | Shift+Space    | page up                                      |
+
+## Chrome
+
+| Shortcut        | Description       |
+| --------------- | ----------------- |
+| Ctrl+Tab        | Next tab          |
+| Ctrl+Shift+Tab  | Previous tab      |
+| Ctrl+1 … Ctrl+8 | Jump to tab 1–8   |
+| Ctrl+9          | Jump to last tab  |
+| Ctrl+Shift+T    | Reopen closed tab |
 
 ## LibreOffice Writer
 
