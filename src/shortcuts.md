@@ -10,6 +10,7 @@
 - [Vim](#vim)
 - [Helix](#helix)
 - [VS Code](#vs-code)
+- [Cursor](#cursor)
 - [Firefox](#firefox)
 - [Chrome](#chrome)
 - [LibreOffice Writer](#libreoffice-writer)
@@ -147,6 +148,12 @@
 | F5                              | Flutter - run app in debug mode                                                                                                      |
 | Ctrl+T                          | Flutter - run all tests                                                                                                              |
 | Alt+Q                           | rewrap extension - rewrap comment                                                                                                    |
+
+## Cursor
+
+| Shortcut | Description                                  |
+| -------- | -------------------------------------------- |
+| Ctrl+P   | `cursor tab` (enable/disable autocompletion) |
 
 ## Firefox
 
