@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD059 -->
 
 # About
 
@@ -13,6 +14,6 @@ Full Stack Developer with experience in backend and open-source development usin
 
 ## Latest Release
 
-[[2024-08-18] Eric Release](./releases/2024-08-18_eric_release.md)
+[[2026-03-27] xbrl-rs Release](./releases/2026-03-27_xbrl_release.md)
 
 [All releases](./releases)
