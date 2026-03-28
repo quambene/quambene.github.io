@@ -3,7 +3,7 @@
 _Published on (2026-03-27)._
 
 XBRL is an XML-based standard used in financial reporting. With
-[xbrl-rs](https://github.com/quambene/xbrl-rs) you can parse so-called _instance
+[xbrl-rs](https://github.com/quambene/xbrl-rs) you can parse _instance
 documents_, and validate them against a _taxonomy_.
 
 An instance document contains the actual report in a flat structure. For
