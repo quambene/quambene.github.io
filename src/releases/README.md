@@ -4,7 +4,7 @@
 
 All releases are summarized in this section:
 
-- [[2026-03-17] xbrl-rs Release v0.2.0](/releases/2026-03-27_xbrl_release.md)
+- [[2026-03-17] xbrl-rs Release v0.2.0](/releases/2026-03-28_xbrl_release.md)
 - [[2024-08-18] Eric Release v0.4.1/v0.3.1](/releases/2024-08-18_eric_release.md)
 - [[2023-09-01] Bogrep Release v0.1.3](/releases/2023-09-01_bogrep_release.md)
 - [[2022-01-05] Pigeon Release v0.2.0](/releases/2022-01-05_pigeon_release.md)

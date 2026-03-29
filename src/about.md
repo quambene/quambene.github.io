@@ -14,6 +14,6 @@ Full Stack Developer with experience in backend and open-source development usin
 
 ## Latest Release
 
-[[2026-03-27] xbrl-rs Release](./releases/2026-03-27_xbrl_release.md)
+[[2026-03-28] xbrl-rs Release](./releases/2026-03-28_xbrl_release.md)
 
 [All releases](./releases)

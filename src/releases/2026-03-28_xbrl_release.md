@@ -1,6 +1,6 @@
 # xbrl-rs: Parse and validate financial reports in Rust
 
-_Published on (2026-03-27)._
+_Published on 2026-03-28._
 
 XBRL is an XML-based standard used in financial reporting. With
 [xbrl-rs](https://github.com/quambene/xbrl-rs) you can parse _instance

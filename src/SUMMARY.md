@@ -9,7 +9,7 @@
 ---
 
 - [Releases](./releases/README.md)
-  - [xbrl-rs Release v0.2.0](./releases/2026-03-27_xbrl_release.md)
+  - [xbrl-rs Release v0.2.0](./releases/2026-03-28_xbrl_release.md)
   - [Eric Release v0.4.1/v0.3.1](./releases/2024-08-18_eric_release.md)
   - [Bogrep Release v0.1.3](./releases/2023-09-01_bogrep_release.md)
   - [Pigeon Release v0.2.0](./releases/2022-01-05_pigeon_release.md)
