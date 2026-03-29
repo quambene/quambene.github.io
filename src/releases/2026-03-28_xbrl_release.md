@@ -22,11 +22,11 @@ contains _facts_, like the total assets and liabilities:
 </xbrli:xbrl>
 ```
 
- In the case above, the referenced taxonomy is the Generally Accepted Accounting
- Principles (GAAP) in Germany. The taxonomy defines what can be reported and the
- relationship between these _concepts_. The concepts themselves are defined in XSD
- schema files, while the relationships are described in linkbases, which are
- simple XML files.
+In the case above, the referenced taxonomy is the Generally Accepted Accounting
+Principles (GAAP) in Germany. The taxonomy defines what can be reported and the
+relationship between these _concepts_. The concepts themselves are defined in
+XSD schema files, while the relationships are described in linkbases, which are
+simple XML files.
 
 In the example above, the _calculation linkbase_ defines how total assets and
 total liabilities are aggregated. Other linkbases include the presentation and
