@@ -46,9 +46,9 @@ structure can be used to display the facts above as a labeled tree:
 
  The following features are supported by xbrl-rs:
 
-- parsing XBRL instance, schema, and linkbase files
-- validating an instance document against the taxonomy
-- a view of the instance document
+- parsing XBRL instance, schema, and linkbase files,
+- validating an instance document against the taxonomy,
+- a view of the instance document.
 
 Technically, xbrl-rs uses [quick-xml](https://crates.io/crates/quick-xml) to
 parse XML files. Compared to the well-known Python library
@@ -60,6 +60,6 @@ be parallelized.
 
 XBRL validation is compared against the [XBRL 2.1 conformance test
 suite](https://specifications.xbrl.org/release-history-base-spec-conformance-suite.html).
-Currently, xbrl-rs achieves 69% coverage
+Currently, xbrl-rs achieves 69% coverage.
 
 Check out the repo for more information: <https://github.com/quambene/xbrl-rs>.
