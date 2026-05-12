@@ -151,9 +151,10 @@
 
 ## Cursor
 
-| Shortcut | Description                                  |
-| -------- | -------------------------------------------- |
-| Ctrl+P   | `cursor tab` (enable/disable autocompletion) |
+| Shortcut     | Description                                  |
+| ------------ | -------------------------------------------- |
+| Ctrl+P       | `cursor tab` (enable/disable autocompletion) |
+| Ctrl+Shift+P | command: Delete Old Chats                    |
 
 ## Firefox
 
