@@ -214,25 +214,26 @@
 
 ## Ubuntu
 
-| Shortcut                  | Description                                          |
-| ------------------------- | ---------------------------------------------------- |
-| Super+D                   | minimize all windows (show/hide desktop)             |
-| Super+Space               | change keyboard layout                               |
-| Alt+F4                    | close window                                         |
-| Alt+F10                   | maximize window                                      |
-| Super+A                   | show applications <br /> Super - get back to desktop |
-| Alt+Tab                   | switch windows                                       |
-| Alt+^                     | switch windows within an application                 |
-| Ctrl+Tab                  | switch tabs within an application                    |
-| Alt+F2                    | run application <br /> `r` - reload shell            |
-| Ctrl+Alt+left             | switch workspaces                                    |
-| Ctrl+Alt+right            | switch workspaces                                    |
-| Ctrl+Alt+Shift+left/right | move current window to left /right workspace         |
-| Ctrl+Alt+Del              | log out                                              |
-| Ctrl+Alt+End              | shut down menu                                       |
-| Alt+Print+REISUB          | force reboot                                         |
-| Ctrl+Alt+F1               | connect to screen                                    |
-| F11                       | full screen                                          |
+| Shortcut                     | Description                                          |
+| ---------------------------- | ---------------------------------------------------- |
+| Super+D                      | minimize all windows (show/hide desktop)             |
+| Super+Space                  | change keyboard layout                               |
+| Alt+F4                       | close window                                         |
+| Alt+F10                      | maximize window                                      |
+| Super+A                      | show applications <br /> Super - get back to desktop |
+| Alt+Tab                      | switch windows                                       |
+| Alt+^                        | switch windows within an application                 |
+| Ctrl+Tab                     | switch tabs within an application                    |
+| Alt+F2                       | run application <br /> `r` - reload shell            |
+| Ctrl+Alt+left                | switch workspaces                                    |
+| Ctrl+Alt+right               | switch workspaces                                    |
+| Ctrl+Alt+Shift+left/right    | move current window to left /right workspace         |
+| Ctrl+Alt+Del                 | log out                                              |
+| Ctrl+Alt+End                 | shut down menu                                       |
+| Alt+Print+REISUB             | force reboot                                         |
+| Ctrl+Alt+F1                  | connect to screen                                    |
+| F11                          | full screen                                          |
+| Super+Shift+right/left arrow | move window to the monitor on the right/left         |
 
 ## macOS
 
