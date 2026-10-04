@@ -568,7 +568,8 @@ my_dir/*
 <pre><code class="language-bash">du -hs .git
 </code></pre>
 <h3 id="pull-request-pr"><a class="header" href="#pull-request-pr">Pull request (PR)</a></h3>
-<pre><code class="language-bash">git clone git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git
+<pre><code class="language-bash">gh repo fork &lt;repo_owner&gt;/&lt;repo_name&gt; --clone=false # Fork repo
+git clone git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git
 git remote rm origin
 git remote add origin git@&lt;host_name&gt;:&lt;me&gt;/&lt;repo_name&gt;.git
 git remote add upstream git@&lt;host_name&gt;:&lt;repo_owner&gt;/&lt;repo_name&gt;.git
@@ -577,7 +578,8 @@ git pull upstream master
 # git pull --rebase upstream master
 git checkout -b &lt;my_feature_branch&gt;
 git commit -m "My fix"
-git push origin &lt;my_feature_branch&gt;
+git push -u origin &lt;my_feature_branch&gt;
+gh pr create --repo &lt;repo_owner&gt;/&lt;repo_name&gt; # Create PR
 </code></pre>
 
                     </main>
