@@ -495,6 +495,7 @@ du -hs .git
 ### Pull request (PR)
 
 ``` bash
+gh repo fork <repo_owner>/<repo_name> --clone=false # Fork repo
 git clone git@<host_name>:<repo_owner>/<repo_name>.git
 git remote rm origin
 git remote add origin git@<host_name>:<me>/<repo_name>.git
@@ -504,5 +505,6 @@ git pull upstream master
 # git pull --rebase upstream master
 git checkout -b <my_feature_branch>
 git commit -m "My fix"
-git push origin <my_feature_branch>
+git push -u origin <my_feature_branch>
+gh pr create --repo <repo_owner>/<repo_name> # Create PR
 ```
