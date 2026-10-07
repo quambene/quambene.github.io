@@ -367,8 +367,9 @@ git push --force origin v1.0.0
 ### Worktree
 
 ``` bash
-git worktree add <folder> <branch> # Add worktree
 git worktree list # List all worktrees
+git worktree prune # Prune worktrees
+git worktree add <folder> <branch> # Add worktree
 git worktree remove <folder> # Remove worktree
 ```
 
