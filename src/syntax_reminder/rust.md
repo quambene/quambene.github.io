@@ -580,6 +580,7 @@ cargo build # Compile source code in debug mode
 cargo build --release # Compile source code in release mode
 cargo clean # Remove target directory
 cargo update # Update dependencies in the Cargo.lock file to the latest version
+cargo update --dry-run --verbose # Show breaking-version updates 
 cargo add <crate> -F <feature> # Add dependency
 cargo rm <crate> # Remove dependency
 cargo install <crate> # Install Rust binary
