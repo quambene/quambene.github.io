@@ -26,6 +26,9 @@ Bash, Git, Docker, Qemu, Argo CD, ControlMonkey
 **Spreadsheets**<br/>
 LibreOffice Base, LibreOffice Calc, Microsoft Access, Microsoft Excel
 
+**LLMs & Generative AI**<br/>
+Large Language Models (LLMs), AI Agents (Strands Agents SDK), Claude Code, GitHub Copilot, Cursor
+
 **Machine Learning**<br/>
 Labeling of data, training of neural network, PyTorch, NumPy, Pandas
 
